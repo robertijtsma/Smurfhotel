@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* Start of Register */
+
+body {
+	background:url(step_one.png) no-repeat top left black;
+}
+
+#_floater {
+	margin-left: 715px;
+	margin-top: 390px;
+	position:absolute;
+}

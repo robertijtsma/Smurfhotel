@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<!--
+    HybridCMS by Synt4x.
+    Noticed a bug? bugs@hybridhotel.uk
+    -------------------
+    @Project-Started: 30/06/2016
+    @uses: AvatarGenerate - https://github.com/synt4xy/avatargenerate
+    -------------------
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+    <link rel="icon" href="./img/favicon.ico">
+
+        <title>Client - Hybrid Hotel.</title>
+    
+                <!-- Bootstrap -->
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom Styling -->
+        <link href="./css/habbo-theme.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="./css/newhabbo.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+
+    <script type="text/javascript" src="http://hybridhotel.uk/skins/Hubba/Assets/js/swfobject.js"></script>
+    <script type="text/javascript">
+        var BaseUrl = "http://game.hybridhotel.uk/gordon/PRODUCTION-201605032204-943702292";
+        var flashvars =
+        {
+            "client.allow.cross.domain" : "0",
+            "client.notify.cross.domain" : "1",
+            "connection.info.host" : "127.0.0.1",
+            "connection.info.port" : "30000",
+            "site.url" : "http://hybridhotel.uk",
+            "url.prefix" : "http://hybridhotel.uk",
+            "client.reload.url" : "http://hybridhotel.uk/client_error",
+            "client.fatal.error.url" : "http://hybridhotel.uk/client_error",
+            "client.connection.failed.url" : "http://hybridhotel.uk/client_error",
+            "logout.url" : "http://hybridhotel.uk/client",
+            "logout.disconnect.url" : "http://hybridhotel.uk/client",
+            "external.variables.txt" : "http://game.hybridhotel.uk/gamedata/external_variables.txt",
+            "external.texts.txt" : "http://game.hybridhotel.uk/gamedata/external_flash_texts.txt",
+            "external.figurepartlist.txt" : "http://game.hybridhotel.uk/gamedata/figuredata.xml",
+            "productdata.load.url" : "http://game.hybridhotel.uk/gamedata/productdata.txt",
+            "furnidata.load.url" : "http://game.hybridhotel.uk/gamedata/furnidata.xml",
+            "sso.ticket" : "LEHABBO-492/ab8b7543165d0f1a4662564b374807fc",
+            "processlog.enabled" : "0",
+            "account_id" : "6199",
+            "client.starting" : "Please wait! Hybrid is starting up...",
+            "flash.client.url" : "http://game.hybridhotel.uk/gordon/PRODUCTION-201605032204-943702292/",
+            "user.hash" : "57255796e259f7e7865a5c90e24acc986d295c4f",
+            "has.identity" : "1",
+            "flash.client.origin" : "popup",
+            "nux.lobbies.enabled" : "true",
+            "country_code" : "GB"
+        };
+        var params =
+        {
+            "base" : BaseUrl + "/",
+            "allowScriptAccess" : "always",
+            "menu" : "false"
+        };
+        swfobject.embedSWF(BaseUrl + "/Habbo.swf", "client", "100%", "100%", "10.0.0", "{swf_folder}/expressInstall.swf", flashvars, params, null);
+    </script>
+
+    <div id="client"></div>
+
+
+<!-- End Footer -->
+
+
+</body>
+</html>

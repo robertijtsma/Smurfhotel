@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - Edit Settings</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Edit Settings</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+<?php
+          
+        if(isset($_POST['update']))
+		{
+			mysql_query("UPDATE cms_settings SET variable ='" . filter($_POST['variable']) . "', value = '" . filter($_POST['value']) . "', description = '" . filter($_POST['description']) . "', name = '" . filter($_POST['name']) . "', example = '" . filter($_POST['example']) . "'") or die(mysql_error());
+			 	echo $_POST['variable'] . " settings updated."; 
+		}
+		
+		if(isset($_POST['lookup']))
+{	
+	
+	if(mysql_num_rows(mysql_query("SELECT * FROM cms_settings WHERE variable = '". filter($_POST['variable']) ."'")) == 0) { echo "Catalogue Page does not exist."; }
+	else { 
+				$two = mysql_fetch_assoc(mysql_query("SELECT * FROM cms_settings WHERE variable = '" . filter($_POST['variable']) . "'"));
+}
+	?>
+	
+	Editing Settings:</a>
+	<form method='post'>
+	<input type="hidden" name="variable" value="<?php echo $_POST['variable']; ?>" />
+	
+		<table style="width: 100%;">
+				
+			<tr>
+				<td>Variable</td></td>
+				<td><input type="text" name="variable" value="<?php echo $_POST['variable']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Room Id</td>
+				<td><input type="text" name="room_id" value="<?php echo $two['room_id']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Type</td>
+				<td><input type="text" name="ai_type" value="<?php echo $two['ai_type']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name" value="<?php echo $two['name']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Motto</td>
+				<td><input type="text" name="motto" value="<?php echo $two['motto']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Looks</td>
+				<td><input type="text" name="look" value="<?php echo $two['look']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>X</td>
+				<td><input type="text" name="x" value="<?php echo $two['z']; ?>" style="width: 95%" /></td>
+			</tr>
+				<td>Y</td>
+				<td><input type="text" name="y" value="<?php echo $two['y']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Z</td>
+				<td><input type="text" name="z" value="<?php echo $two['z']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Rotation</td>
+				<td><input type="text" name="rotation" value="<?php echo $two['rotation']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Walk Mode</td>
+				<td><input type="text" name="walk_mode" value="<?php echo $two['walk_mode']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Min X</td>
+				<td><input type="text" name="min_x" value="<?php echo $two['min_x']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Min Y</td>
+				<td><input type="text" name="min_y" value="<?php echo $two['min_y']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Max X</td>
+				<td><input type="text" name="max_x" value="<?php echo $two['max_x']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Max Y</td>
+				<td><input type="text" name="max_y" value="<?php echo $two['max_y']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Effect</td>
+				<td><input type="text" name="effect" value="<?php echo $two['effect']; ?>" style="width: 3%" /></td>
+			</tr>
+
+			
+		</table>
+		<input type="submit" value="  Update Settings  " name="update"/>
+	</form>
+	<br />
+<?php 
+}
+}
+?>
+
+<?php include_once('inc/footer.html'); ?>

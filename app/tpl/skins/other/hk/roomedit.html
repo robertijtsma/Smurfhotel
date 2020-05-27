@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - Edit a Room</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Edit a Room</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+          <br />          
+         <?php
+          
+        if(isset($_POST['update']))
+		{
+			mysql_query("UPDATE rooms SET id = '" . filter($_POST['id']) . "', state = '" . filter($_POST['state']) . "', caption = '" . filter($_POST['caption']) . 		"', owner = '" . filter($_POST['owner']) . "', description = '" . filter($_POST['description']) . "', model_name = '" . filter($_POST['model_name']) . "', password = '" . filter($_POST['password']) . "' WHERE id = '" . filter($_POST['id_current']) . "'") or die(mysql_error());
+			 	echo $_POST['id_current'] . " Catalogue updated."; 
+		}
+		
+
+if(isset($_POST['lookup']))
+{	
+	
+	if(mysql_num_rows(mysql_query("SELECT * FROM rooms WHERE id = '". filter($_POST['l_id']) ."'")) == 0) { echo "Catalogue Page does not exist."; }
+	else { 
+				$two = mysql_fetch_assoc(mysql_query("SELECT * FROM rooms WHERE id = '" . filter($_POST['l_id']) . "'"));
+	?>
+		
+	Editing Room: <?php echo $id; ?></a>
+	<form method='post'>
+	<input type="hidden" name="id_current" value="<?php echo $_POST['l_id']; ?>" />
+	
+		<table style="width: 100%;">
+				
+			<tr>
+				<td>Room ID</td></td>
+				<td><input type="text" name="id" value="<?php echo $_POST['l_id']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Room Model</td>
+				<td><input type="text" name="model_name" value="<?php echo $two['model_name']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="caption" value="<?php echo $two['caption']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Owner</td>
+				<td><input type="text" name="owner" value="<?php echo $two['owner']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td><input type="text" name="description" value="<?php echo $two['description']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Room Type</td>
+				<td><input type="text" name="state" value="<?php echo $two['state']; ?>" style="width: 95%" /></td>
+			</tr>
+				<td>Password</td>
+				<td><input type="text" name="password" value="<?php echo $two['password']; ?>" style="width: 3%" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="  Update Room  " name="update"/>
+	</form>
+	<br />
+	<?php
+	}
+	}
+	?>
+
+	<center><form method='post'>
+	id: <br /> <input type="text" name="l_id" style="width: 40%"  /> <br /> <br />
+	<input type="submit" class="button green" value="  Find Room  " name="lookup" />
+	</form></center>
+	
+	</center>
+<?php include_once('inc/footer.html'); ?>

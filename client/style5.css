@@ -1,0 +1,519 @@
+
+@import url(//fonts.googleapis.com/css?family=Ubuntu:400,500,300,700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+@import url(//fonts.googleapis.com/css?family=PT+Sans+Caption:400,700);
+body {
+background: #000;
+font-size: 13px;
+}
+
+#userbar {
+position: absolute;
+top: 10px;
+right: 200px;
+min-width: 140px;
+height: 30px;
+background: #24231E;
+
+border-radius: 5px;
+border: 2px solid #54524D;
+-webkit-box-shadow: 0 0 0 1px #000;
+box-shadow: 0 0 0 1px #000;
+cursor: pointer;
+font-family: ubuntu;
+}
+
+#userbar .staffpanel {
+float: left;
+background: url('/public/images/client/settings.gif') no-repeat;
+background-position: 50% 50%;
+width: 25px;
+height: 30px;
+}
+
+#userbar .tab {
+float: left;
+line-height: 30px;
+height: 30px;
+border-right: 1px solid #2A2F2A;
+padding-left: 5px;
+padding-right: 5px;
+cursor: pointer;
+}
+
+#userbar .tab:hover {
+}
+
+#userbar .radio {
+float: left;
+height: 30px;
+line-height: 30px;
+width: 190px;
+}
+
+.buttons {
+cursor:pointer;
+margin-left:5px;
+margin-top: 1px;
+float: left;
+}        
+
+.buttons.play {
+background: url('/public/images/radio/play.png') 50% 50% no-repeat;
+width: 20px;
+height: 17px;
+}
+
+.buttons.pause {
+background: url('/public/images/radio/pause.png') 50% 50% no-repeat;
+width: 20px;
+height: 17px;
+}
+
+.buttons.lauter {
+background: url('/public/images/radio/lauter.png') 50% 50% no-repeat;
+width: 20px;
+height: 17px;
+}
+
+.buttons.leiser {
+background: url('/public/images/radio/leiser.png') 50% 50% no-repeat;
+width: 20px;
+height: 17px;
+}
+
+.buttons.mute {
+background: url('/public/images/radio/mute.png') 50% 50% no-repeat;
+width: 20px;
+height: 17px;
+}
+
+.buttons.unmute {
+background: url('/public/images/radio/unmute.png') 50% 50% no-repeat;
+width: 20px;
+height: 17px;
+display: none;
+}
+
+#userbar counter {
+padding-right: 10px;
+padding-left: 10px;
+height: 30px;
+line-height: 30px;
+float: right;
+text-align: left;
+color: #FFF;
+font-size: 14px;
+font-family: ubuntu;
+cursor: pointer;
+}
+
+#login {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 100%;
+background: #000;
+z-index: 999999999999999999;
+color: #000;
+display: table;
+}
+
+#login #hotel {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 100%;
+background: url('/public/images/client/loader/bg.png');
+background-position: 50% 0%;
+background-size: cover;
+z-index: 99999999999999999999;
+
+}
+
+#login #hotel #blackbg {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 100%;
+
+background: rgba(0, 0, 0, 0.7);
+z-index: 999999999999999999999999999999;
+}
+
+#login #hotel #logo {
+
+background: url('/public/images/design/logo.png?rld3');
+background-repeat: no-repeat;
+width: 197px;
+height: 73px;
+margin: 0px auto;
+margin-top: 200px;
+z-index: 99999999999999999999999999999999999999999999;
+}
+
+#login #hotel #desc {
+
+width: 300px;
+height: 50px;
+margin: 0px auto;
+margin-top: 10px;
+background: rgba(0, 0, 0, 0.5);
+line-height: 50px;
+text-align: center;
+color: #FFF;
+border-radius: 5px;
+font-size: 14px;
+font-weight: bold;
+font-family: ubuntu;
+}
+
+.hp {
+width: 1000px;
+height: 90%;
+margin: 0px auto;
+opacity: 0.95;
+position: absolute;
+left: 0px;
+top: 0px;
+background: rgba(255, 255, 255, 0.7);
+z-index: 999999999999999999999999999999;
+}
+
+.eventalert {
+padding: 10px;
+font-family: PT Sans Caption;
+font-family: Ubuntu;
+font-weight: 400;
+background: #DBDBDB;
+border-top: 4px solid #FFFFFF;
+border-bottom: 4px solid #C9C9C9;
+width: 300px;
+height: 205px;
+border-radius: 5px;
+-webkit-box-shadow: 0 0 0 1px #000;
+box-shadow: 0 0 0 1px #000;
+}
+
+.eventalert .head {
+height: 20px;
+line-height: 20px;
+text-align: center;
+text-shadow: 0 1px 1px #FFF;
+font-size: 14px;
+font-weight: 700;
+color: #000;
+}
+
+.eventalert .close {
+float: right;
+height: 20px;
+width: 20px;
+background: url('/public/images/client/illumina/close.png');
+margin-right: 5px;
+margin-top: 0px;
+cursor: pointer;
+color: #000;
+}
+
+.eventalert .inner {
+font-family: PT Sans Caption;
+background: #FFF;
+margin-top: 20px;
+height: 60px;
+border: 1px solid #000;
+border-radius: 3px;
+padding: 10px;
+font-size: 13px;
+color: #000;
+}
+
+.eventalert .goroom {
+font-size: 12px;
+color: #000;
+font-weight: bold;
+float: right;
+width: 140px;
+height: 25px;
+margin-top: 30px;
+line-height: 25px;
+text-align: center;
+border-radius: 4px;
+background: #E2E2E2;
+border-top: 3px solid #FFF;
+border-bottom: 3px solid #D9D9D9;
+-webkit-box-shadow: 0 0 0 1px #919191;
+box-shadow: 0 0 0 1px #919191;
+cursor: pointer;
+}
+
+.alert {
+position: absolute;
+left: 50%;
+right: -50%;
+top: 50%;
+bottom: -50%;
+
+font-size: 13px;
+width: 200px;
+height: 100px;
+border: 1px solid #000;
+border-bottom: 2px solid #000;
+border-radius: 4px;
+font-family: Ubuntu;
+font-weight: light;
+background: #FFF;
+}
+
+.alert .head {
+background: #367897;
+height: 30px;
+line-height: 30px;
+color: #FFF;
+text-align: center;
+border-radius: 3px 3px 0px 0px;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-bottom: 1px solid #000;
+font-size: 14px;
+}
+
+
+.imagee .close {
+position: absolute;
+background: url('/public/images/client/box/close.png');
+background-repeat: no-repeat;
+background-position: 50% 50%;
+width: 19px;
+height: 20px;
+cursor: pointer;
+margin-top: 5px;
+margin-left: 5px;
+}
+
+.alert .head .close {
+float: right;
+background: url('/public/images/client/box/close.png');
+background-repeat: no-repeat;
+background-position: 50% 50%;
+width: 19px;
+height: 20px;
+cursor: pointer;
+margin-top: 5px;
+margin-right: 5px;
+}
+
+
+.alert .head .close:hover {
+background: url('/public/images/client/box/close_hover.png');
+}
+
+.alert .head .close:active {
+background: url('/public/images/client/box/close_active.png');
+width: 19px;
+height: 19px;
+}
+
+.alert .loggedin {
+background: #FFF;
+margin-top: 0px;
+height: 25px;
+line-height: 25px;
+color: #000;
+font-size: 11px;
+border-bottom: 1px solid #000;
+margin-bottom: 5px;
+padding-left: 10px;
+}	
+
+.alert .modlog.scroll {
+height: 144px;
+overflow-y: scroll;
+color: #000;
+}
+
+.alert .modload .string, .alert .userload .string, {
+width: 100%;
+height: 40px;
+border-bottom: 1px dashed #CCC;
+}
+
+.alert .modload .string .avatar, .alert .userload .string .avatar {
+height: 38px;
+width: 60px;
+float: left;
+margin-left: 0px;
+}
+
+.alert .modload .string .username, .alert .userload .string .username {
+height: 40px;
+line-height: 30px;
+font-weight: bold;
+}	
+
+.alert .modload .string .bemerkung, .alert .userload .string .bemerkung {
+
+margin-top: -15px;
+margin-left: 50px;
+}
+
+.alert .modload .right, .alert .userload .right {
+float: right;
+margin-top: 5px;
+margin-right: 5px;
+height: 20px;
+}
+
+.alert .modload .bann, .alert .userload .bann {
+background: url('/public/images/client/modtool/ban.gif');
+background-repeat: no-repeat;
+width: 15px;
+height: 16px;
+cursor: pointer;
+float: right;
+margin-right: 5px;
+margin-top: 3px;
+}
+
+.alert .modload .isbann, .alert .userload .isbann {
+background: url('/public/images/client/modtool/banned.png');
+background-repeat: no-repeat;
+width: 15px;
+height: 16px;
+float: right;
+margin-right: 5px;
+margin-top: 3px;
+}
+
+
+.alert .modlog .status_0 {
+background: url('/public/images/etc/userstatus_0.gif');
+background-repeat: no-repeat;
+width: 40px;
+height: 18px;
+float: right;
+
+}
+
+.alert .modlog .status_1 {
+background: url('/public/images/etc/userstatus_1.gif');
+background-repeat: no-repeat;
+width: 40px;
+height: 18px;
+float: right;
+}
+
+.alert .modlog .goroom {
+background: url('/public/images/client/modtool/goroom.gif');
+background-repeat: no-repeat;
+width: 16px;
+height: 16px;
+float: right;
+margin-top: 1px;
+margin-right: 5px;
+}
+
+#bar .tab {
+float: left;
+background: #2A2822;
+border: 2px solid #54524D;
+padding-left: 20px;
+padding-right: 20px;
+height: 21px;
+
+line-height: 21px;
+text-align: center;
+font-family: PT Sans Caption;
+color: #FFF;
+// font-weight: bold;
+font-size: 13px;
+border-radius: 4px;
+cursor: pointer;
+margin-right: 5px;
+margin-left: 5px;
+-webkit-box-shadow: 0 0 0 1px #000;
+box-shadow: 0 0 0 1px #000;
+letter-spacing: 0.1px;
+}
+
+#bar .tab:hover {
+border: 2px solid #77736C;
+
+}
+
+#bar .tab.more {
+cursor: pointer;
+width: 12px;
+background: url('/client/more.png') no-repeat;
+background-color: #2A2822;
+background-position: 50% 50%;
+}
+
+#bar .tab.radio {
+
+}
+
+#bar .tab.radio #radiocont {
+margin-top: 2.5px;
+}
+
+#bar .add {
+float: left;
+
+}
+
+#navi {
+display: none;
+width: 180px;
+position: absolute;
+right: 205px;
+top: 40px;
+background-color: #2A2822;
+color: #FFF;
+font-family: Ubuntu;
+font-size: 13px;
+border: 2px solid #54524D;
+border-radius: 4px;
+-webkit-box-shadow: 0 0 0 1px #000;
+box-shadow: 0 0 0 1px #000;
+}
+
+#navi .liste {
+height: 35px;
+line-height: 35px;
+border-bottom: 1px solid #424B52;
+text-align: center;
+cursor: pointer;
+}
+
+#navi .liste.umfragen:hover, #navi .liste.logout:hover, #navi .liste.MOD:hover, #navi .liste.vollbild:hover, #navi .liste.DJ:hover {
+background-color: rgba(255, 255, 255, 0.1);
+}
+
+#navi .liste.bottom {
+border-bottom: 0px;
+}
+
+
+.myroomtools {
+cursor: pointer;
+
+}
+
+#sitealert {
+font-family: Ubuntu;
+position: absolute;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 40px;
+line-height: 40px;
+text-align: center;
+font-size: 15px;
+background: #34495e;
+color: #FFF;
+font-weight: bold;
+border-bottom: 4px solid rgba(0, 0, 0, 0.4);
+}

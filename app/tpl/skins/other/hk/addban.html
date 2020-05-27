@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - Ban a User</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Ban a User</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+<center>
+          <br />          
+<form method="post" action="addban2">
+Ban ID (Make sure it has not been used!!!)<br />
+	<input type="text" name="ban_id"/> <br /> <br />
+	Username:<br />
+	<input type="text" name="username"/> <br /> <br />
+	Ban Type (Either 'user' or 'ip'):<br />
+	<input type="text" name="type"/> <br /> <br />
+	Reason:<br />
+	<input type="text" name="reason"/> <br /> <br />
+	
+	<strong>NOTE: For the next step, please go to http://www.onlineconversion.com/unix_time.htm and use the 'Convert a Date/Time to a Unix timestamp'
+	for when you want the ban to expire, and simply type in the numbers it gives you below:<br /><br /></strong>
+	
+	Expire:
+	<input type="text" name="expire"/><br /><br />
+	
+	<input type="submit" class="button green" value="Ban user" name="ban2" />
+	</form>
+	<?php
+	
+
+?>
+ </div>
+
+      </div>
+    </div>
+  </div>
+</center>
+<?php include_once('inc/footer.html'); ?>

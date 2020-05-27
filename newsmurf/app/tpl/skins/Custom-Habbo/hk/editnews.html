@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swizzy HK - Nieuws</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Bewerk een artikel</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+          <!-- insert the page content here -->
+          <br />          
+         <?php
+          
+        if(isset($_POST['update']))
+		{
+			mysql_query("UPDATE cms_news SET id = '" . filter($_POST['id']) . "', title = '" . filter($_POST['title']) . "', shortstory = '" . filter($_POST['shortstory']) . 		"', longstory = '" . filter($_POST['longstory']) . "', published = '" . filter($_POST['published']) . "', image = '" . filter($_POST['image']) . "', campaign = '" . filter($_POST['campaign']) . "', campaignimg = '" . filter($_POST['campaignimg']) . "', author = '" . filter($_POST['author']) . "' WHERE id = '" . filter($_POST['id_current']) . "'") or die(mysql_error());
+			 	echo $_POST['id_current'] . " News updated."; 
+		}
+		
+
+if(isset($_POST['lookup']))
+{	
+	
+	if(mysql_num_rows(mysql_query("SELECT * FROM cms_news WHERE id = '". filter($_POST['l_id']) ."'")) == 0) { echo "Dit artikel bestaat niet."; }
+	else { 
+				$two = mysql_fetch_assoc(mysql_query("SELECT * FROM cms_news WHERE id = '" . filter($_POST['l_id']) . "'"));
+	?>
+	
+	
+	<form method='post'>
+	<input type="hidden" name="id_current" value="<?php echo $_POST['l_id']; ?>" />
+	
+		<table style="width: 100%;">
+				
+			<tr>
+				<td>ID</td></td>
+				<td><input type="text" name="id" value="<?php echo $_POST['l_id']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Titel</td>
+				<td><input type="text" name="title" value="<?php echo $two['title']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Inleiding</td>
+				<td><input type="text" name="shortstory" value="<?php echo $two['shortstory']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Artikel</td>
+				<td><input type="text" name="longstory" value="<?php echo $two['longstory']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Gepubliceerd</td>
+				<td><input type="text" name="published" value="<?php echo $two['published']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Afbeelding</td>
+				<td><input type="text" name="image" value="<?php echo $two['image']; ?>" style="width: 95%" /></td>
+			</tr>
+				<td>Campaign</td>
+				<td><input type="text" name="campaign" value="<?php echo $two['campaign']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Campaign-img.</td>
+				<td><input type="text" name="campaignimg" value="<?php echo $two['campaignimg']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Schrijver</td>
+				<td><input type="text" name="author" value="<?php echo $two['author']; ?>" style="width: 3%" /></td>
+			</tr>
+		</table><br>
+		<center><input type="submit" class="button green" value="  Update dit artikel!  " name="update"/></center>
+	</form>
+	<br />
+	<?php
+	}
+	}
+	?>
+
+	<center><form method='post'>
+	Nieuwsartikel's ID: <br /><br> <input type="text" name="l_id" style="width: 40%"  /> <br /> <br />
+	<input type="submit" class="button green" value="  Zoek dit artikel  " name="lookup" />
+	</form></center>
+	
+	</center>
+<?php include_once('inc/footer.html'); ?>

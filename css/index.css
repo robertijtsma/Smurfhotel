@@ -1,0 +1,338 @@
+html, body {
+	padding:0;
+	margin:0;
+}
+
+body {
+	width:100%;
+	background-color:#89d4f1;
+	background:url(../Images/bgs/trible_right.png) fixed right bottom no-repeat, url(../Images/bgs/trible_left.png) fixed left bottom no-repeat, url(../Images/bgs/reception_backdrop_stretch.png) fixed repeat-x center bottom;	
+	font-size: 12px;
+	font-family: Ubuntu,Arial;
+	color: black;
+	text-shadow: 1px 1px 1px #FFF;
+}
+
+#container {
+	width: 940px;
+	margin:0px auto;
+}
+
+#logo {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/logo.gif);
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 105px;
+	float: left;
+}
+
+#login_place {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/login_place.png);
+	background-repeat: no-repeat;
+	width:527px;
+	height:85px;
+	margin-right:8px;
+	padding: 10px;
+	float:left;
+}
+
+#login_username {
+	font-size:11px;
+	float: left;
+	width: 210px;
+}
+
+#login_password {
+	font-size:11px;
+	float: left;
+	width: 195px;
+	padding-left: 10px;
+}
+
+#title {
+	font-size:13px;
+	font-weight:bold;
+}
+
+#login_submit {
+	float: left;
+	width:96px;
+	padding-left: 10px;
+}
+
+#information {
+	padding-top:10px;
+	padding-bottom:20px;
+}
+
+#text_20px {
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+}
+
+#text_15px {
+	font-size:15px;
+	font-weight:bold;
+}
+
+input[type=text] {
+	font-size: 13px;
+	font-family: Ubuntu,Arial;
+	text-shadow: 1px 1px 1px #FFF;
+	width:100%;
+	padding:6px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#e2e2e2;
+	height:15px;
+	margin:3px 0px 3px 0px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-bottom-width:2px;
+	border-radius:3px;
+	color:#383838;
+	outline:none;
+	background-color:white;
+	resize:none
+}
+
+input[type=text]:focus {
+	border-color:#aaa
+}
+
+input[type=password] {
+	font-size: 13px;
+	font-family: Ubuntu,Arial;
+	text-shadow: 1px 1px 1px #FFF;
+	width:100%;
+	padding:6px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#e2e2e2;
+	height:15px;
+	margin:3px 0px 3px 0px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-bottom-width:2px;
+	border-radius:3px;
+	color:#383838;
+	outline:none;
+	background-color:white;
+	resize:none
+}
+
+input[type=password]:focus {
+	border-color:#aaa
+}
+
+input[type=submit] {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/login_button.png);
+	width: 96px;
+	height: 30px;
+	margin-top: 15px;
+	font-weight:bold;
+	font-family: Ubuntu,Arial;
+	text-shadow: 1px 1px 1px #FFF;
+
+}
+
+input[type=submit]:hover {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/login_button_hover.png);
+	width: 96px;
+	height: 30px;
+	margin-top: 15px;
+	font-weight:bold;
+	font-family: Ubuntu,Arial;
+	text-shadow: 1px 1px 1px #FFF;
+
+}
+
+#alert {
+	width: 100%;
+	height: 35px;
+	background-color: #f00;
+	color:#fff;
+	text-shadow: 1px 1px 1px #969696;
+	position: fixed;
+	border-bottom:1px solid #FFF;
+}
+
+#alert_tekst {
+	font-family: Arial;
+	font-size: 13pt;
+	font-weight: bold;
+	text-align: center;
+	line-height: 35px;
+	color: #fff;
+}
+
+#alert_tekst_ban {
+	font-family: Arial;
+	font-size: 11pt;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+}
+
+a img {
+    border: 0 none;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+}
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+#register_button {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/register_button.png);
+	width: 235px;
+	height: 112px;
+	margin-top:-7px;
+	float:left;
+}
+
+#register_button:hover {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/register_button_hover.png);
+	width: 235px;
+	height: 112px;
+	margin-top:-7px;
+	float:left;
+}
+
+#container_image {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/login_bg_new.png);
+	background-repeat:repeat;
+	background-position:left;
+	width: 940px;
+	height: 350px;
+	z-index:0px;
+}
+#container_image.scifi {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/login_bg_940_scifi.png);
+}
+
+
+#container_image.jetset {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/login_bg_940_jetset.png);
+}
+
+#container_image.xmas12indoor {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/login_bg_940_kerstmis12binnen.png);
+}
+#container_image.xmas12outdoor {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/login_bg_new.png);
+}
+#information_bar {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/information_bar.png);
+	height:85px;
+	width:920px;
+	margin:-364px 10px 10px 10px;
+	z-index:100px;
+}
+
+#information_bar #text {
+	padding:30px 6px 10px 120px;
+	font-size:12px;
+}
+
+#copyricht_top {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/copyright_top.png);
+	height:6px;
+	width:940px;
+}
+
+#copyricht_mid {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/copyright_mid.png);
+	height:auto;
+	width:920px;
+	padding:0px 10px 0px 10px;
+}
+
+#copyricht_bot {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/copyright_bot.png);
+	height:6px;
+	width:940px;
+	margin-bottom:10px;
+}
+
+#infobox_top {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/infobox_top.png);
+	height:6px;
+	width:300px;
+}
+
+#infobox_mid {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/infobox_middle.png);
+	overflow:auto;
+	height:auto;
+	width:290px;
+	padding:0px 5px 0px 5px;
+}
+
+#infobox_bot {
+	background-image: url(/app/tpl/skins/Custom-Habbo/Leo/infobox_bottom.png);
+	height:6px;
+	width:300px;
+	margin-bottom:10px;
+}
+
+a.copyright:link {
+	cursor:pointer;
+	color: #000000;
+	text-decoration:none;
+}
+a.copyright:hover {
+	cursor:pointer;
+	color: #000000;
+	text-decoration:underline;
+}
+
+#users_online {
+background-image: url(/app/tpl/skins/Custom-Habbo/Leo/users_online_bubble.png);
+display: block;
+float: right;
+width: 192px;
+height: 65px;
+position: relative;
+overflow: hidden;
+white-space: nowrap;
+z-index: 100;
+top: 40px;
+right: 25px;
+}
+
+#ledenlijstpb_box{
+	position: absolute;
+	width:209px;
+	margin-top:-6px;
+	display:none;
+}
+#ledenlijstpb_mid{
+	border: 1px solid #aaaaaa;
+	border-bottom:2px solid #aaaaaa;
+	background-color:#FFFFFF;
+	color:#000;
+	padding-left:0px;
+	padding-right:0px;
+}
+#ledenlijstpb_scroll{
+	max-height:187px;
+	width: 207px;
+	overflow: auto;
+}
+
+a.muisover:link {
+	cursor:pointer;
+	color: #000000;
+	text-decoration:underline;
+}
+a.muisover:hover {
+	cursor:pointer;
+	color: #000000;
+	text-decoration:underline;
+}

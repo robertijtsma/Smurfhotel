@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SwizzyAdminity</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Sollicitaties</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+<center>
+      <div id="content_container">
+
+        <div id="content">
+ <p> <table name="bots" style="width: 100%; height: 77.5%;"> <tr style="background-color: #2DB8CD;"> <td style="width: 5%;background-color:   #8FD8D8;"><b>Username</b></td> <td style="width: 35%;background-color:  #8FD8D8;"><b>Job</b></td> <td style="width: 20%;background-color:  #8FD8D8;"><b>Why</b></td> <td style="width: 30%;background-color:  #8FD8D8;"><b>Experience</b></td> <td style="width: 30%;background-color:  #8FD8D8;"><b>Age</b></td> <td style="width: 20%;background-color:  #8FD8D8;"><b>Other</b></td> </tr> 
+ <?php
+ $getMySQL = mysql_query("SELECT * FROM `jobs` ");                    $alternate = 1;                    while ($data = mysql_fetch_array($getMySQL)) {                        if($alternate == 0) {                        $alternate = 1;                        echo "<tr style=\"background-color: #4FD9EF;\">";                        echo "<td style=\"width: 12.5%;background-color: #4FD9EF;\">" . $data['username'] . "</td>";                        echo "<td style=\"width: 12.5%;background-color: #4FD9EF;\">" . $data['job'] . "</td>";                        echo "<td style=\"width: 37.5%;background-color: #4FD9EF;\">" . $data['why'] . "</td>";                        echo "<td style=\"width: 20%;background-color: #4FD9EF;\">" . $data['experience'] . "</td>";                        echo "<td style=\"width: 30%;background-color: #4FD9EF;\">" . $data['age'] .  "</td>";                        echo "<td style=\"width: 30%;background-color: #4FD9EF;\">" . $data['other'] .  "</td>";                                                                                                echo "</tr>";                        }                        else if($alternate == 1) {                        $alternate = 0;                                                echo "<tr style=\"background-color: #2DB8CD;\">";                        echo "<td style=\"width: 12.5%;background-color: #4FD9EF;\">" . $data['username'] . "</td>";                        echo "<td style=\"width: 12.5%;background-color: #4FD9EF;\">" . $data['job'] . "</td>";                        echo "<td style=\"width: 37.5%;background-color: #4FD9EF;\">" . $data['why'] . "</td>";                        echo "<td style=\"width: 20%;background-color: #4FD9EF;\">" . $data['experience'] . "</td>";                        echo "<td style=\"width: 30%;background-color: #4FD9EF;\">" . $data['age'] .  "</td>";                        echo "<td style=\"width: 30%;background-color: #4FD9EF;\">" . $data['other'] .  "</td>";                        echo "</tr>";                        }                    }                ?> </table> </p></div> </div>
+</div> </div> </div>
+</center>
+<?php include_once('inc/footer.html'); ?> 

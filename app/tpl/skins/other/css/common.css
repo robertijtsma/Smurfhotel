@@ -1,0 +1,118 @@
+/* 
+    Document   : common
+    Created on : August 16th 2013, 20:02:13
+    Author     : Administrateur (Emetophobic)
+    Description:
+        Habbo thought by Google Index stylesheet
+*/
+
+root { 
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+input.loginForm {
+	padding: 15px;
+	outline: none;
+	border-radius: 3px;
+	background: #fcfcfc;
+	border: 1px solid #a6a6a6;
+	color: #6c6c6c;
+	width: 224px;
+}
+
+#home {
+    font-family: 'Maven Pro', sans-serif;
+    background: url('../img/bg.png');
+   
+    background-attachment: fixed;
+}
+
+.button {
+    display: block;
+    padding: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    color: white!important;
+    border-radius: 2px;
+    background-color: #fb8823;
+    transition: background-color .218s,border-color .218s,box-shadow .218s;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+.button:hover {
+	background-color: #ff9a5c;
+	box-shadow: inset 0 -2px 0 rgba(0,0,0,.27);
+	background-image: none;
+	transition: background-color .218s,border-color .218s,box-shadow .218s;
+}
+
+.button:active {
+	background-color: #cd6d1d;
+	box-shadow: inset 0 2px 0 rgba(0,0,0,.27);
+}
+
+.wrapper {
+    width: 285px;
+    margin: 0 auto;
+}
+
+.form {
+    background: #FFF;
+    border-radius: 5px;
+    border-color: #EFEFEF;
+    padding: 15px;
+}
+
+.register-button {
+    background: #BF1D1D url('../img/register.png') no-repeat;
+    padding: 15px;
+    color: #FFF;
+    margin-top: 5px;
+    background-position-x: 160px;
+}
+
+.admin-button {
+	background: #4EB4D2 url('../img/key.gif') no-repeat;
+	padding: 15px;
+	color: #FFF;
+	margin-top: 5px;
+	background-position: 240px 5px;
+}
+
+.squared_effect-red {	transform: translate(0px,0px);	-ms-transform: translate(0px,0px);	-moz-transform: translate(0px,0px);	-webkit-transform: translate(0px,0px);	-o-transform: translate(0px,0px);	transition: all .25s;	-ms-transition: all .25s;	-moz-transition: all .25s;	-webkit-transition: all .25s;	-o-transition: all .25s;	box-shadow: 0px 0px #8F1616;	-moz-box-shadow: 0px 0px #8F1616;	-webkit-box-shadow: 0px 0px #8F1616;}
+.squared_effect-red:hover {		transform: translate(-10px,-10px);	-ms-transform: translate(-10px,-10px);	-moz-transform: translate(-10px,-10px);	-webkit-transform: translate(-10px,-10px);	-o-transform: translate(-10px,-10px);	box-shadow: 1px 1px #8F1616, 2px 2px #8F1616, 3px 3px #8F1616, 4px 4px #8F1616, 5px 5px #8F1616, 6px 6px #8F1616, 7px 7px #8F1616, 8px 8px #8F1616;	-moz-box-shadow: 1px 1px #8F1616, 2px 2px #8F1616, 3px 3px #8F1616, 4px 4px #8F1616, 5px 5px #8F1616, 6px 6px #8F1616, 7px 7px #8F1616, 8px 8px #8F1616;	-webkit-box-shadow: 1px 1px #8F1616, 2px 2px #8F1616, 3px 3px #8F1616, 4px 4px #8F1616, 5px 5px #8F1616, 6px 6px #8F1616, 7px 7px #8F1616, 8px 8px #8F1616;}
+
+.squared_effect-white {	transform: translate(0px,0px);	-ms-transform: translate(0px,0px);	-moz-transform: translate(0px,0px);	-webkit-transform: translate(0px,0px);	-o-transform: translate(0px,0px);	transition: all .25s;	-ms-transition: all .25s;	-moz-transition: all .25s;	-webkit-transition: all .25s;	-o-transition: all .25s;	box-shadow: 0px 0px #EDEDED;	-moz-box-shadow: 0px 0px #EDEDED;	-webkit-box-shadow: 0px 0px #EDEDED;}
+.squared_effect-white:hover {		transform: translate(-10px,-10px);	-ms-transform: translate(-10px,-10px);	-moz-transform: translate(-10px,-10px);	-webkit-transform: translate(-10px,-10px);	-o-transform: translate(-10px,-10px);	box-shadow: 1px 1px #EDEDED, 2px 2px #EDEDED, 3px 3px #EDEDED, 4px 4px #EDEDED, 5px 5px #EDEDED, 6px 6px #EDEDED, 7px 7px #EDEDED, 8px 8px #EDEDED;	-moz-box-shadow: 1px 1px #EDEDED, 2px 2px #EDEDED, 3px 3px #EDEDED, 4px 4px #EDEDED, 5px 5px #EDEDED, 6px 6px #EDEDED, 7px 7px #EDEDED, 8px 8px #EDEDED;	-webkit-box-shadow: 1px 1px #EDEDED, 2px 2px #EDEDED, 3px 3px #EDEDED, 4px 4px #EDEDED, 5px 5px #EDEDED, 6px 6px #EDEDED, 7px 7px #EDEDED, 8px 8px #EDEDED;}
+
+.squared_effect-blue {
+	transform: translate(0px,0px);
+	-ms-transform: translate(0px,0px);
+	-moz-transform: translate(0px,0px);
+	-webkit-transform: translate(0px,0px);
+	-o-transform: translate(0px,0px);
+	transition: all .25s;
+	-ms-transition: all .25s;
+	-moz-transition: all .25s;
+	-webkit-transition: all .25s;
+	-o-transition: all .25s;
+	box-shadow: 0px 0px #479DB6;
+	-moz-box-shadow: 0px 0px #479DB6;
+	-webkit-box-shadow: 0px 0px #479DB6;
+}
+
+.squared_effect-blue:hover {
+	transform: translate(-10px,-10px);
+	-ms-transform: translate(-10px,-10px);
+	-moz-transform: translate(-10px,-10px);
+	-webkit-transform: translate(-10px,-10px);
+	-o-transform: translate(-10px,-10px);
+	box-shadow: 1px 1px #479DB6, 2px 2px #479DB6, 3px 3px #479DB6, 4px 4px #479DB6, 5px 5px #479DB6, 6px 6px #479DB6, 7px 7px #479DB6, 8px 8px #479DB6;
+	-moz-box-shadow: 1px 1px #479DB6, 2px 2px #479DB6, 3px 3px #479DB6, 4px 4px #479DB6, 5px 5px #479DB6, 6px 6px #479DB6, 7px 7px #479DB6, 8px 8px #479DB6;
+	-webkit-box-shadow: 1px 1px #479DB6, 2px 2px #479DB6, 3px 3px #479DB6, 4px 4px #479DB6, 5px 5px #479DB6, 6px 6px #479DB6, 7px 7px #479DB6, 8px 8px #479DB6;
+}

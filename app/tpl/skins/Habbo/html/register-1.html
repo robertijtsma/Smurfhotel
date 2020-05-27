@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<!--
+    HybridCMS by Synt4x.
+    Noticed a bug? bugs@hybridhotel.uk
+    -------------------
+    @date: 30/06/2016
+    @uses: AvatarGenerate - https://github.com/synt4xy/avatargenerate
+    @contact: musecms (Skype)
+    -------------------
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="icon" href="./img/favicon.ico">
+
+    <title>My Character - Hybrid Hotel.</title>
+    
+    <!-- AvatarGenerate by Synt4x -->
+    <link href="./css/avatargenerate.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link href="./css/habbo-theme.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- Begin Header -->
+<header>
+
+    <div class="container">
+
+        <a href="." class="brand" title="Hybrid Hotel" alt="Hybrid Hotel">Hybrid Hotel</a>
+
+        <div class="col-xs-12 col-md-8 pull-md-right login-form">
+
+        
+        </div>
+    </div>
+
+</header>
+<!-- End Header -->
+
+<!-- Begin Main Section -->
+<div class="hero register" id="main" data-smoothState="true">
+    <div class="container anim_element anim_element--fadeInLeft">
+
+            <div class="hidden-md-down col-md-12 title">
+        <h2>Choose a username</h2>
+        <p>Make sure to keep it appropriate.</p>
+    </div>
+
+    <div class="col-md-4 no-padding">
+
+        <!-- Form -->
+        <form action="" method="post" name="habboUsernameForm">
+
+            <!-- Username -->
+            <div class="col-md-12 username-input">
+
+                <input type="hidden" name="_token" value="5kEhBcqZgx1RULFEDVmpFZa444RXb62yFKQm0EZA">
+
+                <fieldset class="form-group" id="habboUsernameSet">
+                    <label for="habboUsername" class="text-error" id="habboUsernameErrors"></label>
+                    <input type="text" class="form-control" id="habboUsername" name="habboUsername" placeholder="Username">
+                </fieldset>
+            </div>
+            <!-- End Username -->
+
+            <!-- Login Button -->
+            <div class="col-md-12 no-padding">
+                <button type="button" data-hybrid-submit="true" data-toggle="modal" data-target="#myModal" class="btn-design-avatar btn-gloss btn-sm">
+                    <span class="font-weight-bold">Design My Avatar</span>
+                </button>
+
+                <a href="#" data-hybrid-submit="false" data-no-avatar class="small">No thanks, just take me to make my account &raquo;</a>
+            </div>
+            <!-- End Login Button -->
+
+        </form>
+        <!-- End of Form -->
+
+    </div>
+
+    </div>
+</div>
+<!-- End Main Section -->
+
+<!-- Other Things -->
+
+
+        <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Build Your Avatar</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="hidden-xs-up">Close</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-background"></div>
+                    <div id="avatarSelector" class="builder-viewport">
+
+                        <!-- Main Navigation -->
+                        <div class="main-navigation">
+
+                            <ul>
+                                <li class="active">
+                                    <a href="#" data-navigate="hd" data-subnav="gender"><img src="./img/body.png" /></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" data-navigate="hr" data-subnav="hair"><img src="./img/hair.png" /></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" data-navigate="ch" data-subnav="tops"><img src="./img/tops.png" /></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" data-navigate="lg" data-subnav="bottoms"><img src="./img/bottoms.png" /></a>
+                                </li>
+
+                                <li>
+                                    <a href="#"><img src="./img/saved-looks.png" /></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- End Main Navigation -->
+
+                        <!-- Sub Navigation -->
+                        <div class="sub-navigation">
+
+                            <ul id="gender" class="display">
+
+                                <li>
+                                    <a href="#" class="male nav-selected" data-gender="M"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="female" data-gender="F"></a>
+                                </li>
+                            </ul>
+
+                            <ul id="hair" class="hidden">
+
+                                <li>
+                                    <a href="#" class="hair nav-selected" data-navigate="hr"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="hats" data-navigate="ha"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="hair-accessories" data-navigate="he"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="glasses" data-navigate="ea"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="moustaches" data-navigate="fa"></a>
+                                </li>
+
+
+                            </ul>
+
+                            <ul id="tops" class="hidden">
+
+                                <li>
+                                    <a href="#" class="tops nav-selected" data-navigate="ch"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="chest" data-navigate="cp"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="jackets" data-navigate="cc"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="accessories" data-navigate="ca"></a>
+                                </li>
+                            </ul>
+
+                            <ul id="bottoms" class="hidden">
+
+                                <li>
+                                    <a href="#" class="bottoms nav-selected" data-navigate="lg"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="shoes" data-navigate="sh"></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="belts" data-navigate="wa"></a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <!-- End Sub Navigation -->
+
+
+                        <div id="clothes-colors">
+                            <div id="clothes"></div>
+                            <div id="colors"></div>
+                        </div>
+
+
+                        <div id="avatar">
+
+                            <img id="myHabbo" src="" alt="My Habbo" title="My Habbo" />
+
+                            <form action="register-2.html" id="avatarSelectionForm" method="POST" name="avatarSelectionForm">
+
+                                <input type="hidden" name="_token" value="5kEhBcqZgx1RULFEDVmpFZa444RXb62yFKQm0EZA">
+
+                                <input type="hidden" name="habboAvatar" id="avatar-code">
+
+                                <button type="submit">Save Changes</button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- End Modal -->
+<!-- End Other Things -->
+
+<!-- Begin Footer -->
+
+<footer>
+    <div class="container">
+        <div class="hidden-md-down col-md-3 social-media">
+            <span>Follow Hybrid</span>
+            <ul class="social-links">
+                <li>
+                    <a href="#"><img src="./img/fb.png" alt="Facebook"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/youtube.png" alt="Youtube"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/rss.png" alt="RSS Feed"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9 policies">
+            <ul class="hidden-ms-down policy-links">
+                <li>
+                    <a href="https://devbest.com/members/synt4x.65632/">Made With &lt;3 By Synt4x</a>
+                </li>
+                <li>
+                    <a href="#">Safety</a>
+                </li>
+                <li>
+                    <a href="#">For Parents</a>
+                </li>
+                <li>
+                    <a href="#">Terms of Service &amp; Privacy</a>
+                </li>
+            </ul>
+
+            <p class="copyright">Hybrid Hotel, Powered by HybridCMS. Page was rendered in 0.0548 seconds.<br>
+                Copyright © 2016 Synt4x, and others who have supported this project. All rights reserved. Hybrid Hotel is no way affiliated with Sulake Corporation Oy.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- End Footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="./js/jquery.min.js"><\/script>')</script>
+<script src="./js/jquery.avatargenerate.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+
+        var displayAvatar = true;
+
+        if ($.ui) {
+            (function () {
+                var oldEffect = $.fn.effect;
+                $.fn.effect = function (effectName) {
+                    if (effectName === "shake") {
+                        var old = $.effects.createWrapper;
+                        $.effects.createWrapper = function (element) {
+                            var result;
+                            var oldCSS = $.fn.css;
+
+                            $.fn.css = function (size) {
+                                var _element = this;
+                                var hasOwn = Object.prototype.hasOwnProperty;
+                                return _element === element && hasOwn.call(size, "width") && hasOwn.call(size, "height") && _element || oldCSS.apply(this, arguments);
+                            };
+
+                            result = old.apply(this, arguments);
+
+                            $.fn.css = oldCSS;
+                            return result;
+                        };
+                    }
+                    return oldEffect.apply(this, arguments);
+                };
+            })();
+        }
+
+        $( '[data-hybrid-submit]' ).on( 'click', function()
+        {
+            displayAvatar = $( this ).data( 'hybrid-submit' );
+
+            $( 'form[name="habboUsernameForm"]' ).submit();
+
+            return false;
+        });
+
+        $( 'form[name="habboUsernameForm"]' ).on( 'submit', function() {
+
+            $.ajax({
+                type: 'POST',
+                url: $( this ).attr( 'action' ),
+                data: $( this ).serialize()
+            })
+            .done(function( data ) {
+                if( data == "success" )
+                {
+                    $( '#habboUsernameErrors' ).text( "" );
+
+                    if( displayAvatar )
+                        $( '#myModal' ).modal( 'show' );
+                    else
+                    {
+                        window.location.href = "register-2.html"
+                    }
+                }
+                else {
+                    $( 'input[name="habboUsername"] ' ).effect( "shake" );
+                    $( '#habboUsernameErrors' ).addClass( 'text-error' ).text( data ).effect( "shake" );
+                }
+            })
+            .fail(function( data ) {
+                alert( "Failed to load avatar changer" );
+            });
+
+            return false;
+
+        });
+
+    </script>
+
+
+</body>
+</html>

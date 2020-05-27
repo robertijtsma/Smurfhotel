@@ -1,0 +1,1 @@
+<?phprequire("config.php");header ("Content-Type:text/xml"); $id = $_GET["id"];mysql_connect($mysql_host, $mysql_user, $mysql_password) or die(mysql_error());mysql_select_db($mysql_database) or die(mysql_error());echo utf8_encode(mysql_result(mysql_query("SELECT data FROM movies WHERE id = '" . mysql_real_escape_string($id) . "'"), 0));mysql_close();?>

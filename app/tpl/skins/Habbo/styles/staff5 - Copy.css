@@ -1,0 +1,27 @@
+
+.staffs {
+	min-height: 300px;
+	width: 94%;
+	margin-left: 2%;
+	margin-top: 1%;
+}
+
+.staffs .container {
+	height: auto;
+	padding-bottom: 20px;
+	text-align: left;
+}
+
+.avatar {
+	float: left;
+	width: 64px;
+	height: 81px;
+}
+
+.staffs img {
+	float: right;
+	top: 10px;
+	margin-right: 20px;
+	max-width: 40px;
+	max-height: 16px;
+}

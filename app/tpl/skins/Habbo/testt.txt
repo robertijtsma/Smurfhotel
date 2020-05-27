@@ -1,0 +1,20 @@
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+    var refreshId = setInterval(function()
+    {
+         $('#TheStats').fadeOut("slow").load('/r').fadeIn("slow");
+    }, 10000);
+    </script>
+    
+        <div id="topbar">
+            <div class="left">
+                <div id="RefreshBar">
+                    <div id="TheStats">
+                        <div id="ActualStats">
+                        <center>{online}</center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<script>

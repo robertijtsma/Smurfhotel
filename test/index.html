@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Smurf Avatarimaging</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="cont_cent_p">	
+			<div class="box_ghabbo">
+				<div class="box_usuarios_g">
+					<div id="lista_usuarios"></div>
+					<div id="nuevo_us" onclick="nuevoUsuario();"></div>
+					<div id="cont_usuarios"></div>
+				</div>
+			</div>
+			<div class="box_ghabbo">
+				<div class="campo"><input id="habbo" type="text" maxlength="15" placeholder="Habbo..."></div>
+				<div class="campo">
+				</div>
+				<div id="borrar_us" onclick="borrarUsuario();"></div>
+			</div>
+			<div class="box_ghabbo">
+				<div id="cont_g" class="cont_gen">
+					<div class="desc_genh">
+						<div class="tip">
+							<div class="f_izq" onclick="cambiarHabbo('i', 'body');"></div>
+							<div class="f_der" onclick="cambiarHabbo('d', 'body');"></div>
+						</div>
+						<div class="tip">
+							<div class="f_izq" onclick="cambiarHabbo('i', 'head');"></div>
+							<div class="f_der" onclick="cambiarHabbo('d', 'head');"></div>
+						</div>
+						<div class="tip">
+							<div class="f_izq" onclick="cambiarHabbo('i', 'gesture');"></div>
+							<div class="f_der" onclick="cambiarHabbo('d', 'gesture');"></div>
+						</div>
+						<div class="tip">
+							<div class="f_izq" onclick="cambiarHabbo('i', 'action');"></div>
+							<div class="f_der" onclick="cambiarHabbo('d', 'action');"></div>
+						</div>
+						<div class="tip">
+							<div class="f_izq" onclick="cambiarHabbo('i', 'size');"></div>
+							<div class="f_der" onclick="cambiarHabbo('d', 'size');"></div>
+						</div>
+					</div>
+					<div class="box_prev_gen">
+						<div id="prev_ghabbo"></div>
+					</div>
+				</div>
+			</div>
+			<div class="box_ghabbo copy">© SmurfHotel</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,404 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,600italic,600,400italic,300italic,300);
+@import url(960_24_col.css);
+
+body {
+	background: url(http://spiral-hotel.co.uk/background.gif);
+	font: 14px 'Open Sans', sans-serif;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.width1 {
+	width: 100%;
+}
+
+.width2 {
+	width: 1060px;
+}
+
+.width3 {
+	width: 525px;
+}
+
+.width4 {
+	width: 340px;
+}
+
+.width5 {
+    width: 280px;
+}
+
+.width6 {
+    width: 180px;
+}
+
+#content {
+	background: #252928;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+	box-shadow: -1px 2px 1px rgba(0, 0, 0, .2), 1px 0 1px rgba(0, 0, 0, .2);
+}
+
+#content .padding {
+	padding: 20px;
+}
+
+#content .header-content {
+	background: #4C4C4C url(../img/header.png) center center;
+	height: 180px;
+	width: 100%;
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
+	box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .5);
+}
+
+#content .header-content .logo {
+	background: url(../img/Hab.gif);
+	height: 38px;
+	width: 111px;
+	position: absolute;
+	margin-top: 59px;
+	margin-left: -287px;
+}
+
+#content .header-content #onlineBar {
+	border: 3px solid #252928;
+    background: #FBFAFA;
+    height: 39px;
+    float: left;
+    color: rgba(0, 0, 0, .6);
+    font: 500 14px 'Open Sans', sans-serif;
+    padding: 0px 20px;
+    line-height: 39px;
+    border-radius: 1px;
+    margin-left: 160px;
+    margin-top: 55px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .0);
+}
+
+#content .header-content #onlineBar #arrow {
+    border-style: solid;
+    border-color: transparent #FBFAFA transparent transparent;
+    border-width: 10px;
+    position: absolute;
+    margin-left: -40px;
+    margin-top: 10px;
+}
+
+#content .header-content .clientButton {
+	border: 3px solid #252928;
+	background: #733c8e;
+	padding: 20px 40px;
+	text-decoration: none;
+    border-radius:4px;
+	color: #fff;
+	position: absolute;
+	right: 60px;
+	top: 50px;
+	font: 600 18px 'Open Sans', sans-serif;
+	transition: background .3s;
+}
+
+#wrapper .text {
+position:relative;
+bottom:30px;
+left:0px;
+visibility:hidden;
+}
+
+#wrapper:hover .text {
+	visibility:visible;
+}
+
+#content .header-content .clientButton:hover {
+	background: #683880;
+}
+
+#content .header-content .sub-container {
+	background: #FBFAFA;
+	padding: 5px 20px;
+	font: 200 13px 'Open Sans', sans-serif;
+	position: absolute;
+	right: 20px;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+}
+
+#content .header-content .sub-container a {
+	color: rgba(0, 0, 0, .6);
+	text-decoration: none;
+	display: block;
+}
+
+#content .header-content #header-navigation {
+    position: absolute;
+	top: 142px;
+	left: 30px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#content .header-content #header-navigation li b a {
+border: 2px solid #252928;
+display: block;
+background: rgba(56, 128, 82, 0.65);
+padding: 8px 25px;
+border-top-left-radius: 1px;
+border-top-right-radius: 1px;
+color: #fff;
+text-decoration: none;
+font: 15px 'Open Sans', sans-serif;
+transition: background .2s;
+height: 19.25px;
+text-transform: uppercase;
+}
+
+#content .header-content #header-navigation li b a:hover {
+background: rgba(56, 128, 82, 0.45);
+height: 19.25px;
+}
+
+#content .header-content #headernavi li a {
+float: left;
+margin-right: 10px;
+}
+
+#content .header-content #header-navigation li {
+    float: left;
+    margin-right: 10px;
+}
+
+#content .header-content #header-navigation li a {
+    border: 2px solid #252928;
+	display: block;
+    background: rgba(104, 56, 128, 0.65);
+    padding: 8px 25px;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    color: #fff;
+    text-decoration: none;
+    font: 15px 'Open Sans', sans-serif;
+    transition: background .2s;
+    height: 19.25px;
+    text-transform: uppercase;
+}
+
+#content .header-content #header-navigation li a:hover {
+    background: rgba(104,56,128,0.45);
+    height: 19.25px;
+}
+
+#content .header-content #header-navigation li a.selected {
+    background: #252928;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+#content #sub-navigation {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	margin-left: 50px;
+	height: 35px;
+}
+
+#content #sub-navigation li {
+	display: block;
+	padding: 7px 20px;
+	float: left;
+}
+
+#content #sub-navigation li a {
+	color: #fff;
+	text-decoration: none;
+	font: 400 13px 'Open Sans', sans-serif;
+}
+
+#content #sub-navigation li a:hover {
+	color: rgba(255, 255, 255, .6);
+}
+
+#content #sub-navigation li a.selected {
+	font-weight: bold;
+	pointer-events: none;
+}
+
+#content .alert {
+	padding: 10px;
+	border-radius: 1px;
+	text-align: center;
+	font: 12px 'Open Sans', sans-serif;
+	margin-bottom: 10px;
+}
+
+#content .alert.alert-error {
+	background: #c0392b;
+}
+
+#content .alert.alert-warning {
+	background: #e67e22;
+}
+
+#content .alert.alert-success {
+	background: #1E824C;
+}
+
+#content #contentBox {
+	background: rgba(0, 0, 0, .2);
+	margin-bottom: 15px;
+	border-radius: 5px;
+	position: relative;
+}
+
+#content #contentBox .title {
+	padding: 8px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font: bold 13px 'Open Sans', sans-serif;
+	background: #733c8e;
+    position: relative;
+}
+
+#content #contentBox .content {
+	padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+#content #contentBox p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#content #contentBox a {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#content .avatarBox {
+	background: url(https://spiral-hotel.co.uk/app/tpl/skins/hero/web/img/frontpage/me.gif) center center;
+	background-size: auto;
+	image-rendering: pixelated;
+	position: relative;
+	height: 160px;
+	margin-bottom: 0;
+}
+
+#content .avatarBox .overlay {
+	background: rgba(0, 0, 0, .7);
+	height: 160px;
+	width: 1060px;
+}
+
+#content .avatarBox .avatar {
+	background: no-repeat;
+	height: 180px;
+	width: 22%;
+	position: absolute;
+	bottom: 0;
+	left: 40px;
+	margin-bottom:3px;
+
+}
+
+#content .avatarBox .username {
+	font: 500 25px 'Open Sans', sans-serif;
+	position: absolute;
+	margin-left: 180px;
+	margin-top: 40px;
+}
+
+#content .avatarBox .motto {
+	font: 300 16px 'Open Sans', sans-serif;
+	position: absolute;
+	margin-left: 180px;
+	margin-top: 80px;
+}
+
+#content .avatarBox .lastonline {
+	font: 300 14px 'Open Sans', sans-serif;
+	position: absolute;
+	margin-left: 180px;
+	margin-top: 100px;
+}
+
+#content .avatarBox .avatarClientButton {
+	border: 3px solid #252928;
+	background: #733c8e;
+	padding: 20px 30px;
+	border-radius: 4px;
+	text-decoration: none;
+	color: #fff;
+	font: 600 16px 'Open Sans', sans-serif;
+	position: absolute;
+	right: 40px;
+	top: 50px;
+	transition: background .3s;
+}
+
+#content .avatarBox .avatarClientButton:hover {
+	background: #683880;
+}
+
+#content #footer-content {
+	height: 60px;
+	width: 100%;
+	font: 300 12px 'Open Sans', sans-serif;
+	border-top: 1px solid rgba(0, 0, 0, .2);
+	margin-top: 20px;
+}
+
+#content #footer-content .left {
+	float: left;
+	margin-top: 12px;
+}
+
+#content #footer-content .right {
+	float: right;
+	margin-top: 12px;
+}
+
+#content #footer-content .left .sulake {
+	background: url(../img/sulake.png);
+	height: 120px;
+	width: 150px;
+}
+
+#article-archive ul {
+    margin:0 0 1.5em 25px;
+}
+
+#article-archive ul li {
+    margin:5px 0;
+}
+
+#article-archive h2 {
+    font-size:100%;
+    border-bottom:1px dashed #666;
+    margin:0;
+    padding:3px 0;
+}
+
+#staff-container {
+    margin-left:24%;
+}
+#user-avatar {
+    -webkit-filter: drop-shadow(0 1px 0 #733c8e) drop-shadow(0 -1px 0 #733c8e) drop-shadow(1px 0 0 #733c8e) drop-shadow(-1px 0 0 #733c8e) drop-shadow(0 0 10px rgba(000,000,000,000));
+}
+}

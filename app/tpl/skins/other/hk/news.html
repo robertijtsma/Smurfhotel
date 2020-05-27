@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - News</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Post News</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+          <br />         
+        <?php
+
+if(mysql_result(mysql_query("SELECT rank FROM users WHERE id = '" . $_SESSION['user']['id'] . "'"), 0) >= 5)
+{
+	if(isset($_GET["done"]))
+	{
+		$get = filter($_GET["done"]);
+		if($get == true)
+		{
+			echo '<h3>Article posted.</h3>';
+			exit;
+		}
+	}
+	if(isset($_POST["step1"]))
+	{
+		if($_POST["title"] == NULL || $_POST["shortstory"] == NULL || $_POST["longstory"] == NULL)
+		{
+			echo "<h2>Please fill in all the fields!</h2>";
+		}
+		else
+		{
+			$_SESSION["title"] = filter($_POST["title"]);
+			$_SESSION["shortstory"] = filter($_POST["shortstory"]);
+			$_SESSION["longstory"] = mysql_real_escape_string($_POST["longstory"]);
+			$_SESSION["author"] = mysql_real_escape_string($_POST["author"]);
+			
+			header("Location: ".$_CONFIG['hotel']['url']."/ase/news2");
+			exit;
+		}
+			
+	}
+	else
+	{ ?>
+	
+	<script type="text/javascript" src="tiny_mce/tiny_mce.js"></script>
+	      <script type="text/javascript">
+		  tinyMCE.init({
+          mode : "textareas",
+          theme : "simple",
+          editor_selector : "mceEditor",
+          editor_deselector : "mceNoEditor"
+		  });
+		  </script>
+<center>
+	<form method="post">
+	Title of the news article <br />
+	<input type="text" name="title"/> <br /> <br />
+	Short story <br />
+	<input type="text" name="shortstory"/> <br /> <br />
+	Author of this article <br />
+	<input type="text" name="author"/> <br /> <br />
+	Main story <br />
+	<textarea id="content1" name="longstory" cols="82" rows="10" class="mceEditor"></textarea>
+	<br /> <br /> <input class="button green" type="submit" value="Proceed to next step (Image chooser)" name="step1" />
+	</form>
+	<?php
+	}
+}
+
+?>
+</center>
+	</center>
+<?php include_once('inc/footer.html'); ?>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swizzy Housekeeping</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <!--- HEADER -->
+  
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+      <div class="ad-notif-info grid_12"><p>Welkom op SwizzyAdminity! Klik op mij als je me niet meer wilt zien. :P</p></div>
+      <div class="box grid_3">
+        <div class="box-head"><h2>Jij</h2></div>
+        <div class="box-content">
+		<center>
+		  <img alt="{username}" src="http://www.habbo.nl/habbo-imaging/avatarimage?figure={figure}&direction=2&head_direction=3&action=wav&gesture=sml"/>
+		  <p>{username}</p>
+		  <p>{motto}</p>
+          </p>
+		</center>
+        </div>
+      </div>
+      <div class="box grid_3">
+        <div class="box-head"><h2>Statistieken</h2></div>
+        <div class="box-content ad-stats">
+          <ul>
+            <li><h3><?php $query = mysql_query("SELECT COUNT(*) AS aantalleden FROM users") or die(mysql_error()); $data = mysql_fetch_assoc($query); echo $data['aantalleden']; ?></h3> Swizzers Geregistreerd</li>
+            <li class="stats-up"><font color="black"><h3>{online}</h3></font> Swizzers Online</li>
+            <li class="stats-up"><font color="black"><h3><?php $query = mysql_query("SELECT COUNT(*) AS aantalkamers FROM rooms") or die(mysql_error()); $data = mysql_fetch_assoc($query); echo $data['aantalkamers']; ?></h3></font> Kamers</li>
+            <li class="stats-down"><font color="black"><h3><?php $query = mysql_query("SELECT COUNT(*) AS aantalmeubels FROM furniture") or die(mysql_error()); $data = mysql_fetch_assoc($query); echo $data['aantalmeubels']; ?></h3></font> Meubels</li>
+            <li class="stats-up"><font color="black"><h3><?php $query = mysql_query("SELECT COUNT(*) AS aantalmeubels FROM catalog_items") or die(mysql_error()); $data = mysql_fetch_assoc($query); echo $data['aantalmeubels']; ?></h3></font> Meubels in de catalogus</li>
+          </ul>
+        </div>
+      </div>
+	  
+      <div class="box grid_6">
+        <div class="box-head"><span class="box-icon-24 fugue-24 system-monitor"></span><h2>Welcome to {hotelName} ASE</h2></div>
+        <div class="box-content">
+		
+			Welkom {username}, Dit is de offici&euml;le SwizzyAdminity Housekeeping. Hier kan je alles heel goed in de gaten houden, bewerken, verwijderen en controleren. Maak aub geen misbruik van deze Housekeeping. Wij zijn van alles voorzien en weten wat jij op dit moment doet op de Housekeeping. Zorg aub dat we geen
+			maatregelen moeten nemen, deze zijn zeer zwaar! Wij zijn geen streng hotel of staff team maar we slaan wel toe indien nodig!
+			<br /><br />
+			Elke sessie is logged. Dat wil zeggen dat alles wat jij doet of elke beweging die je maakt op de HK word opgeslagen onder jou IP (<?php echo $_SERVER['REMOTE_ADDR']; ?>). 
+			Dus blijf respectvol op de HK en in het hotel zodat we je niet moeten ontslaan.
+			<br /><br />
+			Bedankt,
+			<br />
+			Het SwizzyEntertainment en Hotel Team!
+        </div>
+      </div>
+  </div>
+

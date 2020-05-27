@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Courier New", Courier, monospace;
+	background: #999;
+}
+
+#ylaviiva {
+	background: #333;
+	padding: 3px;
+	color: white;
+}
+
+#ylaviiva .linkit {
+	margin-left: 10px;
+}
+
+#ylaviiva .linkit a {
+	margin-left: 10px;
+	color: white;
+}
+
+#kirjaudu_runko {
+	width: 300px;
+	margin: 100px auto;
+}
+
+#runko {
+	max-width: 1200px;
+	width: 1200px;
+	margin: 20px auto;
+}
+
+#logo_teksti {
+	display: inline;
+	float: left;
+	font-size: 30px;
+}
+
+.otsikko {
+	background: #333;
+	color: white;
+	padding: 5px;
+	border-radius: 10px 10px 0px 0px;
+	font-weight: bold;
+}
+
+.sisalto {
+	padding: 5px;
+	color: black;
+	background: white;
+	border: 1px solid #333;
+}
+
+a {
+	color: black;
+}
+
+.etusivu_laatikko a {
+	background:#f9f6f6;
+	margin: 5px;
+	display: block;
+	float: left;
+	color: #333333;
+	border: 1px solid #bcb8ae;
+	padding: 14px 16px 14px 16px;
+	text-decoration: none;
+	text-align: center;
+	height: 67px !important;
+	height: 70px; 
+	min-width: 88px;
+	width: 29.5%;
+}
+
+.etusivu_laatikko a:hover{
+	color: #000066;
+	border: 1px solid #000066;
+	background: #ecf4eb;
+	padding: 15px 15px 13px 17px;
+}
+
+input[type="text"].kirjaudu, input[type="password"].kirjaudu {
+	width: 97%;
+	padding: 3px;
+	border: 1px solid #333;
+}
+
+input[type="text"], input[type="password"] {
+	width: 99.4%;
+	padding: 3px;
+	border: 1px solid #333;
+}
+
+textarea {
+	width: 99.4%;
+	padding: 3px;
+	border: 1px solid #333;
+}
+
+input[type="submit"].nappi, input[type="button"].nappi {
+	float: right;
+	background: #666;
+	color: white;
+	padding: 3px;
+	font-weight: bold;
+	border: 1px solid #333;
+}
+
+#virhe {
+	padding: 5px;
+	border: 2px solid red;
+	background: #FCC;
+	color: red;
+	text-align: center;
+	font-weigh: bold;
+	margin-bottom: 7px;
+}
+
+#onnistui {
+	padding: 5px;
+	border: 2px solid green;
+	background: #C4FFC4;
+	color: green;
+	text-align: center;
+	font-weigh: bold;
+	margin-bottom: 7px;
+}
+
+#tasaus {
+	clear: both;
+	margin: 1;
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   text-align: center;
+}
+
+table.taulukko {
+	border-spacing: 0;
+	width: 100%;
+}
+
+tr.yla {
+	background: black;
+	padding: 3px;
+	color: white;
+}
+
+tr.parillinen {
+	background: #999;
+	padding: 3px;
+}
+
+tr.pariton {
+	background: #666;
+	padding: 3px;
+}
+
+tr.parillinen:hover, tr.pariton:hover {
+	background: #151515;
+	color: white;
+	cursor: default;
+}
+
+/**** Tyylin tehnyt ATKD ****/

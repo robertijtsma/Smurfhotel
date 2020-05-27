@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - Cmd Logs</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Cmd Logs</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+          <br />          
+
+      <table width="675">
+		 <tr>
+			<td><b>Username</b></td>
+			<td><b>Command</b></td>
+			<td><b>Extra Data</b></td>
+			<td><b>Time/Date</b></td>
+		 </tr>
+<?php                                // Make a MySQL Connection
+                                $query = "SELECT * FROM cmdlogs ORDER by id DESC"; 
+     
+                                $result = mysql_query($query) or die(mysql_error());
+
+
+
+
+                                while($row = mysql_fetch_array($result))
+                                {
+                                echo("<tr>");
+                                echo("<td>" . $row['user_name'] . "</td>");
+                                echo("<td>" . $row['command'] . "</a></td>");
+                                echo("<td>" . $row['extra_data'] . "</a></td>");
+                                
+                                // Now we convert the Unix timestamp to a humanley readable time
+                                $timestamp = $row['timestamp'];
+                                $date = date("D-m-Y H:i:s", $timestamp);
+                                
+                                echo("<td>$date</td></tr>");
+                                }
+                                ?>
+
+</table>
+        </div>
+</center>
+<?php include_once('inc/footer.html'); ?>

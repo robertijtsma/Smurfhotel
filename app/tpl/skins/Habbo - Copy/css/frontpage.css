@@ -1,0 +1,1644 @@
+/* Habbo Index by Crookie | MADE FOR FANS */
+body {
+    background-color: #FFFFFF;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: 0 none;
+}
+
+input[type="submit"] {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/login-button.png") repeat scroll center top transparent;
+    border: 0 none;
+    color: white;
+    font: bold 13px/33px arial,sans-serif;
+    height: 33px;
+    width: 96px;
+}
+input[type="submit"]:hover {
+    background-position: center bottom;
+    cursor: pointer;
+}
+a {
+    color: #000000;
+}
+fieldset {
+    border: 0 none;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none outside none;
+    margin-top: 3px;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#fp-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+    min-width: 776px;
+    position: relative;
+}
+#site-header {
+    background-color: #000000;
+    margin-bottom: 8px;
+}
+#site-header .focus {
+    background-color: #DA5A4C;
+}
+#site-header-content {
+    border-bottom: 1px solid #414141;
+    border-top: 1px solid #414141;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100px;
+    width: 890px;
+}
+#login-recaptcha {
+    color: white;
+    height: 105px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 0;
+    width: 887px;
+}
+#login-recaptcha-left {
+    float: left;
+    margin-left: 182px;
+    width: 305px;
+}
+#login-recaptcha-left-typewords {
+    margin-bottom: 3px;
+}
+#login-recaptcha-left-reload {
+    margin-bottom: 3px;
+    text-align: right;
+}
+#login-recaptcha-left-image {
+    margin-bottom: 3px;
+}
+#login-recaptcha-left-image img {
+    border: 2px solid #CC0000;
+    height: 57px;
+    width: 300px;
+}
+#login-recaptcha-right-newimage a {
+    color: white;
+}
+#login-recaptcha-right {
+    float: left;
+    width: 320px;
+}
+#login-recaptcha-right-title {
+    margin-bottom: 3px;
+}
+#login-recaptcha-right-input input {
+    font-size: 2em;
+    height: 26px;
+    margin-left: 1px;
+    padding: 5px;
+    width: 190px;
+}
+#loginerrorfieldwrapper {
+    height: 35px;
+}
+#loginerrorfield {
+    background-color: #CC0000;
+    color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+}
+#loginerrorfield div {
+    font-family: Arial;
+    font-size: 13pt;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+}
+#site-header #loginerrorfieldtest .hint {
+    color: white;
+    padding-left: 10px;
+}
+#habbo-logo {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/habbologo_whiteR.gif") no-repeat scroll 0 0 transparent;
+    display: inline;
+    float: left;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 30px;
+    width: 152px;
+}
+#login-form {
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    margin-left: 20px;
+    margin-top: 18px;
+    position: relative;
+}
+#login-form-email {
+    float: left;
+    width: 164px;
+}
+#login-form-email input {
+    margin-left: 0;
+}
+#login-form-email {
+    width: 204px;
+}
+#login-forgot-password {
+    text-align: left;
+}
+#login-form-password {
+    float: left;
+    margin-left: 5px;
+    width: 134px;
+}
+#rpx-login {
+    display: inline;
+    float: left;
+    margin: 25px 0 0 15px;
+    text-align: right;
+    width: 200px;
+}
+#fb-root {
+    border-top: 1px solid black;
+}
+#login-form-submit {
+    float: left;
+    height: 60px;
+    margin-left: 10px;
+    padding-top: 13px;
+    width: 132px;
+}
+#site-header h1 a {
+    float: left;
+    left: 30px;
+    margin-top: 0;
+    position: relative;
+    top: 30px;
+}
+#header .login-register-link {
+    position: absolute;
+    right: 35px;
+    top: 18px;
+    z-index: 1;
+}
+#header .login-register-link, #header .login-register-link a {
+    color: #FFFFFF;
+    font-size: 12px;
+}
+#header .login-register-link a {
+    font-weight: bold;
+}
+#content {
+    margin: 0 20px;
+}
+.cb {
+    margin: 0 8px 7px 0;
+}
+.bt {
+    background: none no-repeat scroll 100% 0 transparent;
+    height: 7px;
+    margin: 0 0 0 18px;
+}
+.bt div {
+    background: none no-repeat scroll 0 0 transparent;
+    font-size: 0;
+    height: 7px;
+    left: -18px;
+    line-height: 0;
+    position: relative;
+    width: 18px;
+    z-index: 1;
+}
+.bb {
+    background: none no-repeat scroll 100% 100% transparent;
+    height: 9px;
+    margin: 0 0 0 8px;
+    position: relative;
+}
+.bb div {
+    background: none no-repeat scroll 0 100% transparent;
+    display: block;
+    font-size: 0;
+    height: 9px;
+    left: -8px;
+    line-height: 0;
+    position: absolute;
+    width: 8px;
+}
+.i1 {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/borders.png") repeat-y scroll 0 0 transparent;
+    padding: 0 0 0 1px;
+}
+.i2 {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/borders.png") repeat-y scroll right top transparent;
+    padding: 0 1px 0 0;
+}
+.i3 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: block;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+.i3:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.i3 {
+    display: inline-block;
+}
+.i3 {
+    display: block;
+}
+#frontpage-image-container {
+    margin: 0 auto;
+    width: 890px;
+}
+#frontpage-image {
+    background: none no-repeat scroll 50% 100% transparent;
+    cursor: pointer;
+    display: block;
+    height: 391px;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    width: 890px;
+    z-index: 0;
+}
+#column-footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+#footer {
+    clear: both;
+    margin: 0 auto;
+    padding-top: 18px;
+    text-align: center;
+    width: 680px;
+}
+#footer p {
+    color: #000000;
+    font-size: 9px;
+    margin: 0;
+    padding: 0;
+}
+#footer .copyright {
+    color: #7F7F7F;
+    padding-top: 0.7em;
+}
+#footer.new_and_improved {
+    padding-top: 16px;
+    width: 890px;margin-bottom:20px;
+}
+#footer.new_and_improved div#sulake-logo a {
+    margin: 11px 2px 0 0;
+    width: 71px;
+}
+#footer.new_and_improved #partner-logo a {
+    padding: 28px 0 0 4px;
+}
+#footer.new_and_improved p.footer-links {
+    border-bottom: 1px solid #414141;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+#footer.new_and_improved p.footer-links a {
+    margin: 0 3px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#footer.new_and_improved p.footer-links a:hover {
+    text-decoration: underline;
+}
+#footer.new_and_improved p.copyright {
+    line-height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    width: 508px;
+}
+#footer.new_and_improved #compact-tags-container {
+    font-size: 9px;
+    margin-top: 35px;
+}
+#footer.new_and_improved #compact-tags-container a {
+    text-decoration: none;
+}
+#footer.new_and_improved #compact-tags-container a:hover {
+    text-decoration: underline;
+}
+#footer.new_and_improved #compact-tags-container ul {
+    display: inline;
+}
+#tag-cloud-slim a, #tag-cloud-slim span {
+    color: #B3B3B3;
+    font-size: 11px;
+    text-decoration: none;
+}
+#tag-cloud-slim a:hover {
+    text-decoration: underline;
+}
+#tag-cloud-slim ul, .tag-list li {
+    display: inline;
+}
+.bubble .bt, .bubble .bt div, .bubble .bb, .bubble .bb div, #tag-cloud-slim .bt, #tag-cloud-slim .bt div, #tag-cloud-slim .bb, #tag-cloud-slim .bb div {
+    background-image: url("/app/tpl/skins/Custom-Habbo/data/images/box_thin.png");
+}
+.bubble .i1, #tag-cloud-slim .i1 {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/borders_thin.png") repeat-y scroll 0 0 transparent;
+    padding: 0 0 0 1px;
+}
+.bubble .i2, #tag-cloud-slim .i2 {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/borders_thin.png") repeat-y scroll right top transparent;
+    padding: 0 1px 0 0;
+}
+.bubble .i3, #tag-cloud-slim .i3 {
+    background-color: #FFFFFF;
+    padding: 0 10px;
+}
+.logincontainer {
+    width: 223px;
+}
+.loginbox ul {
+    padding: 1px 0 2px;
+}
+.loginbox .login-field, #captcha-code, #recaptcha_response_field {
+    display: block;
+    padding-left: 1px;
+    padding-right: 1px;
+    width: 187px;
+}
+label.login-text {
+    display: block;
+    margin-bottom: 3px;
+}
+.loginbox #register-link {
+    display: none;
+}
+#login-username {
+    height: 18px;
+    margin-bottom: 3px;
+    margin-top: 1px;
+    padding: 1px 5px;
+    width: 190px;
+}
+#login-password {
+    height: 14px;
+    margin-bottom: 5px;
+    margin-top: 1px;
+    padding: 3px 5px;
+    width: 120px;
+}
+#remember-me {
+    margin-bottom: 3px;
+}
+#remember-me {
+    clear: both;
+}
+#remember-me input {
+    margin-left: 0;
+    vertical-align: middle;
+}
+#forgot-password, #remember-me {
+    color: #FFFFFF;
+    font-size: 11px;
+}
+.loginbox h2, .loginbox h3, .loginbox .rounded-container {
+    display: none;
+}
+.loginbox form {
+    margin: 0;
+    padding: 0;
+}
+.loginbox .login-field-empty {
+    color: #9A9A9A;
+    font-weight: bold;
+}
+.loginbox .bt, .loginbox .bt div, .loginbox .bb, .loginbox .bb div {
+    background-image: url("/app/tpl/skins/Custom-Habbo/data/images/box_login.png");
+}
+.loginbox .i1 {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/borders_login.png") repeat-y scroll left bottom transparent;
+    padding: 0 0 0 2px;
+}
+.loginbox .i2 {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/borders_login.png") repeat-y scroll right top #FFFFFF;
+    padding: 0 2px 0 0;
+}
+.loginbox .i3 {
+    background-color: transparent;
+    padding: 0;
+}
+#login-habblet {
+    padding: 0 9px;
+}
+.logincontainer {
+    position: absolute;
+    right: 24px;
+    top: 40px;
+    z-index: 100;
+}
+#login-submit-new-button {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/button_black_end.png") no-repeat scroll right top transparent;
+    color: white;
+    display: none;
+    float: left;
+    font: bold 13px arial,sans-serif;
+    height: 33px;
+    margin-right: 6px;
+    padding-right: 3px;
+    text-decoration: none;
+}
+#login-submit-new-button span {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/button_black_body.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    line-height: 23px;
+    padding: 5px 27px 5px 30px;
+}
+#login-submit-new-button:hover {
+    background-position: right bottom;
+    color: #000000;
+    outline: 0 none;
+}
+#login-submit-new-button:hover span {
+    background-position: left bottom;
+    color: white;
+    font: bold 13px/23px arial,sans-serif;
+    padding: 5px 27px 5px 30px;
+}
+#login-submit-button {
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+    height: 28px;
+    padding: 0 15px;
+}
+a.button:hover span {
+    text-decoration: underline;
+}
+.login-captcha {
+    width: 230px;
+}
+.login-captcha p, .widehabblet p {
+    margin: 0;
+    padding: 0;
+}
+.login-captcha #login-username, .login-captcha #login-password, .login-captcha #captcha-code, .login-captcha #remember-me, .login-captcha #forgot-password, .login-captcha label.login-text {
+    margin-left: 7px;
+}
+#captcha-reload, #recaptcha-reload {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#captcha-container {
+    margin-bottom: 7px;
+}
+#recaptcha_image img {
+    background-image: url("/app/tpl/skins/Custom-Habbo/data/images/page_loader.gif");
+    background-repeat: no-repeat;
+    border-color: #DA5A4C;
+    border-style: solid;
+    border-width: 2px;
+}
+#captcha-code, #recaptcha_response_field {
+    font-family: Verdana,Arial,Helvetica;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 300px;
+}
+.login-captcha .action-error {
+    width: 222px;
+}
+.widehabblet .action-error {
+    width: 324px;
+}
+.widehabblet {
+    width: 332px;
+}
+#recaptcha_image {
+    border: 1px solid #000000;
+    height: 57px;
+    margin-bottom: 3px;
+    width: 300px;
+}
+.widehabblet #login-username, .widehabblet #login-password, .widehabblet #recaptcha_response_field, .widehabblet #remember-me, .widehabblet #forgot-password, .widehabblet label.login-text {
+    margin-left: 109px;
+}
+#captcha-reload img, #recaptcha-reload img {
+    display: none;
+}
+a.new-button {
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 25px;
+    margin: 0 0 2px 10px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+a.new-button.disabled-button, a.new-button:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+html > body a.new-button.fill, html > body a.new-button.fill b {
+    display: block;
+    float: none;
+}
+a.new-button b {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/login_btn.gif") no-repeat scroll -3px 0 transparent;
+    color: #000000;
+    display: inline;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 17px;
+    margin-right: 3px;
+    padding: 5px 17px 4px 20px;
+    text-align: center;
+}
+a.new-button:hover {
+    text-decoration: none;
+}
+a.new-button:hover b {
+    background-position: -3px -25px;
+}
+a.new-button.disabled-button:hover b {
+    background-position: -3px 0;
+}
+a.new-button i {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/new_button.png") no-repeat scroll 0 0 transparent;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+}
+a.new-button.green-button b {
+    background-position: -3px -150px;
+    color: #FFFFFF !important;
+}
+a.new-button.green-button i {
+    background-position: 0 -150px;
+}
+a.new-button.green-button:hover b {
+    background-position: -3px -175px;
+}
+a.static-button {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/button_166x98.png") no-repeat scroll left top transparent;
+    display: block;
+    font-weight: bold;
+    height: 39px;
+    margin: 0 auto 10px;
+    padding: 10px 20px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 126px;
+}
+a.static-button:hover {
+    background-position: 0 -49px;
+}
+#remember-me-notification {
+    color: #333333;
+    display: block;
+    left: -15px;
+    position: relative;
+    width: 220px;
+    z-index: 120;
+}
+#remember-me-notification .submit {
+    margin-bottom: 5px;
+}
+#landing-remember-me-notification {
+    color: #333333;
+    display: block;
+    left: -15px;
+    position: absolute;
+    top: 60px;
+    width: 220px;
+    z-index: 120;
+}
+#landing-remember-me-notification .submit {
+    margin-bottom: 5px;
+}
+div.bottom-bubble-c {
+    background-color: white;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 4px 7px;
+}
+div.bottom-bubble-t {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/editbubble-tl.png") no-repeat scroll 0 100% transparent;
+    font-size: 1px;
+    margin-right: 5px;
+    text-align: right;
+}
+div.bottom-bubble-t div {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/editbubble-tr.png") no-repeat scroll 100% 100% transparent;
+    margin-right: -5px;
+    padding-top: 15px;
+}
+div.bottom-bubble-b {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/editbubble-bl.png") no-repeat scroll 0 0 transparent;
+    font-size: 1px;
+    margin-right: 5px;
+}
+div.bottom-bubble-b div {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/editbubble-br.png") no-repeat scroll 100% 0 transparent;
+    margin-right: -5px;
+    padding-top: 5px;
+}
+div.flash-message {
+    margin-bottom: 12px;
+    text-align: center;
+}
+div.action-error div {
+    background-color: #E2001A;
+    color: #FFFFFF;
+}
+.action-error {
+    width: 215px;
+    z-index: -10;
+}
+div.action-error div a {
+    color: #FFCC02;
+}
+div.action-confirmation div {
+    background-color: #4BB601;
+    color: #FFFFFF;
+}
+.bubble {
+    font-size: 10px;
+    height: 24px;
+    opacity: 0.88;
+    position: absolute;
+}
+.bubble .i1 {
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 10;
+}
+.bubble .i2 {
+    height: 4px;
+}
+.bubble .i3 {
+    background-color: transparent;
+    position: absolute;
+    top: -4px;
+}
+.bubble .spike {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/spike.png") no-repeat scroll 0 0 transparent;
+    height: 5px;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 8px;
+    position: absolute;
+    width: 5px;
+    z-index: 12;
+}
+#geoip-ad-container {
+    color: #FFFFFF;
+    font-size: 13px;
+    padding-left: 15px;
+    text-align: center;
+    width: 220px;
+    z-index: 99;
+}
+#geoip-ad-container a {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+#geoip-ad-container .i1 {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/borders_thin_black.png") repeat-y scroll 0 0 transparent;
+    padding: 0 0 0 1px;
+}
+#geoip-ad-container .i2 {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/borders_thin_black.png") repeat-y scroll right top transparent;
+    padding: 0 1px 0 0;
+}
+#geoip-ad-container .i3 {
+    background-color: #1BA90B;
+    padding: 0 10px;
+}
+#join-now-button-container {
+    float: left;
+    height: 121px;
+    left: -3px;
+    position: relative;
+    top: 10px;
+    z-index: 1;
+}
+#join-now-button-wrapper-fb {
+    display: none;
+}
+#join-now-button-wrapper {
+    display: block;
+}
+#join-now-button-container div.join-now-button {
+    height: 121px;
+}
+#join-now-button-container a.join-now-link {
+    cursor: pointer;
+    float: left;
+    height: 121px;
+    max-width: 304px;
+    text-decoration: none;
+}
+#join-now-button-container span.close {
+    float: left;
+    height: 121px;
+}
+#join-now-button-container #join-now-button-wrapper-fb a.join-now-link {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/join_now_button_fb.png") no-repeat scroll -6px 0 transparent;
+}
+#join-now-button-container #join-now-button-wrapper-fb span.close {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/join_now_button_fb.png") no-repeat scroll 0 0 transparent;
+    width: 6px;
+}
+#join-now-button-container #join-now-button-wrapper a.join-now-link {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/join_now_button.png") no-repeat scroll -8px 0 transparent;
+}
+#join-now-button-container #join-now-button-wrapper span.close {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/join_now_button.png") no-repeat scroll 0 0 transparent;
+    width: 8px;
+}
+#join-now-button-container #join-now-button-wrapper-fb div.join-now-button:hover a.join-now-link {
+    background-position: -6px -121px;
+}
+#join-now-button-container #join-now-button-wrapper-fb div.join-now-button:hover span.close {
+    background-position: 0 -121px;
+}
+#join-now-button-container #join-now-button-wrapper div.join-now-button:hover a.join-now-link {
+    background-position: -8px -121px;
+}
+#join-now-button-container #join-now-button-wrapper div.join-now-button:hover span.close {
+    background-position: 0 -121px;
+}
+.join-now-button .join-now-link {
+    min-width: 220px;
+}
+#join-now-button-container span.join-now-text-big {
+    color: #FFFFFF;
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -0.005em;
+    padding: 26px 40px 0;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #333333;
+}
+#join-now-button-container span.join-now-text-small {
+    color: #FFFFFF;
+    display: block;
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #000000;
+}
+#join-now-button-container span.join-now-text-small span.fbword {
+    font-weight: bold;
+    margin-left: 5px;
+}
+#join-now-button-container div.join-now-alternative {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    text-align: left;
+}
+#join-now-button-container div.join-now-alternative a.newusers {
+    font-size: 14px;
+    text-decoration: none;
+}
+#geotargeting {
+    border-bottom: 1px solid #414141;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 0 15px;
+    text-align: center;
+}
+#geotargeting a {
+    color: #5AA600;
+}
+#join-now-button-container div.join-now-alternative a, div.join-now-alternative span {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+}
+#join-now-button-container div.join-now-alternative a.fbicon {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/fb-icon.png") no-repeat scroll 0 4px black;
+    color: white;
+    padding-left: 22px;
+}
+#tagline {
+    border-bottom: 1px solid #414141;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 4px 30px 15px;
+    text-align: left;
+}
+#tag-cloud-slim {
+    background-color: #3D3D3D;
+    color: #FFFFFF;
+    padding: 3px 0;
+    text-align: center;
+}
+#rpx-signin {
+    text-align: right;
+}
+#rpx-signin a {
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 5px 0 0;
+}
+#reset-password-form-content #register-password.error, #reset-password-form-content #register-password2.error {
+    background-color: #DA5A4C;
+    margin-bottom: 5px;
+}
+#reset-password-form-content #register-password.error, #reset-password-form-content #register-password2.error {
+    color: black;
+}
+#reset-password-form-content .error ul {
+    color: #DA5A4C;
+}
+#reset-password-form-content .error ul span {
+    margin-top: 5px;
+}
+#reset-password-form-container .header {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+#reset-password-form-content #left-column {
+    float: left;
+    width: 60%;
+}
+#reset-password-form-content #right-column {
+    float: right;
+    width: 35%;
+}
+#reset-password-form-content form {
+    margin: 10px;
+}
+#reset-password-form-content form input {
+    height: 20px;
+    width: 250px;
+}
+#reset-password-form-content form p {
+    color: #FFFFFF;
+    padding-bottom: 15px;
+}
+#password-change-all-account-notice-text, #password-change-accounts-notice-text {
+    padding: 10px;
+}
+#reset-password-account-list li div {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/icons_passwordreset.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 25px;
+    margin-right: 10px;
+    width: 16px;
+}
+#reset-password-account-list li div.green-tick {
+    background-position: 0 -2px;
+}
+#email-create-notice p, #password-change-all-account-notice-text div, #email-create-notice-header div {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_icons_old.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 25px;
+    margin-right: 10px;
+    width: 18px;
+}
+#reset-password-form-container #email-create-notice p.force-email-notice, #password-change-all-account-notice-text div.force-email-notice, #email-create-notice-header div.force-email-notice {
+    background-position: -35px 0;
+}
+#reset-password-submit-button {
+    float: right;
+    height: 50px;
+    margin-top: 10px;
+}
+#reset-password-submit-button.new-button b {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll -6px -100px transparent;
+    font-size: 18px;
+    height: 50px;
+    line-height: 40px;
+    margin-right: 5px;
+    text-align: center;
+}
+#reset-password-submit-button.new-button i {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll 0 -100px transparent;
+    height: 50px;
+    width: 6px;
+}
+#reset-password-submit-button.new-button b {
+    background-position: -6px 0;
+    color: #FFFFFF;
+    padding: 5px 30px 4px;
+}
+#reset-password-submit-button.new-button:hover b {
+    background-position: -6px -50px;
+}
+#reset-password-submit-button.new-button i {
+    background-position: 0 0;
+}
+#reset-password-submit-button.new-button:hover i {
+    background-position: 0 -50px;
+}
+#reset-password-form-content .change-password-buttons {
+    padding-left: 10px;
+}
+#reset-password-form-content #reset-password-account-list {
+    height: 300px;
+    margin: 10px;
+    overflow: auto;
+}
+#reset-password-account-list li {
+    padding: 15px 0;
+}
+#reset-password-form-container #email-address {
+    background-color: #A9A9A9;
+    border: 0 none;
+    color: black;
+    font-weight: bold;
+    padding: 2px;
+}
+.white {
+    color: #FFFFFF;
+}
+#email-create-notice-header {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+#email-create-notice-header .force-email-notice {
+    margin-top: 3px;
+}
+#email-create-notice-container p {
+    color: #000000;
+    padding-top: 10px;
+}
+#email-create-notice-content {
+    padding: 0 10px;
+}
+#overlay {
+    background-color: #000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9000;
+}
+div#tags-main-container {
+    margin: 0 auto;
+    padding-top: 11px;
+    width: 890px;
+}
+#partner-logo a {
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    height: 55px;
+    width: 120px;
+}
+div#tags-container {
+    margin: 0 auto;
+}
+div#sulake-logo a {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/sulake_logo.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    float: right;
+    height: 55px;
+    width: 120px;
+}
+#embed-content #rpx-login {
+    float: right;
+}
+#embed-content #site-header-content, #embedpage #frontpage-image-container {
+    width: 728px;
+}
+#embed-content #frontpage-image {
+    background: none no-repeat scroll 50% 50% transparent;
+    height: 298px;
+    width: 728px;
+}
+#embed-content .action-error {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+#embed-content div.button {
+    width: auto;
+}
+#embed-content #login-button {
+    float: left;
+    margin: 30px 0 0 180px;
+}
+#embed-content #login-area {
+    position: relative;
+    top: 30px;
+}
+#embed-content div.button a.area {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/select_button.png") no-repeat scroll -6px 0 black;
+    color: white;
+    cursor: pointer;
+    float: left;
+    font-size: 1.4em;
+    font-weight: bold;
+    height: 50px;
+    line-height: 48px;
+    padding-left: 22px;
+    padding-right: 17px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #000000;
+}
+#embed-content div.button span.close {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/select_button.png") no-repeat scroll 0 0 black;
+    clear: right;
+    float: left;
+    height: 50px;
+    width: 6px;
+}
+#embed-content div.button a.gray {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll -6px -400px black;
+    color: black;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+#embed-content div.button span.gray {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll 0 -400px black;
+}
+#embed-content div.button:hover a.gray {
+    background-position: -6px -450px;
+}
+#embed-content div.button:hover span.gray {
+    background-position: 0 -450px;
+}
+#embed-content #logged-in-content {
+    color: #FFFFFF;
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    width: 550px;
+}
+#embed-content #logged-in-content b {
+    color: #66CCFF;
+}
+#embed-content #logged-out-content a {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+.phishing-warning {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/exclamation_mark.png") no-repeat scroll 7px 50% #FFFFFF;
+    margin: 5px 0;
+    padding: 5px 5px 5px 30px;
+    text-align: center;
+}
+#people-inside {
+    display: block;
+    float: right;
+    height: 65px;
+    overflow: hidden;
+    position: relative;
+    right: 140px;
+    top: 245px;
+    white-space: nowrap;
+    z-index: 100;
+}
+#people-inside b {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/users_online_bubble.png") no-repeat scroll -8px 0 transparent;
+    color: #000000;
+    display: inline;
+    float: left;
+    font-size: 11px;
+    font-weight: normal;
+    height: 56px;
+    margin-right: 8px;
+    max-width: 145px;
+    min-width: 45px;
+    padding: 5px 10px 4px 16px;
+    text-align: center;
+}
+#people-inside i {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/users_online_bubble.png") no-repeat scroll 0 0 transparent;
+    height: 65px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 8px;
+}
+#people-inside span {
+    display: block;
+}
+#people-inside .stats-fig {
+    font-size: 18px;
+    font-weight: bold;
+}
+#change-password-form {
+    color: #FFFFFF;
+    position: absolute;
+    width: 383px;
+    z-index: 9001;
+}
+#change-password-form a {
+    color: #FFFFFF;
+}
+#change-password-form-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 7px 5px;
+    text-align: center;
+}
+#change-password-form-content .email-address {
+    border: 1px solid #663333;
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+    text-align: center;
+    width: 330px;
+}
+#change-password-form-content .email-address {
+    color: black;
+}
+#change-password-form-container {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_bg.png") no-repeat scroll left top transparent;
+    overflow: hidden;
+    padding: 5px 20px;
+}
+#change-password-form-container-bottom {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_bg.png") no-repeat scroll left bottom transparent;
+    height: 10px;
+}
+.bottom-border {
+    border-bottom: thin solid #313131;
+    padding-bottom: 15px;
+}
+#change-password-submit-button.new-button b, #change-password-success-button.new-button b {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll -6px -100px transparent;
+    font-size: 18px;
+    height: 50px;
+    line-height: 40px;
+    margin-right: 5px;
+    text-align: center;
+}
+#change-password-submit-button.new-button i, #change-password-success-button.new-button i {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll 0 -100px transparent;
+    height: 50px;
+    width: 6px;
+}
+#change-password-submit-button.new-button i, #change-password-success-button.new-button i {
+    background-position: 0 -400px;
+}
+#change-password-submit-button.new-button:hover i, #change-password-success-button.new-button:hover i {
+    background-position: 0 -450px;
+}
+#change-password-submit-button.new-button b, #change-password-success-button.new-button b {
+    background-position: -6px -400px;
+}
+#change-password-submit-button.new-button:hover b, #change-password-success-button.new-button:hover b {
+    background-position: -6px -450px;
+}
+#change-password-submit-button, #change-password-success-button {
+    float: right;
+    height: 50px;
+    margin-top: 10px;
+}
+#change-password-form-content form {
+    margin: 10px 0;
+}
+#change-password-form-content #email {
+    padding-top: 10px;
+}
+#change-password-cancel-link, #change-password-change-link {
+    color: #FFFFFF;
+    float: left;
+    line-height: 60px;
+}
+#change-password-form #email-sent-container {
+    color: #66CCFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+    word-wrap: break-word;
+}
+#change-password-email-sent-notice div {
+    margin-top: 10px;
+}
+#change-password-form #change-password-error-container {
+    color: #DA5A4C;
+    margin-top: 5px;
+}
+#change-password-form-content .email-address.error {
+    background-color: #DA5A4C;
+    margin-bottom: 5px;
+}
+#change-password-form-content .email-address {
+    color: black;
+}
+#change-password-form-content span {
+    text-align: left;
+}
+#reset-password-form-content form input {
+    border: 0 none;
+    padding: 1px;
+    width: 190px;
+}
+#reset-password-form-container div.form-content {
+    margin-bottom: 20px;
+}
+#reset-password-form-container div.form-content .label {
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+#reset-password-form-container div#password-retype {
+    margin-top: 5px;
+}
+#reset-password-form-container div.left {
+    float: left;
+    width: 50%;
+}
+#reset-password-form-container div.right {
+    float: right;
+    margin-top: 20px;
+    width: 45%;
+}
+#reset-password-form-container div#errors {
+    margin-bottom: 10px;
+}
+#reset-password-form-container div#error-title {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_icons.png") no-repeat scroll 10px -34px transparent;
+    padding: 3px 0 3px 40px;
+}
+#reset-password-form-container div.form-content .help {
+    color: #666666;
+}
+#forced-email-login {
+    color: #FFFFFF;
+    position: absolute;
+    width: 383px;
+    z-index: 9001;
+}
+#forced-email-login-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 7px 5px;
+    text-align: center;
+}
+#forced-email-login .email-address {
+    border: 1px solid #663333;
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+    text-align: center;
+    width: 330px;
+}
+#forced-email-login-container {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_bg.png") no-repeat scroll left top transparent;
+    overflow: hidden;
+    padding: 5px 20px;
+}
+#forced-email-login-container-bottom {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_bg.png") no-repeat scroll left bottom transparent;
+    height: 10px;
+}
+#forced-email-login #forced-email-login-content li {
+    padding: 15px 0;
+}
+#forced-email-login li.center {
+    text-align: center;
+}
+.bottom-border {
+    border-bottom: thin solid #313131;
+    padding-bottom: 15px;
+}
+.bottom-top-border {
+    border-bottom: thin solid #313131;
+    border-top: thin solid #313131;
+}
+.bottom-top-dotted-border {
+    border-bottom: thin dotted #313131;
+    border-top: thin dotted #313131;
+}
+#forced-email-login #forced-email-login-content li div {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_icons_old.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 25px;
+    margin-right: 10px;
+    width: 18px;
+}
+#forced-email-login #forced-email-login-content li div.force-email-notice-2 {
+    background-position: 1px 0;
+}
+#forced-email-login #forced-email-login-content li div.force-email-notice-1 {
+    background-position: -17px 0;
+}
+#forced-email-login #forced-email-login-content li div.force-email-notice {
+    background-position: -35px 0;
+}
+#force-email-ok-button {
+    float: right;
+    height: 50px;
+    margin-top: 10px;
+}
+#force-email-ok-button.new-button b {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll -6px -100px transparent;
+    font-size: 18px;
+    height: 50px;
+    line-height: 40px;
+    margin-right: 5px;
+    text-align: center;
+}
+#force-email-ok-button.new-button i {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll 0 -100px transparent;
+    height: 50px;
+    width: 6px;
+}
+#force-email-ok-button.new-button:hover b {
+    background-position: -6px -150px;
+}
+#force-email-ok-button.new-button:hover i {
+    background-position: 0 -150px;
+}
+#email-changed-notice {
+    color: #FFFFFF;
+    position: absolute;
+    width: 383px;
+    z-index: 9001;
+}
+#email-changed-notice-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 7px 5px;
+    text-align: center;
+}
+#email-changed-notice-content div {
+    margin-top: 10px;
+}
+#email-changed-notice .email-address {
+    color: #66CCFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+#email-changed-notice input.email-address {
+    border: 1px solid #663333;
+    padding: 4px;
+    width: 340px;
+}
+#email-changed-notice-container {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_bg.png") no-repeat scroll left top transparent;
+    overflow: hidden;
+    padding: 5px 20px;
+}
+#email-changed-notice-container-bottom {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_bg.png") no-repeat scroll left bottom transparent;
+    height: 10px;
+}
+.bottom-border {
+    border-bottom: thin solid #313131;
+    padding-bottom: 15px;
+}
+#force-email-ok-button, #email-changed-submit-button {
+    float: right;
+    height: 50px;
+    margin-top: 10px;
+}
+#force-email-ok-button.new-button b, #email-changed-submit-button.new-button b {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll -6px -400px transparent;
+    font-size: 18px;
+    height: 50px;
+    line-height: 40px;
+    margin-right: 5px;
+    text-align: center;
+}
+#email-changed-submit-button.new-button b {
+    background-position: -6px 0;
+}
+#force-email-ok-button.new-button i, #email-changed-submit-button.new-button i {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll 0 -400px transparent;
+    height: 50px;
+    width: 6px;
+}
+#email-changed-submit-button.new-button i {
+    background-position: 0 0;
+}
+#force-email-ok-button.new-button:hover b {
+    background-position: -6px -450px;
+}
+#email-changed-submit-button.new-button:hover b {
+    background-position: -6px -50px;
+}
+#force-email-ok-button.new-button:hover i {
+    background-position: 0 -450px;
+}
+#email-changed-submit-button.new-button:hover i {
+    background-position: 0 -50px;
+}
+#email-changed-error-container {
+    color: #DA5A4C;
+    margin-top: 5px;
+}
+#email-changed-notice #email-changed-update-email.error {
+    background-color: #DA5A4C;
+}
+#email-changed-submit-button b {
+    color: #FFFFFF;
+}
+#email-changed-notice #email {
+    padding-top: 10px;
+}
+#email-changed-notice #email .checkbox {
+    padding: 5px;
+}
+#email-changed-notice .email-address.black {
+    color: #000000;
+}
+#email-changed-notice .checkbox.error {
+    border: 2px solid #DA5A4C;
+}
+#email-changed-notice .checkbox a {
+    color: #33CCFF;
+}
+#email-changed-notice #terms-container {
+    margin-top: 10px;
+}
+#email-changed-notice-container form {
+    margin-top: 40px;
+}
+#identity-combine-prompt-title {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/use_email_icons.png") no-repeat scroll 10px -34px transparent;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+#identity-combine-prompt-title-container {
+    padding: 7px 5px;
+}
+.overlay-text {
+    font-size: 12px;
+}
+#combine-submit-button.new-button b {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll -6px 0 transparent;
+    color: #FFFFFF;
+    font-size: 18px;
+    height: 50px;
+    line-height: 40px;
+    margin-right: 5px;
+    text-align: center;
+}
+#combine-submit-button.new-button i {
+    background: url("/app/tpl/skins/Custom-Habbo/data/images/buttons_small.png") no-repeat scroll 0 -400px transparent;
+    height: 50px;
+    width: 6px;
+}
+#combine-submit-button.new-button i {
+    background-position: 0 0;
+}
+#combine-submit-button.new-button:hover b {
+    background-position: -6px -50px;
+}
+#combine-submit-button.new-button:hover i {
+    background-position: 0 -50px;
+}
+#combine-submit-button {
+    float: right;
+    height: 50px;
+    margin-top: 10px;
+}
+a#donotcombine-link {
+    color: #FFFFFF;
+    float: left;
+    font-size: 12px;
+    max-width: 170px;
+    padding: 20px 0 0;
+    text-align: left;
+}
+form#identity-combine-form {
+    margin-top: 15px;
+}
+#submit-section {
+    height: 55px;
+}
+#do-not-show-checkbox {
+    float: left;
+    padding: 5px 0 0;
+}
+.combine-illustration {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 10px 15px 30px;
+}
+#plus-image {
+    left: -15px;
+    padding: 22px 0 5px 8px;
+    position: relative;
+}
+#plus-image.center {
+    left: 0;
+}
+.combine-provider-image {
+    left: -110px;
+    position: relative;
+    top: -13px;
+    z-index: 1;
+}
+.combine-provider-image.center {
+    left: -70px;
+    top: -10px;
+}
+.character-image {
+    left: -28px;
+    position: relative;
+    top: -6px;
+    z-index: 1;
+}
+.combine-illustration .combine-source {
+    float: left;
+    margin-right: -30px;
+}
+.combine-illustration .combine-target {
+    float: right;
+    margin-right: -5px;
+}
+#unavailable-wrapper {
+    height: 35px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+#unavailable-field {
+    background-color: #FF8C00;
+    color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+}
+#unavailable-field div {
+    font-family: Arial;
+    font-size: 13pt;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+}
+div#alert-cookies-container, div#alert-javascript-container {
+    background-color: #FFCC00;
+    border-radius: 8px 8px 8px 8px;
+    clear: both;
+    color: black;
+    font-size: 13px;
+    margin-bottom: 16px;
+    padding: 10px 18px;
+}
+div#alert-cookies-title, div#alert-javascript-title {
+    background-image: url("/app/tpl/skins/Custom-Habbo/data/images/warning_sign_outline.png");
+    background-position: 10px 4px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #D39A00;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    padding: 0 0 9px 40px;
+}
+div#alert-cookies-text, div#alert-javascript-text {
+    padding-left: 9px;
+}
+div#alert-cookies-text a, div#alert-javascript-text a {
+    font-weight: bold;
+}
+/* Habbo Index by Crookie | MADE FOR FANS */

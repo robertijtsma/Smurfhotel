@@ -1,0 +1,452 @@
+function changeAvatar(a)
+{
+    if(a.length > 2) 
+    {
+		DataCall({ action: "GetLook", controller: "User", username: a }, function(data) 
+		{
+            var b = jQuery.parseJSON(data);
+			if(b.valid == "true")
+			{
+				$("#imager").css("background-image", "url(/cache/avatar.php?figure=" + b.response + "&action=std&direction=4&head_direction=3&img_format=png&gesture=spk&headonly=0&size=b");
+			}
+			else
+			{
+				$("#imager").css("background-image", "url(/assets/img/ghost.png");
+			}
+		});
+	}
+	else
+	{ 
+		$("#imager").css("background-image", "url(/assets/img/ghost.png");
+	}
+}
+
+function validateEmail(a)
+{
+    var b = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    a.length > 2 && b.test(a) ? ($("#reg-mail").removeClass("error"), $("#reg-mail").addClass("check")) : $("#reg-mail").addClass("error");
+}
+
+function validateUsername(a)
+{
+    var b = /[^-a-zA-Z0-9_.:=#!,?@]/i;
+    a.length >= 3 && a.length <= 25 ? b.test(a) ? $("#reg-username").addClass("error") : ($("#reg-username").removeClass("error"),
+	$("#reg-username").addClass("check")) : $("#reg-username").addClass("error");
+}
+
+function returnRabbo(a, b)
+{
+    4 != a && ($("#stap" + a).show(), $("#stap4").animate(
+    {
+        opacity: 0
+	},
+    {
+        step: function(b, c)
+        {
+			scale = .8 + .2 * (1 - b), left = 50 * (1 - b) + "%", opacity = 1 - b, $("#stap4").css(
+			{
+				left: left
+			}), $("#stap" + a).css(
+			{
+				opacity: opacity
+			});
+		},
+		duration: 800,
+		complete: function()
+		{
+			$("#stap4").hide(), animating = !1;
+		},
+		easing: "easeInOutBack"
+	})), "none" != b && $("#reg-" + b).addClass("error");
+}
+
+setTimeout(function()
+{
+	$("#box_1").addClass("active");
+}, 1e3), setTimeout(function()
+{
+	$("#habbo").addClass("dance");
+}, 1e3), setTimeout(function()
+{
+	$("#box_1").removeClass("active");
+}, 2500), setTimeout(function()
+{
+	$("#box_2").addClass("active");
+}, 3500), setTimeout(function()
+{
+	$("#room_2").addClass("active");
+}, 4e3), setTimeout(function()
+{
+	$("#room_1").removeClass("active");
+}, 4500), setTimeout(function()
+{
+	$("#room_3").addClass("active");
+}, 5e3), setTimeout(function()
+{
+	$("#box_2").removeClass("active");
+}, 7e3), setTimeout(function()
+{
+	$("#box_3").addClass("active");
+}, 8e3), setTimeout(function()
+{
+	$("#furni").addClass("active");
+}, 9e3), setTimeout(function()
+{
+	$("#box_3").removeClass("active");
+}, 14500), setTimeout(function()
+{
+	$("#box_4").addClass("active");
+}, 15500), setTimeout(function()
+{
+	$("#friends").addClass("active");
+}, 16e3), $("#volgende-wachtwoord").click(function()
+{
+	var a = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
+	b = $("#reg-mail").val(),
+	c = $("#geboortedag option:selected").val(),
+	d = $("#geboortemaando option:selected").val(),
+	e = $("#geboortejaar option:selected").val();
+	"" == b ? $("#page1_alert").addClass("alert-danger").html("Oeps! Je bent je e-mailadres vergeten!").fadeIn("slow").delay(3e3).fadeOut("slow") : "" == c || "" == d || "" == e ? $("#page1_alert").addClass("alert-danger").html("Oeps! Je bent je geboortedatum vergeten!").fadeIn("slow").delay(3e3).fadeOut("slow") : a.test(b) ? ($("#stap2").show(),
+	$("#stap1").animate(
+	{
+		opacity: 0
+	},
+	{
+		step: function(a, b)
+		{
+			scale = 1 - .2 * (1 - a), left = 50 * a + "%", opacity = 1 - a, $("#stap1").css(
+			{
+				position: "absolute"
+			}), $("#stap2").css(
+			{
+				left: left,
+				opacity: opacity
+			});
+		},
+		duration: 800,
+		complete: function()
+		{
+			$("#stap1").hide();
+		},
+		easing: "easeInOutBack"
+	})) : $("#page1_alert").addClass("alert-danger").html("Oeps! Gebruik alsjeblieft een geldige e-mailadres!").fadeIn("slow").delay(3e3).fadeOut("slow");
+}), $("#volgende-look").click(function()
+{
+	var a = $("#reg-password").val(),
+	b = $("#reg-password-repeat").val();
+	"" == a || "" == b ? $("#page2_alert").addClass("alert-danger").html("Vergeet niet alle velden in te vullen!").fadeIn("slow").delay(3e3).fadeOut("slow") : a.length < 6 ? $("#page2_alert").addClass("alert-danger").html("Je wachtwoord moet meer dan 6 tekens lang zijn en letters en cijfers bevatten.").fadeIn("slow").delay(3e3).fadeOut("slow") : a != b ? $("#page2_alert").addClass("alert-danger").html("Je wachtwoorden komen niet overeen!").fadeIn("slow").delay(3e3).fadeOut("slow") : ($("#stap3").show(),
+	$("#stap2").animate(
+	{
+		opacity: 0
+	},
+	{
+		step: function(a, b)
+		{
+			scale = 1 - .2 * (1 - a), left = 50 * a + "%", opacity = 1 - a, $("#stap2").css(
+			{
+				position: "absolute"
+			}), $("#stap3").css(
+			{
+				left: left,
+				opacity: opacity
+			});
+		},
+		duration: 800,
+		complete: function()
+		{
+			$("#stap2").hide();
+		},
+		easing: "easeInOutBack"
+	}));
+}), $("#volgende-tos").click(function()
+{
+	$("#stap4").show(), $("#stap3").animate(
+	{
+		opacity: 0
+	},
+	{
+		step: function(a, b)
+		{
+			scale = 1 - .2 * (1 - a), left = 50 * a + "%", opacity = 1 - a, $("#stap3").css(
+			{
+				position: "absolute"
+			}), $("#stap4").css(
+			{
+				left: left,
+				opacity: opacity
+			});
+		},
+		duration: 800,
+		complete: function()
+		{
+			$("#stap3").hide();
+		},
+		easing: "easeInOutBack"
+	});
+}), $("#vorige-stap1").click(function()
+{
+	$("#stap1").show(), $("#stap2").animate(
+	{
+		opacity: 0
+	},
+	{
+		step: function(a, b)
+		{
+			scale = .8 + .2 * (1 - a), left = 50 * (1 - a) + "%", opacity = 1 - a, $("#stap2").css(
+			{
+				left: left
+			}), $("#stap1").css(
+			{
+				opacity: opacity
+			});
+		},
+		duration: 800,
+		complete: function()
+		{
+			$("#stap2").hide(), animating = !1;
+		},
+		easing: "easeInOutBack"
+	});
+}), $("#vorige-stap2").click(function()
+{
+	$("#stap2").show(), $("#stap3").animate(
+	{
+		opacity: 0
+	},
+	{
+		step: function(a, b)
+		{
+			scale = .8 + .2 * (1 - a), left = 50 * (1 - a) + "%", opacity = 1 - a, $("#stap3").css(
+			{
+				left: left
+			}), $("#stap2").css(
+			{
+				opacity: opacity
+			});
+		},
+		duration: 800,
+		complete: function()
+		{
+			$("#stap3").hide(), animating = !1;
+		},
+		easing: "easeInOutBack"
+	});
+}), $("#vorige-stap3").click(function()
+{
+	$("#stap3").show(), $("#stap4").animate(
+	{
+		opacity: 0
+	},
+	{
+		step: function(a, b)
+		{
+			scale = .8 + .2 * (1 - a), left = 50 * (1 - a) + "%", opacity = 1 - a, $("#stap4").css(
+			{
+				left: left
+			}), $("#stap3").css(
+			{
+				opacity: opacity
+			});
+		},
+		duration: 800,
+		complete: function()
+		{
+			$("#stap4").hide(), animating = !1;
+		},
+		easing: "easeInOutBack"
+	});
+}), $("#open_forgot").click(function()
+{
+	$("#forgot_password").addClass("active");
+}), $(".close_forgot").click(function(a)
+{
+	$("#forgot_password").removeClass("active"), a.preventDefault();
+}), $(".signsdfup").click(function()
+{
+	$("#regissdfster").addClass("active"), $("#login").removeClass("active");
+}), $(".sigfsadfnin").click(function()
+{
+	$("#regisadafster").removeClass("active"), $("#login").addClass("active");
+}), $("#sigdsfsdnup-cancel").click(function()
+{
+	$("#regisdfsdfster").removeClass("active"), $("#login").addClass("active");
+}),
+function()
+{
+	[].slice.call(document.querySelectorAll("select.cs-select")).forEach(function(a)
+	{
+		new SelectFx(a);
+	});
+}();
+
+
+function DataCall(vars,callback)
+{
+	$.ajax(
+	{
+		type:"POST",
+		url:"/Data/DataController",
+		data:vars,
+		success:function(data)
+		{
+			callback(data);
+		}
+	});
+}
+
+var registerStyle = $(".roundedStyle").children("img").attr("alt"),
+selectedlook = "hr-115-45.hd-180-1.ch-3111-81-1408.lg-275-1408",
+selectedSlot = "1-rabbo-hoofd-m";
+
+$(".roundedStyle").click(function()
+{
+	$(".roundedStyle").each(function()
+	{
+		$(this).removeClass("active");
+	}), $(this).addClass("active"), registerStyle = $(this).children("img").attr("alt"),
+	selectedlook = $(this).children("img").data("look"), selectedSlot = $(this).children("img").data("slot"),
+	$("#rabbolook-voorbeeld").attr("src", "/assets/img/" + selectedSlot + "-big.png");
+}), $("#log-username, #log-password").keypress(function(a)
+{
+	13 == a.which && (a.preventDefault(), $("#doLogin").trigger("click"));
+}), $("#forgot-username").keypress(function(a)
+{
+	13 == a.which && (a.preventDefault(), $("#doForgot").trigger("click"));
+}), $("#reg-username").keypress(function(a)
+{
+	13 == a.which && (a.preventDefault(), $("#doRegister").trigger("click"));
+}), $(".burger").click(function()
+{
+	$(".menu_mobile_content, .burger").toggleClass("active");
+});
+
+$("#doLogin").click(function(a)
+{
+	var b = $("#log-username").val(),
+	c = $("#log-password").val();
+	0 == b.length || 0 == c.length ? $(".alert").addClass("alert-danger").html("<B> Oops! </ B> Remember to fill in all fields!").fadeIn("slow").delay(1e3).fadeOut("slow") : 
+	DataCall({ action: "Login", controller: "Auth", username: b, password: c }, function(data) 
+	{
+		if(data != "success")
+		{
+			$(".alert").addClass("alert-danger").html(data).fadeIn("slow").delay(3e3).fadeOut("slow") 
+		}
+		else
+		{
+			$(".alert").hasClass("alert-danger") && $(".alert").removeClass("alert-danger"),
+			window.location.href = "/me";
+		}
+		
+	}), a.preventDefault();
+});
+
+
+function LoginOld()
+{
+	var b = $("#log-username").val(),
+	c = $("#log-password").val();
+	0 == b.length || 0 == c.length ? $(".alert").addClass("alert-danger").html("<B> Oops! </ B> Remember to fill in all fields!").fadeIn("slow").delay(1e3).fadeOut("slow") : 
+	DataCall({ action: "Login", controller: "Auth", username: b, password: c }, function(data) 
+	{
+		if(data != "success")
+		{
+			$(".alert").addClass("alert-danger").html(data).fadeIn("slow").delay(3e3).fadeOut("slow") 
+		}
+		else
+		{
+			$(".alert").hasClass("alert-danger") && $(".alert").removeClass("alert-danger"),
+			window.location.href = "/me";
+		}
+		
+	});
+}
+
+$("#doRegister").click(function()
+{
+	grecaptcha.reset();
+	
+	// add var to form array
+	var data = $(this).serializeArray();
+	var data = { 
+		action: "RegisterJson",
+		controller: "Auth",
+		bean_username: $("#reg-username").val(),
+		bean_password: $("#reg-password").val(),
+		bean_retypedPassword: $("#reg-password-repeat").val(),
+		bean_email: $("#reg-mail").val(),
+		gender: "M",
+		look: selectedlook,
+		captcha: grecaptcha.getResponse(),
+	};
+	
+	
+	DataCall(data, function(data) 
+	{
+		var b = jQuery.parseJSON(data);
+		
+		if(b.valid == "true")
+		{
+			$(".alert").hasClass("alert-danger") && $(".alert").removeClass("alert-danger");
+			$(".alert").addClass("alert-success").html(b.response).fadeIn("slow").delay(1e3).fadeOut("slow");
+			window.location.href = "/me";
+		}
+		else
+		{
+			$("#page" + b.return+"_alert").addClass("alert-danger").html(b.response).fadeIn("slow").delay(5e3).fadeOut("slow");
+			returnRabbo(b.return, b.field);
+		}
+	});
+});
+
+$("#doForgot").click(function()
+{
+	var b = $("#forgot-username").val();
+	
+	$("#forget_alert").addClass("alert-warning").html("We're just checking the information you've given us one moment...").fadeIn("slow");
+	if(b.length == 0)
+	{
+		$("#forget_alert").addClass("alert-danger").html("<B> Oops! </ B> Remember to fill in all fields!").fadeIn("slow").delay(1e3).fadeOut("slow")
+	}
+	else
+	{
+		DataCall({ action: "GetPassword", controller: "Forgot", username: b}, function(data) 
+		{
+			var b = jQuery.parseJSON(data);
+			$("#forget_alert").addClass("alert-warning").html("We're just checking the information you've given us one moment...").fadeIn("slow");
+			
+			if(b.valid == "true")
+			{
+				$("#forget_alert").hasClass("alert-warning") && $("#forget_alert").removeClass("alert-warning");
+				$("#forget_alert").hasClass("alert-danger") && $("#forget_alert").removeClass("alert-danger");
+				$("#forget_alert").addClass("alert-success").html(b.response).fadeIn("slow"), $("#doForgot").html("You must wait 10 seconds before sending in another request!").delay(10000).prop("disabled", !0);
+				
+				if($("#doForgot").hasClass("customGreenButton"))
+				{
+					$("#doForgot").removeClass("customGreenButton");
+				}
+				
+				$("#doForgot").addClass("customRedButton");
+				
+				setTimeout(function()
+				{
+					$("#doForgot").html("Stuur opnieuw een mail!").delay(10000).prop("disabled", !1);
+					
+					if($("#doForgot").hasClass("customRedButton"))
+					{
+						$("#doForgot").removeClass("customRedButton");
+					}
+					
+					$("#doForgot").addClass("customGreenButton");
+					
+				}, 10000);
+			}
+			else
+			{
+				$("#forget_alert").hasClass("alert-warning") && $("#forget_alert").removeClass("alert-warning");
+				$("#forget_alert").addClass("alert-danger").html(b.response).fadeIn("slow").delay(20000).fadeOut("slow");
+			}
+		});	
+	}	
+	
+	return false;
+});			

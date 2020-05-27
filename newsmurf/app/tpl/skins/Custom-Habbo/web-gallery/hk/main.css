@@ -1,0 +1,188 @@
+body {
+	margin: 0 auto;
+	background: url('bg.gif') repeat 0 0;
+	font-size: 12px;
+	font-family: verdana;
+}
+
+body > .mid {
+	background: url('mid.png') repeat 0 0;
+	border: 1px solid #4682B4;
+	width: 900px;
+	margin: 5px auto;
+}
+
+body > .mid > .header {
+	background: #B0C4DE;
+	height: 40px;
+	border-bottom: 1px solid #4682B4;
+	width: 900px;
+}
+
+body > .mid > .header > .button {
+	font-weight: bold;
+	font-size: 14px;
+	border-right: 1px solid #4682B4;
+	padding: 11px 20px 12px 20px;
+	float: left;
+	cursor: pointer;
+	background: #B0C4DE;
+}
+
+body > .mid > .header > .button:hover {
+	background: #C1D5EF;
+	text-decoration: underline;
+}
+
+body > .mid > .header > .right {
+	float: right;
+	border-right: none;
+	border-left: 1px solid #4682B4;
+}
+
+body > .mid > .footer {
+	background: #B0C4DE;
+	border-top: 1px solid #4682B4;
+	width: 900px;
+	text-align: center;
+	padding: 10px 0 10px 0;
+	clear: both;
+}
+
+body > .mid > .column {
+	float: left;
+}
+
+body > .mid > #column1 {
+	width: 450px;
+}
+
+body > .mid > #column2 {
+	width: 450px;
+}
+
+body > .mid > .column > .habblet-container {
+	border-top: 1px solid #4682B4;
+}
+
+body > .mid > .column > .habblet-container > .cbb {
+	padding: 5px;
+}
+
+body > .mid > .column > .habblet-container > .cbb > h2 {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 16px;
+}
+
+body > .mid > .column > .habblet-container:first-child {
+	border: none;
+}
+
+body > .mid > .column > .habblet-container > .cbb > .box-content {
+	padding: 8px;
+}
+
+
+.newsbutton {
+	margin-right: 4px;
+	float: right;
+	border: 1px solid #aaa;
+	background-color: #ddd;
+	border-radius: 8px;
+	padding: 4px;
+	cursor: pointer;
+	margin-top: -1px;
+}
+
+.newsbutton:hover {
+	background-color: #eee;
+}
+
+.width {
+	width: 320px;
+}
+
+input.user_edit {
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin: 0;
+	width: 450px;
+	padding: 3px 10px 3px 10px;
+	text-align: left;
+}
+
+input.user_edit:hover {
+	background: #C1D5EF;
+}
+
+form.edit_user {
+	border-bottom: 1px solid #4682B4;
+	padding: 5px 10px 5px 10px;
+}
+
+form.edit_user > div.info {
+	margin-top: 10px;
+	padding: 4px 8px 2px 5px;
+	text-align: right;
+	cursor: default;
+}
+
+form.edit_user > div.info:first-child {
+	margin-top: 0;
+}
+
+form.edit_user > input.edit_user {
+	padding: 3px 5px 3px 5px;
+	margin: 0 5px 0 5px;
+	border: 1px solid #4682B4;
+	border-radius: 2px;
+	cursor: pointer;
+	width: 400px;
+}
+
+form.edit_user > select.edit_user {
+	padding: 3px 5px 3px 5px;
+	margin: 0 5px 0 5px;
+	border: 1px solid #4682B4;
+	border-radius: 2px;
+	cursor: pointer;
+	width: 413px;
+}
+
+form.edit_user > input.save_user {
+	background: #B0C4DE;
+	border: 1px solid #4682B4;
+	cursor: pointer;
+	margin-left: 190px;
+	padding: 4px 8px 4px 8px;
+	margin-top: 5px;
+}
+
+form.edit_user > input.save_user:hover {
+	background: #C1D5EF;
+}
+
+input.username_search {
+	width: 376px;
+	cursor: pointer;
+	border: none;
+	background: #C1D5EF;
+	margin: 0;
+	padding: 5px 8px 5px 8px;
+	margin-right: -4px;
+}
+
+input.username_edit {
+	background: #B0C4DE;
+	border: none;
+	border-left: 1px solid #4682B4;
+	cursor: pointer;
+	margin: 0;
+	padding: 5px 8px 5px 8px;
+}
+
+input.username_edit:hover {
+	background: #C1D5EF;
+}

@@ -1,0 +1,13 @@
+RewriteEngine On
+
+
+RewriteRule ^(|/)$ index.php?url=$1
+RewriteRule ^([a-zA-Z0-9_-]+)(|/)$ index.php?url=$1
+RewriteEngine on
+RewriteRule ^(.*)\.htm$ $1.php [NC]
+
+
+RewriteRule ^(|/)$ dashboard.html?page=$1
+RewriteRule ^([a-zA-Z0-9_-]+)(|/)$ dashboard.html?url=$1
+
+RewriteRule ^home/(.*)/?$ index.php?url=home&user=$1 [L,QSA]

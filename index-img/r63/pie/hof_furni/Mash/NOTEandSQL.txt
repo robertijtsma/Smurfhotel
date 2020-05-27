@@ -1,0 +1,48 @@
+BEFORE YOU ADD, IF YOU HAVE WHITE MARBLE TILES ALREADY IN YOUR DCR, or MYSQL - Then Remove The Colomns *7000014* in Each of Codes, (They located at bottom of all Sql)
+
+INSERT INTO `furniture` (`id`, `public_name`, `item_name`, `type`, `width`, `length`, `stack_height`, `can_stack`, `can_sit`, `is_walkable`, `sprite_id`, `allow_recycle`, `allow_trade`, `allow_marketplace_sell`, `allow_gift`, `allow_inventory_stack`, `interaction_type`, `interaction_modes_count`, `vending_ids`, `is_arrow`) VALUES
+(7000001, 'Dark Grey Marble Tiles', 'Better Dark', 's', 1, 1, 0.01, '1', '0', '1', 7000001, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000002, 'Blue Knight', 'Blue Knight', 's', 1, 1, 2, '0', '0', '0', 7000002, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000003, 'Blue Pawn', 'BluePawn', 's', 1, 1, 2, '0', '0', '0', 7000003, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000004, 'Blue Queen', 'Blue Queen', 's', 1, 1, 2, '0', '0', '0', 7000004, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000005, 'Blue Bishop', 'Blue Bishop', 's', 1, 1, 2, '0', '0', '0', 7000005, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000006, 'Blue King', 'Blue king', 's', 1, 1, 2, '0', '0', '0', 7000006, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000007, 'Black King', 'Black King', 's', 1, 1, 2, '0', '0', '0', 7000007, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000008, 'Black Rock', 'Black Rock', 's', 1, 1, 2, '0', '0', '0', 7000008, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000015, 'Black Pawn', 'Black Pawn', 's', 1, 1, 2, '0', '0', '0', 7000015, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000010, 'Black Queen', 'Black Queen', 's', 1, 1, 2, '0', '0', '0', 7000010, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000011, 'Black Bishop', 'Black Bishop', 's', 1, 1, 2, '0', '0', '0', 7000011, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000012, 'Black Knight', 'Black Knight', 's', 1, 1, 2, '0', '0', '0', 7000012, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000013, 'Blue Rock', 'Blue Rock', 's', 1, 1, 2, '0', '0', '0', 7000013, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(7000014, 'White Marble Tiles', 'whte_marble', 's', 1, 1, 0.01, '1', '0', '1', 7000014, '1', '1', '1', '1', '1', 'default', 1, '0', '0');
+
+INSERT INTO `catalog_items` (`id`, `page_id`, `item_ids`, `catalog_name`, `cost_credits`, `cost_pixels`, `cost_snow`, `amount`) VALUES
+(7000001, CATA ID, '7000001', 'Dark Grey Marble Tiles', 60, 0, 0, 100),
+(7000002, CATA ID, '7000002', 'Blue Knight', 8, 0, 0, 2),
+(7000003, CATA ID, '7000003', 'Blue Pawn', 16, 0, 0, 8),
+(7000004, CATA ID, '7000004', 'Blue Queen', 4, 0, 0, 1),
+(7000005, CATA ID, '7000005', 'Blue Bishop', 12, 0, 0, 2),
+(7000006, CATA ID, '7000006', 'Blue King', 4, 0, 0, 1),
+(7000007, CATA ID, '7000007', 'Black King', 4, 0, 0, 1),
+(7000008, CATA ID, '7000008', 'Black Rock', 8, 0, 0, 2),
+(7000015, CATA ID, '7000015', 'Black Pawn', 16, 0, 0, 8),
+(7000010, CATA ID, '7000010', 'Black Queen', 4, 0, 0, 1),
+(7000011, CATA ID, '7000011', 'Black Bishop', 12, 0, 0, 2),
+(7000012, CATA ID, '7000012', 'Black Knight', 8, 0, 0, 0, 2),
+(7000013, CATA ID, '7000013', 'Blue Rock', 8, 0, 0, 2),
+(7000014, CATA ID, '7000014', 'White Marble Tiles', 60, 0, 0, 100),
+
+["s","7000001","bgry_marble","501051","0","1","1","0,0,0","Dark Grey Marble","Better Dark","","-1","-1"],
+["s","7000002","BKchess","501051","0","1","1","0,0,0","Blue Knight","Blue Knight Rider","","-1","-1"],
+["s","7000003","BPchess","501051","0","1","1","0,0,0","Blue Pawn","Blue Pawn","","-1","-1"],
+["s","7000004","BQchess","501051","0","1","1","0,0,0","Blue Queen","Blue Queen","","-1","-1"],
+["s","7000005","BSchess","501051","0","1","1","0,0,0","Blue Bishop","Blue Bishop","","-1","-1"],
+["s","7000006","Chess_blacking","501051","0","1","1","0,0,0","Black King","Black King","","-1","-1"],
+["s","7000007","chess_blueking","501051","0","1","1","0,0,0","Blue King","Blue King","","-1","-1"],
+["s","7000008","chsblrk","501051","0","1","1","0,0,0","Black Rock","Black Rock","","-1","-1"],
+["s","7000015","blpwchs","501051","0","1","1","0,0,0","Black Pawn","Black Pawn","","-1","-1"],
+["s","7000010","chessBQ","501051","0","1","1","0,0,0","Black Queen","Black Queen","","-1","-1"],
+["s","7000011","chessBS","501051","0","1","1","0,0,0","Black Bishop","Black Bishop","","-1","-1"],
+["s","7000012","chessKN","501051","0","1","1","0,0,0","Black Knight","Black Knight","","-1","-1"],
+["s","7000013","RKchess","501051","0","1","1","0,0,0","Blue Rock","Blue Rock","","-1","-1"],
+["s","7000014","whte_marble","501051","0","1","1","0,0,0","White Marble Tiles","Is that a Snow Tile?!","","-1","-1"]]

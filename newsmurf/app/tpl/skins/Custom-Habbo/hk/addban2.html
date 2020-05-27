@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SwizzyAdminity</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Ban een gebruiker</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+<center>
+          <br />          <?php
+include_once('databaseconfig.php');
+
+{ 
+$ban_id = mysql_real_escape_string($_POST['ban_id']);
+$type = mysql_real_escape_string($_POST['type']);
+$user = mysql_real_escape_string($_POST['username']);
+$reason = mysql_real_escape_string($_POST['reason']);
+$author = mysql_result(mysql_query("SELECT username FROM users WHERE id = '".$_SESSION['user']['id']."' LIMIT 1"), 0);
+$expire = mysql_real_escape_string($_POST['expire']);
+
+mysql_query("INSERT INTO bans (id,bantype,value,reason,added_by,expire) VALUES ('$ban_id','$type','$user','$reason','$author','$expire')");
+echo ("Ban is toegevoegd!"); 
+}
+
+
+
+?>
+<html>
+<body><br><br>
+<h1>Oke, als je hierboven 'Ban is toegevoegd' ziet  
+<br>staan, dan is de ban succesvol toegevoegd! :P</h1>
+
+
+ </div>
+
+      </div>
+    </div>
+  </div>
+<center/>
+<?php include_once('inc/footer.html'); ?>

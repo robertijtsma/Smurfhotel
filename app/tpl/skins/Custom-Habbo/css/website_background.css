@@ -1,0 +1,23 @@
+body.trible{
+	background:url(/app/tpl/skins/Custom-Habbo/Leo/trible_right.png) fixed right bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/trible_left.png) fixed left bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/reception_backdrop_stretch.png) fixed repeat-x center bottom;	
+	background-color:#89d4f1;
+}
+
+body.halloween {
+	
+	background:url(/app/tpl/skins/Custom-Habbo/Leo/halloween_left.png) fixed left bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/halloween_right.png) fixed right bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/halloween_horiz_right.png) fixed right bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/halloween_stretch.png) fixed repeat-x center bottom;
+	background-color:#00382E;	
+}
+
+body.stars {
+	
+	background:url(/app/tpl/skins/Custom-Habbo/Leo/reception_zstars_backdrop_left.png) fixed left bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/reception_zstars_backdrop_right.png) fixed right bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/reception_zstars_horiz_left.png) fixed left bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/reception_zstars_stretch.png) fixed repeat-x center bottom;
+	background-color:#ECB7FF;	
+}
+
+body {
+	
+	background:url(/app/tpl/skins/Custom-Habbo/Leo/reception_zstars_backdrop_left.png) fixed left bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/reception_zstars_backdrop_right.png) fixed right bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/reception_zstars_horiz_left.png) fixed left bottom no-repeat, url(/app/tpl/skins/Custom-Habbo/Leo/reception_zstars_stretch.png) fixed repeat-x center bottom;
+	background-color:#1c1c2c;	
+}
+/*background:url(/app/tpl/skins/Custom-Habbo/Leo/halloween_horiz_left.png) fixed right bottom no-repeat,*/

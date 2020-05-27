@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swizzy HK - News</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Maak een artikel</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+          <br />         
+        <?php
+
+if(mysql_result(mysql_query("SELECT rank FROM users WHERE id = '" . $_SESSION['user']['id'] . "'"), 0) >= 5)
+{
+	if(isset($_GET["done"]))
+	{
+		$get = filter($_GET["done"]);
+		if($get == true)
+		{
+			echo '<h3>Artikel staat op Swizzy :-)</h3>';
+			exit;
+		}
+	}
+	if(isset($_POST["step1"]))
+	{
+		if($_POST["title"] == NULL || $_POST["shortstory"] == NULL || $_POST["longstory"] == NULL)
+		{
+			echo "<h2>Vul alle velden in, nu hebben de Swizzers er niet veel aan!</h2>";
+		}
+		else
+		{
+			$_SESSION["title"] = filter($_POST["title"]);
+			$_SESSION["shortstory"] = filter($_POST["shortstory"]);
+			$_SESSION["longstory"] = mysql_real_escape_string($_POST["longstory"]);
+			
+			header("Location: ".$_CONFIG['hotel']['url']."/ase/news2");
+			exit;
+		}
+			
+	}
+	else
+	{ ?>
+	
+	<script type="text/javascript" src="tiny_mce/tiny_mce.js"></script>
+	      <script type="text/javascript">
+		  tinyMCE.init({
+          mode : "textareas",
+          theme : "simple",
+          editor_selector : "mceEditor",
+          editor_deselector : "mceNoEditor"
+		  });
+		  </script>
+<center>
+	<form method="post">
+	Titel <br />
+	<input type="text" name="title"/> <br /> <br />
+	Inleiding <br />
+	<input type="text" name="shortstory"/> <br /> <br />
+	Artikel zelf <br />
+	<textarea id="content1" name="longstory" cols="82" rows="10" class="mceEditor"></textarea>
+	<br /> <br /> <input class="button green" type="submit" value="Maak het artikel, breng me naar de Image Chooser" name="step1" />
+	</form>
+	<?php
+	}
+}
+
+?>
+</center>
+	</center>
+<?php include_once('inc/footer.html'); ?>

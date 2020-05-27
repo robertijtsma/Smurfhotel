@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SwizzyAdminity</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Mus Commands</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+<?PHP
+function sendMUS($header, $data){
+        $ip = "5.89.229.171";
+        $port = 30001;
+        $musData = $header . chr(1) . $data;
+        $sock = @socket_create(AF_INET, SOCK_STREAM, getprotobyname('tcp'));
+        @socket_connect($sock, $ip, $port);
+        @socket_send($sock, $musData, strlen($musData), MSG_DONTROUTE);
+        @socket_close($sock);
+}
+if(isset($_POST['send'])){
+        sendMUS($_POST['header'], $_POST['data']);
+}
+?>
+<center>
+<div id="content_container">
+<div id="content">
+<table style="width: 100%;">
+<center>
+<form method="post">
+<input type="text" name="header" /> : <input type="text" name="data" /> <input class="button green" type="submit" name="send" />	
+<tr>
+<center>
+<br>
+<h3>Recente Commands</h3>
+<ul>
+<li>unloadroom [id]</li>
+<li>updategroup [id]</li>
+<li>updatepixels [id]</li>
+<li>updatepoints [id]</li>
+<li>giveitem [userid itemid pageid gift-message]</li>
+<li>updatevip [id]</li>
+<li>updateusersgroups [id]</li>
+<li>shutdown</li>
+<li>update_filter</li>
+<li>updatecredits [id]</li>
+<li>reloadbans</li>
+<li>update_bots</li>
+<li>signout [id]</li>
+<li>exe [SQL]</li>
+<li>alert [id message]</li>
+<li>ha [message]</li>
+<li>hal [url message]</li>
+<li>updatelook [id]</li>
+<li>updatemotto [id]</li>
+<li>sa [message]</li>
+<li>roomalert [id message]</li>
+<li>update_items</li>
+<li>update_catalogue</li>
+<li>updateusersrooms [userid]</li>
+<li>senduser [userid] [room]</li>
+</ul>
+</center>
+</tr>
+</form>
+</table>
+</div>
+</div>
+<?php include_once('inc/footer.html'); ?>

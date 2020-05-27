@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - Profile</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Profile</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+	<div class="cbb clearfix settings">
+		<h2 class="title">Email & Password</h2>
+		<div class="box-content">
+			<form method="post" id="profileForm">
+				<h3>Your email address</h3>
+				<p>Your email address is what you may need to reset your password incase you forget it.</p><br><br>
+				<p><label>Email:<input type="text" name="acc_email" size="32" value="{email}" id="avatarmotto"></p><br><br>
+				<h3>Current Password</h3><br>
+				<p>Your current password is the password you use to login to the main website. Only fill this in if you wish to change your login password.</p><br><br>
+				<p><label>Password:<input type="password" name="acc_old_password" value="" id="avatarmotto"></p><br><br>
+				<h3>New Password</h3><br>
+				<p>Please only change this field if you wish to change your login password.</p><br><br>
+				<p><label>New Password:<input type="password" name="acc_new_password" value="" id="avatarmotto"></p><br><br>					 
+				
+				<div class="settings-buttons">
+					<input type="submit" value="Save" name="account" class="button green"><br><br>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swizzy Housekeeping</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Bewerk een Swizzer</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+
+        <div id="content">
+          <!-- insert the page content here -->
+          <br />          
+         <?php
+          
+        if(isset($_POST['update']))
+		{
+			mysql_query("UPDATE users SET username = '" . filter($_POST['username']) . "', vip = '" . filter($_POST['vip']) . "', mail = '" . filter($_POST['email']) . 		"', motto = '" . filter($_POST['motto']) . "', rank = '" . filter($_POST['rank']) . "', credits = '" . filter($_POST['credits']) . "', activity_points = '" . filter($_POST['pixels']) . "', hide_inroom = '" . filter($_POST['hide_inroom']) . "', hide_online = '" . filter($_POST['hide_online']) . "' WHERE username = '" . filter($_POST['username_current']) . "'") or die(mysql_error());
+			 	echo $_POST['username_current'] . "'s account updated."; 
+		}
+		
+
+if(isset($_POST['lookup']))
+{	
+	
+	if(mysql_num_rows(mysql_query("SELECT * FROM users WHERE username = '". filter($_POST['l_username']) ."'")) == 0) { echo "User does not exist."; }
+	else { 
+				$two = mysql_fetch_assoc(mysql_query("SELECT * FROM users WHERE username = '" . filter($_POST['l_username']) . "'"));
+	?>
+	
+	</a>
+	<form method='post'>
+	<input type="hidden" name="username_current" value="<?php echo $_POST['l_username']; ?>" />
+	
+		<table style="width: 100%;">
+				
+			<tr>
+				<td>Naam</td></td>
+				<td><input type="text" name="username" value="<?php echo $_POST['l_username']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email" value="<?php echo $two['mail']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Motto</td>
+				<td><input type="text" name="motto" value="<?php echo $two['motto']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Rank</td>
+				<td><input type="text" name="rank" value="<?php echo $two['rank']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Credits</td>
+				<td><input type="text" name="credits" value="<?php echo $two['credits']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Pixels</td>
+				<td><input type="text" name="pixels" value="<?php echo $two['activity_points']; ?>" style="width: 95%" /></td>
+			</tr>
+				<td>VIP</td>
+				<td><input type="text" name="vip" value="<?php echo $two['vip']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Hide Online</td>
+				<td><input type="text" name="hide_online" value="<?php echo $two['hide_online']; ?>" style="width: 3%" /></td>
+			</tr>
+				<td>Hide In-Room</td>
+				<td><input type="text" name="hide_inroom" value="<?php echo $two['hide_inroom']; ?>" style="width: 3%" /></td>
+			</tr>
+		</table>
+		<center><br />
+		<input align="center" type="submit" class="button green" value="Update account" name="update"/>
+		</center><br />
+	</form>
+	<br />
+	<?php
+	}
+	}
+	?>
+
+	<center><form method='post'>
+	Naam: <br /> <input type="text" name="l_username" style="width: 40%"  /> <br /> <br />
+	<input class="button green" type="submit"  value="Find User" name="lookup" />
+	</form></center>
+	
+	</center></div></div></div></div>
+<?php include_once('inc/footer.html'); ?>

@@ -1,0 +1,12 @@
+<html>
+<head> <script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owl:0,mirage:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/v=174003646/"},atok:"7b334c772103a85705ece50253166a63",zone:"herofire.net",rocket:"a",apps:{}}];document.write('<script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/v=840670951/cloudflare.min.js"><'+'\/script>')}}catch(a){};
+//]]>
+</script>
+<title>405 Not Allowed</title></head>
+<body bgcolor="white">
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>

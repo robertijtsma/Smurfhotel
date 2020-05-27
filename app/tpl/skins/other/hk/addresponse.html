@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - Add Responce</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Add Responce</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+          <!-- insert the page content here -->
+          <br />        
+			<center>
+				<div style="padding:5px">
+					<form name="form" action="/bots/insertresponce.php" onSubmit="return validateForm();" method="post">
+						<span title="Don&#39;t worry about the ID, it has been corrected for you.">Bot Responce ID: </span><br />
+						<input type="text" name="id" value="<?php
+						$sql = "SELECT * FROM bots_responses ORDER BY id DESC LIMIT 0,1";
+						$result = mysql_query($sql);
+						$info = mysql_fetch_array($result);
+						$id = $info['id'];
+						$addition = $id + 1;
+										   
+						echo $addition;
+						?>" readonly /><br /><br />
+									
+						<span title="To find your Bot ID, go to the View Bots, and write the bot ID Below">Bot ID: </span><br />
+						<select name="bot_id">
+						<?php
+						$getID = mysql_query('SELECT * FROM bots');
+						
+						while($row = mysql_fetch_array($getID)){
+							echo "<option>";
+							echo $row['id'];
+							echo "<br /></option>";
+						}
+						?>
+						</select><br /><br />
+						
+						<span title="Self-explanatory.">Keyword: </span><br />
+						<input type="text" name="keywords" /><br /><br />
+						
+						<span title="bot_responce">Bot Responce: </span><br />
+						<input type="text" name="response_text" /><br /><br />
+					
+						<span title="There are 3 types of modes: Say, Shout and Whisper; pretty self-explanatory.">Mode: </span><br />
+						<select name="mode">
+							<option>Say</option>
+							<option>Shout</option>
+							<option>Whisper</option>
+						</select><br /><br />
+						
+						<span title="Bot Will Serve this when keyword is said.">Serve Id: </span><br />
+						<input type="text" name="serve_id" /><br /><br />
+									
+						<input type="submit" value="Make Bot Responce" class="button green">
+					</form>
+				<script type="text/javascript">if (!$(document.body).hasClassName('process-template')) { Rounder.init(); }</script>
+				</div>
+			</div>
+        <script type="text/javascript">if (!$(document.body).hasClassName('process-template')) { Rounder.init(); }</script>
+        <script type="text/javascript">
+            HabboView.run();
+        </script>
+	</center>
+</center>
+<br />
+<?php include_once('inc/footer.html'); ?>

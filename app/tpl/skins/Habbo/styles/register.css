@@ -1,0 +1,30 @@
+
+.register {
+	width: 40%;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+.register text {
+	color: #7ECAEE;
+}
+.register input {
+	width: 90%;
+}
+
+.register input[type=submit] {
+	background: #00813E;
+	border-color: #8EDA55;
+	color: #fff;
+}
+
+.register input[type=submit]:hover {
+	background: #00ba3e;
+}
+
+.registerbg {
+	float: right;
+	width: 546px;
+	height: 465px;
+	background: url(/app/tpl/skins/Habbo/images/register.png) no-repeat;
+}

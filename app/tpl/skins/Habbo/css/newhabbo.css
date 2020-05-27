@@ -1,0 +1,504 @@
+/*
+ * Body
+ */
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background: url( ../img/background/body.png );
+}
+
+body:before {
+    content: none;
+}
+
+/*
+ * Header
+ */
+
+header {
+    width: 100%;
+    height: 235px;
+    min-height: 235px;
+    background: url( ../img/background/header-background.png );
+    position: relative;
+    z-index: 10;
+}
+
+header:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: #000;
+    opacity: .5;
+    z-index: -1;
+}
+
+header a.brand {
+    margin: 10px auto;
+    display: block;
+    float: none;
+}
+
+header p.user-count {
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 2px 0 #000;
+    font-size: 11px;
+    color: #FFF;
+}
+
+
+/*
+ * Navigation
+ */
+
+header nav.main-navigation {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba( 255, 255, 255, .8 );
+}
+
+header nav.main-navigation ul {
+    display: block;
+    list-style-type: none;
+}
+
+header nav.main-navigation ul li:first-child {
+    margin: 20px 20px 20px 0;
+}
+
+header nav.main-navigation ul li {
+    display: inline-block;
+    margin: 20px;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 21px;
+}
+
+header nav.main-navigation ul li img {
+    margin: 0 10px 0 0;
+}
+
+header nav.main-navigation ul li a {
+    color: #003c4e;
+}
+
+header nav.main-navigation ul li a:hover,
+header nav.main-navigation ul li a:focus {
+    text-decoration: none;
+    color: #0099c8;
+}
+
+header nav.main-navigation ul li.enter-hotel {
+    margin: 9px;
+    float: right;
+    background: #FFB900;
+    border: 2px solid #ffea00;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+header nav.main-navigation ul li.enter-hotel a {
+    padding: 10px 10px 10px 20px;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+
+/*
+ * Sub Navigation
+ */
+
+div.sub-navigation {
+    width: 100%;
+    height: 55px;
+    min-height: 55px;
+    background: #0d3c67;
+}
+
+div.sub-navigation ul li {
+    display: inline-block;
+}
+
+div.sub-navigation ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Ubuntu',  sans-serif;
+    font-size: 13px;
+    color: #FFF;
+}
+
+div.sub-navigation ul li:not(:last-child) a:after {
+    content: ' | ';
+    display: inline-block;
+    margin: 18px 10px;
+}
+
+/*
+ * News Article
+ */
+
+div.article-main {
+    background: url( https://habboo-a.akamaihd.net/web_images/habbo-web-articles/lpromo_gen_staff_2.png ) no-repeat right center;
+    height: 300px;
+    min-height: 300px;
+    border-radius: 0px;
+    padding: 60px 40px 40px 40px;
+}
+
+div.article-main h3 {
+    width: 100%;
+    position: relative;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: #FFF;
+}
+
+div.article-main p {
+    width: 55%;
+    margin: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1.3em;
+    color: #FFF;
+    opacity: .8;
+}
+
+div.article-main a {
+    display: block;
+    margin: 40px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    color: #FFF;
+}
+
+/*
+ * Sub Articles
+ */
+
+div.sub-articles div.sub-article p,
+div.sub-articles div.sub-article {
+    margin: 0;
+    padding: 0;
+}
+
+div.sub-article:nth-child(2) {
+    border-radius: 0 0 7px 7px;
+    -webkit-border-radius: 0 0 7px 7px;
+    -moz-border-radius: 0 0 7px 7px;
+    -ms-border-radius: 0 0 7px 7px;
+    -o-border-radius: 0 0 7px 7px;
+}
+
+div.sub-article:nth-child(odd) {
+    background: #e9e9e9;
+}
+
+div.sub-article:nth-child(even) {
+    background: #FFF;
+}
+
+div.sub-articles div.sub-article p {
+    padding: 10px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    color: #8b8b8b;
+}
+
+div.sub-articles div.sub-article a {
+    display: block;
+    width: 100%;
+    color: #000;
+}
+
+div.news-articles article {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 2em;
+}
+
+div.news-articles article p {
+    font-size: 14px;
+    line-height: 2em;
+}
+
+/*
+ * Habbo Avatar
+ */
+
+div.habbo-welcome {
+    margin: 40px 0;
+    height: 240px;
+    min-height: 240px;
+    position: relative;
+    background: url( ../img/background/habbo-welcome.png ) no-repeat left top;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+div.habbo-welcome ul li {
+    padding: 10px 20px;
+    text-shadow: 1px 2px 0 rgba( 0, 0, 0, .4 );
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    color: #FFF;
+    border-radius: 0 0 7px 7px;
+    -webkit-border-radius: 0 0 7px 7px;
+    -moz-border-radius: 0 0 7px 7px;
+    -ms-border-radius: 0 0 7px 7px;
+    -o-border-radius: 0 0 7px 7px;
+}
+
+div.habbo-welcome ul li img {
+    margin: 0 5px 0 0;
+}
+
+div.habbo-welcome ul li.diamonds {
+    float: left;
+    margin: 0 0 0 10px;
+    background: rgba( 0, 113, 101, .7 );
+}
+
+div.habbo-welcome ul li.duckets {
+    float: right;
+    margin: 0 10px 0 0;
+    background: rgba( 77, 13, 41, .7 );
+}
+
+div.habbo-welcome ul li.credits {
+    float: right;
+    margin: 0 10px 0 0;
+    background: rgba( 113, 56, 0, .7 );
+}
+
+div.habbo-welcome > img {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+div.habbo-welcome a.surprise-box {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    -webkit-animation-name: thumb;
+    -webkit-animation-duration: 200ms;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+/*
+ * Page titles
+ */
+
+div.title {
+    margin: 30px 0;
+}
+
+div.title h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #0D3C67;
+}
+
+/*
+ * Habbo Popular Rooms
+ */
+
+div.popular-rooms div.room {
+    width: 95%;
+    clear: both;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+div.popular-rooms div.room .room-picture {
+    width: 110px;
+    height: 110px;
+    min-height: 110px;
+    margin: 0 20px 0 0;
+    float: left;
+    box-shadow: 3px 3px 0 #333;
+}
+
+div.popular-rooms div.room .room-picture img {
+    width: 110px;
+    height: 110px;
+    min-height: 110px;
+}
+
+div.popular-rooms div.room h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+div.popular-rooms div.room p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #666;
+}
+
+div.popular-rooms div.room p.owner {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2195c4;
+}
+
+/*
+ * Client
+ */
+
+#client {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+}
+
+/*
+ * Habbo Box Styling
+ */
+
+.habbo-box {
+    margin: 40px 0;
+    overflow: auto;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    box-shadow: 1px 3px 0 rgba( 0, 0, 0, .2 );
+    background: #FFF;
+}
+
+.habbo-box.content {
+    padding: 1px 5px;
+}
+
+.habbo-box-header {
+    margin: 5px auto;
+    padding: 2px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    background: #16648c;
+    border-radius: 4px;
+}
+
+.habbo-box-header.title-grey {
+    background: #666;
+}
+
+.habbo-box-header h4 {
+    margin: 5px auto;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: #FFF;
+}
+
+.habbo-box p {
+    width: 95%;
+    margin: 10px auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/*
+ * Input
+ */
+
+.setting-row input {
+    margin: 20px 0;
+}
+
+
+/*
+ * Footer
+ */
+
+footer {
+    position: relative;
+    margin: 20px 0 0 0;
+    background: #0c3858;
+}
+
+/*
+ * Buttons
+ */
+
+.btn {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.btn-sm {
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: none;
+    width: 100%;
+    min-height: 20px;
+    padding: 4px 0;
+    margin: 0 0 20px 0;
+    background: #ffffff;
+    border: 2px solid #000;
+    border-bottom: 3px solid #000;
+    box-shadow: 0px 0px 0 rgba( 0, 0, 0, .2 );
+    color: #000;
+}
+
+.btn-sm:after {
+    background: #e5e5e5;
+}
+
+/*
+ * CSS Shake Animation
+ */
+
+@-webkit-keyframes thumb {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(0.9); }
+    100% { -webkit-transform: scale(1); }
+}

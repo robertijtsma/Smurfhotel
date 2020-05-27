@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - Ip Lookup</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Ip Lookup</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+          <br />
+<center>
+          <table width="100%">
+<tr><td><b>Username</b></td><td><b>E-Mail</b></td><td><b>IP</b></td></tr>
+<?php
+	if(isset($_POST['get_ip']))
+	{
+		$derp = mysql_fetch_array(mysql_query("SELECT ip_last FROM users WHERE username = '" . filter($_POST['username']) . "'"), MYSQL_ASSOC);
+		$lerp = mysql_query("SELECT * FROM users WHERE ip_last = '" . $derp['ip_last'] . "'");
+		
+		echo "There are " . mysql_num_rows($lerp) . " account(s) on this IP. <br /><br />";
+		while($ferp = mysql_fetch_array($lerp, MYSQL_ASSOC)) {
+		echo "<tr><td>" . $ferp['username'] . "</td><td>" . $ferp['mail'] . "</td><td>" . $ferp['ip_last'] . "</td></tr>"; }
+	} ?>
+	
+	<form method='post'>
+	Username <br /> <input type="text" name="username" style="width: 40%" /> <br /> <br />
+	<input type="submit" value="  Lookup IP  " class="button green" name="get_ip"/><br><br>
+	</form>
+</table>
+</center>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<?php include_once('inc/footer.html'); ?>

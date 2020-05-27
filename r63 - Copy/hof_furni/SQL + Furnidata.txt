@@ -1,0 +1,7 @@
+["s","5235551","doener_idabbo1","DoctorX","0","1","1","","Der Gerät","Deine Dönermaschine im iDabbo..","","-1","-1"],
+
+
+INSERT INTO `furniture` VALUES ('5235551', 'doener_idabbo1', 'doener_idabbo1', 's', '1', '1', '1', '0', '0', '0', '5235551', '1', '1', '1', '1', '1', 'default', '1', '0', '0', '0', '0', '0', '0');
+
+
+INSERT INTO `catalog_items` VALUES ('5235551', 'PAGEID', '5235551', 'doener_idabbo1', '1000', '0', '0', '1', '0', '0');

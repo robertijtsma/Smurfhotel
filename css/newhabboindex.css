@@ -1,0 +1,185 @@
+/*
+ * Body
+ */
+
+
+
+/*
+ * Header
+ */
+
+header {
+    width: 100%;
+    height: 235px;
+    min-height: 235px;
+    background: url( ../img/background/header-background.png );
+    position: relative;
+    z-index: 10;
+}
+
+header:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: #000;
+    opacity: .5;
+    z-index: -1;
+}
+
+header a.brand {
+    margin: 10px auto;
+    display: block;
+    float: none;
+}
+
+header p.user-count {
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 2px 0 #000;
+    font-size: 11px;
+    color: #FFF;
+}
+
+
+/*
+ * Navigation
+ */
+
+header nav.main-navigation {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba( 255, 255, 255, .8 );
+}
+
+header nav.main-navigation ul {
+    display: block;
+    list-style-type: none;
+}
+
+header nav.main-navigation ul li:first-child {
+    margin: 20px 20px 20px 0;
+}
+
+header nav.main-navigation ul li {
+    display: inline-block;
+    margin: 20px;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 21px;
+}
+
+header nav.main-navigation ul li img {
+    margin: 0 10px 0 0;
+}
+
+header nav.main-navigation ul li a {
+    color: #003c4e;
+}
+
+header nav.main-navigation ul li a:hover,
+header nav.main-navigation ul li a:focus {
+    text-decoration: none;
+    color: #0099c8;
+}
+
+header nav.main-navigation ul li.enter-hotel {
+    margin: 9px;
+    float: right;
+    background: #FFB900;
+    border: 2px solid #ffea00;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+header nav.main-navigation ul li.enter-hotel a {
+    padding: 10px 10px 10px 20px;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+
+/*
+ * Sub Navigation
+ */
+
+div.sub-navigation {
+    width: 100%;
+    height: 55px;
+    min-height: 55px;
+    background: #0d3c67;
+}
+
+div.sub-navigation ul li {
+    display: inline-block;
+}
+
+div.sub-navigation ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Ubuntu',  sans-serif;
+    font-size: 13px;
+    color: #FFF;
+}
+
+div.sub-navigation ul li:not(:last-child) a:after {
+    content: ' | ';
+    display: inline-block;
+    margin: 18px 10px;
+}
+
+
+
+/*
+ * Buttons
+ */
+
+.btn {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.btn-sm {
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: none;
+    width: 100%;
+    min-height: 20px;
+    padding: 4px 0;
+    margin: 0 0 20px 0;
+    background: #ffffff;
+    border: 2px solid #000;
+    border-bottom: 3px solid #000;
+    box-shadow: 0px 0px 0 rgba( 0, 0, 0, .2 );
+    color: #000;
+}
+
+.btn-sm:after {
+    background: #e5e5e5;
+}
+
+/*
+ * CSS Shake Animation
+ */
+
+@-webkit-keyframes thumb {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(0.9); }
+    100% { -webkit-transform: scale(1); }
+}

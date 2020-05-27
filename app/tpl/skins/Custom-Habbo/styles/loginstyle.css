@@ -1,0 +1,53 @@
+body {
+	background:#CCCCCC;
+	margin:0;
+	padding:0;
+	font-family:Verdana;
+	font-size:11px; }
+a {
+	color:#15C;
+	text-decoration:none;
+	outline:none; }
+a:hover {
+	text-decoration:underline; }
+.right {
+	float:right; }
+.left {
+	float:left; }
+
+/* Header ---------------------- */
+#blahblah {
+	color: #000000;
+	width: 100%;
+	background:transparent url("/app/tpl/skins/Custom-Habbo/images/menu-illu3.png") repeat-x;
+	height:34px;
+	border-bottom:1px solid #171511;
+}
+#body-header-container .lefts {
+	width: 400px;
+	float: left;
+	margin-right: 10px;
+}
+#body-header-container .right {
+	width: 530px;
+	text-align: right;
+	height: 25px;
+	float: right;
+}
+#body-header-container {
+	width:1000px;
+	padding:10px;
+	margin:auto;
+	color:white;
+}
+.body-header-slot {
+	float:right;
+	padding:10px;
+	margin:-9px 0 -10px 0;
+	color:white;
+	text-decoration:none;
+	text-shadow:#000000 1px 1px 1px;
+	outline:none; }
+.body-header-slot:hover {
+	background:#171511;
+	text-decoration:none; }

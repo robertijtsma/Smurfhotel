@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<!--
+    HybridCMS by Synt4x.
+    Noticed a bug? bugs@hybridhotel.uk
+    -------------------
+    @date: 30/06/2016
+    @uses: AvatarGenerate - https://github.com/synt4xy/avatargenerate
+    @contact: musecms (Skype)
+    -------------------
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+    <link rel="icon" href="./img/favicon.ico">
+
+        <title>Hybrid Hotel - A mix of awesome people.</title>
+    
+    <!-- AvatarGenerate by Synt4x -->
+    <link href="./css/avatargenerate.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link href="./css/habbo-theme.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- Begin Header -->
+<header>
+
+    <div class="container">
+
+        <a href="." class="brand" title="Hybrid Hotel" alt="Hybrid Hotel">Hybrid Hotel</a>
+
+        <div class="col-xs-12 col-md-8 pull-md-right login-form">
+
+        
+            <!-- Form -->
+            <form action="./login"  role="form" method="post" name="hubbaLoginForm">
+
+                <!-- CSRF TOKEN -->
+                <input type="hidden" name="_token" value="5kEhBcqZgx1RULFEDVmpFZa444RXb62yFKQm0EZA">
+                <!-- End CSRF TOKEN -->
+
+                <!-- Username -->
+                <div class="col-md-5">
+                    <fieldset class="form-group">
+                        <input type="text" class="form-control" name="username" value="" placeholder="Username">
+                    </fieldset>
+                </div>
+                <!-- End Username -->
+                <!-- Password -->
+                <div class="col-md-5">
+                    <fieldset class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <a href="#forgot-password" data-hybrid-forgot-password class="forgot-password" title="Forgot your password?">I forgot my password</a>
+                    </fieldset>
+                </div>
+                <!-- End Password -->
+
+                <!-- Login Button -->
+                <div class="col-md-2 login-col">
+                    <button type="submit" class="btn-login btn-gloss btn-sm btn-green">
+                        <span>Sign In</span>
+                    </button>
+                </div>
+
+                <div class="col-xs-12 hidden-md-up col-md-2">
+
+                    <a href="./register/username">
+
+                        <button type="button" class="btn-login btn-gloss btn-sm">
+                            <span>Register Now</span>
+                        </button>
+
+                    </a>
+                </div>
+                <!-- End Login Button -->
+            </form>
+            <!-- End Form -->
+        
+        </div>
+    </div>
+
+</header>
+<!-- End Header -->
+
+<!-- Begin Main Section -->
+<div class="hero register" id="main" data-smoothState="true">
+    <div class="container anim_element anim_element--fadeInLeft">
+
+        
+    <div class="col-md-12 no-padding">
+
+        <!-- Begin Register Box -->
+        <div class="hidden-md-down col-md-3 register-button-block">
+
+            <a href="register-1.html">
+
+                <button type="button" class="btn-gloss btn-lg btn-orange">
+                   <span>
+                      Join Now <span>(It's Free!)</span>
+                   </span>
+                </button>
+
+            </a>
+        </div>
+
+        <div class="hidden-md-down col-md-8 hero-text">
+            <h2>Welcome to Hybrid</h2>
+            <p>A mix of awesome people.</p>
+        </div>
+        <!-- End Register Box -->
+
+        <!-- Begin Login IMG -->
+        <div class="habbosPreview">
+            <img src="./img/background/habbos.png">
+        </div>
+        <!-- End Login IMG -->
+
+    </div>
+    
+    </div>
+</div>
+<!-- End Main Section -->
+
+<!-- Other Things -->
+
+
+            <!-- Modal -->
+    <div class="modal fade forgot-password" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span style="width: 70px;">My Account</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="hidden-xs-up">Close</span></button>
+                </div>
+                <div class="modal-title">
+                    <h3>Forgot your password?</h3>
+                </div>
+                <div class="modal-body">
+
+                    <form action="./account/reset" method="post">
+
+                        <input type="hidden" name="_token" value="5kEhBcqZgx1RULFEDVmpFZa444RXb62yFKQm0EZA">
+
+                        <div class="col-md-9 no-padding">
+                            <fieldset class="form-group">
+                                <input type="text" name="mail" class="form-control" placeholder="Enter Your E-mail">
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-3 no-padding">
+
+                            <button type="submit" class="btn-login btn-gloss btn-sm btn-green">
+                                <span>Send</span>
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+<!-- End Other Things -->
+
+<!-- Begin Footer -->
+
+<footer>
+    <div class="container">
+        <div class="hidden-md-down col-md-3 social-media">
+            <span>Follow Hybrid</span>
+            <ul class="social-links">
+                <li>
+                    <a href="#"><img src="./img/fb.png" alt="Facebook"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/youtube.png" alt="Youtube"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/rss.png" alt="RSS Feed"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9 policies">
+            <ul class="hidden-ms-down policy-links">
+                <li>
+                    <a href="https://devbest.com/members/synt4x.65632/">Made With &lt;3 By Synt4x</a>
+                </li>
+                <li>
+                    <a href="#">Safety</a>
+                </li>
+                <li>
+                    <a href="#">For Parents</a>
+                </li>
+                <li>
+                    <a href="#">Terms of Service &amp; Privacy</a>
+                </li>
+            </ul>
+
+            <p class="copyright">Hybrid Hotel, Powered by HybridCMS. Page was rendered in 0.0492 seconds.<br>
+                Copyright © 2016 Synt4x, and others who have supported this project. All rights reserved. Hybrid Hotel is no way affiliated with Sulake Corporation Oy.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- End Footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="./js/jquery.min.js"><\/script>')</script>
+<script src="./js/jquery.avatargenerate.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+
+        $( '[data-hybrid-forgot-password]' ).on( 'click', function()
+        {
+            $( '#myModal' ).modal( 'show' );
+
+            return false;
+        });
+
+    </script>
+
+
+</body>
+</html>

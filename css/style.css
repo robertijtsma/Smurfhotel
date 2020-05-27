@@ -1,0 +1,1423 @@
+@import url(/app/tpl/skins/Habbo/css/reset.css);
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500');
+body {
+    background-color: #02c1ee;
+    background-image: linear-gradient(to bottom, #F1F1F1, #F1F1F1), url(/app/tpl/skins/Habbo/images/index-img/floor.png), linear-gradient(to bottom, #02c1ee, #000000);
+    background-repeat: repeat-y, repeat-x, no-repeat;
+    background-size: 50% 100%, auto, 50% 100%;
+    background-position: left top, bottom, right top;
+    font-family: 'Rubik', sans-serif;
+}
+#menu {
+    box-shadow: 0 4px #02c1ee, 0 5px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+.logo {
+    background-color: #02c1ee;
+    background-image: url(/app/tpl/skins/Habbo/images/logo.png), linear-gradient(to bottom, #ffffff, #02c1ee);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 240px;
+    height: 140px;
+    float: left;
+    position: relative;
+    z-index: 99;
+}
+header {
+    background-color: #222222;
+    width: calc(100% - 240px);
+    height: 60px;
+    overflow: hidden;
+}
+header .online {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/online.png?v=2);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 32px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 30px;
+    float: left;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+}
+header .right {
+    float: right;
+}
+header ul li {
+    padding: 0 30px;
+    height: 60px;
+    line-height: 60px;
+    box-shadow: -1px 0 rgba(255, 255, 255, 0.06);
+    float: left;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+header ul li i {
+    margin-right: 4px;
+}
+header ul li span {
+    color: #999999;
+}
+header button {
+    border: none;
+    background-color: #43AF0A;
+    background-image: linear-gradient(to bottom, #60CC03, #43AF0A);
+    padding: 0 32px;
+    padding-left: 60px;
+    height: 60px;
+    box-shadow: inset 0 -30px rgba(0, 0, 0, 0.06);
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    float: right;
+    position: relative;
+    transition: all 0.2s;
+}
+header button:before {
+    content: "";
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/cursor.png);
+    width: 14px;
+    height: 22px;
+    position: absolute;
+    left: 30px;
+    top: 18px;
+}
+nav {
+    background-color: #343434;
+    width: calc(100% - 240px);
+    height: 80px;
+    overflow: hidden;
+    box-shadow: inset 0 -40px rgba(34, 34, 34, 0.1);
+}
+nav ul {
+    float: left;
+}
+nav ul li {
+    padding: 0 50px;
+    height: 80px;
+    line-height: 80px;
+    box-shadow: 1px 0 rgba(255, 255, 255, 0.06);
+    font-size: 16px;
+    color: #858585;
+    float: left;
+    transition: all 0.2s;
+}
+nav ul li i {
+    margin-left: 8px;
+}
+nav ul li:hover {
+    color: #FFFFFF;
+}
+nav ul li.active {
+    color: #FFFFFF;
+}
+.menu_mobile {
+    background-color: #343434;
+    width: 100%;
+    height: 52px;
+    overflow: hidden;
+    box-shadow: inset 0 -26px rgba(34, 34, 34, 0.1);
+    position: relative;
+    z-index: 20;
+    display: none;
+}
+.menu_mobile .online {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/online.png?v=1);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 32px;
+    height: 52px;
+    line-height: 52px;
+    margin: 0 30px;
+    float: left;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+}
+.menu_mobile .burger {
+    float: right;
+    margin: 14px 30px;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 20;
+}
+.menu_mobile .burger div {
+    background-color: #FFFFFF;
+    width: 26px;
+    height: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 4px 0;
+    transition: all 0.25s;
+}
+.menu_mobile .burger.active div:first-child {
+    transform: rotate(45deg);
+    margin-top: 10px;
+}
+.menu_mobile .burger.active div:nth-child(2) {
+    opacity: 0;
+}
+.menu_mobile .burger.active div:last-child {
+    transform: rotate(-45deg);
+    margin-top: -14px;
+}
+.menu_mobile_content {
+    background-color: #343434;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -200px;
+    z-index: 19;
+    transition: all 0.2s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.menu_mobile_content.active {
+    top: 52px;
+}
+.menu_mobile_content h2 {
+    font-size: 14px;
+    height: 52px;
+    line-height: 52px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0 20px;
+}
+.menu_mobile_content button {
+    border: none;
+    background-color: #43AF0A;
+    background-image: linear-gradient(to bottom, #60CC03, #43AF0A);
+    width: 100%;
+    height: 52px;
+    box-shadow: inset 0 -26px rgba(0, 0, 0, 0.06);
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    float: left;
+    position: relative;
+    transition: all 0.2s;
+}
+.menu_mobile_content ul {
+    width: 100%;
+    float: left;
+}
+.menu_mobile_content ul li {
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    height: 52px;
+    line-height: 52px;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.06);
+    font-size: 16px;
+    color: #858585;
+    float: left;
+    transition: all 0.2s;
+}
+button.green {
+    background-color: #329F0E;
+    background-image: linear-gradient(to bottom, #60CC03, #329F0E);
+    color: #FFFFFF!important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+button.green:focus {
+    background-image: linear-gradient(to top, #60CC03, #329F0E);
+}
+.white {
+    background-color: #FFFFFF;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+}
+.white .content {
+    max-width: 460px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.white h2 {
+    font-size: 30px;
+    color: #444444;
+    margin-top: 96px;
+}
+.white p {
+    font-size: 14px;
+    color: #888888;
+    margin: 24px 0;
+}
+.white p.p_back {
+    margin-bottom: 74px;
+}
+.white .title {
+    height: 20px;
+    line-height: 20px;
+    margin: 30px 0;
+    margin-top: 100px;
+}
+.white .title .left {
+    font-size: 24px;
+    color: #444444;
+    text-transform: uppercase;
+    float: left;
+}
+.white .title .right {
+    font-size: 16px;
+    color: #888888;
+    float: right;
+}
+.white .subtitle {
+    font-size: 20px;
+    height: 20px;
+    color: #444444;
+    margin: 16px 0;
+    margin-top: 22px;
+    text-align: left;
+}
+.white .required {
+    height: 20px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #555555;
+    margin-top: -36px;
+    margin-bottom: 16px;
+    text-align: right;
+}
+.white input {
+    border: none;
+    padding: 0 20px;
+    padding-right: 74px;
+    width: calc(100% - 94px);
+    height: 56px;
+    margin: 10px 0;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    transition: all 0.2s;
+}
+.white input:focus {
+    box-shadow: 0 0 0 2px #EE8E02;
+    color: #EE8E02;
+}
+.white .input_area {
+    position: relative;
+}
+.white input[type="password"] {
+    width: calc(100% - 200px);
+    padding-right: 180px;
+}
+.white .input_area input+label {
+    font-size: 20px;
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 20px;
+    top: 28px;
+}
+.white input.check {
+    box-shadow: 0 0 0 2px #67CD0F!important;
+}
+.white input.check:focus {
+    color: #67CD0F;
+}
+.white input.check+label {
+    color: #46B309;
+}
+.white input.check+label:before {
+    content: "\f058"
+}
+.white input.error {
+    box-shadow: 0 0 0 2px #FF6D6D!important;
+}
+.white input.error:focus {
+    color: #FF6D6D;
+}
+.white input.error+label {
+    color: #FF6D6D;
+}
+.white input.error+label:before {
+    content: "\f06a"
+}
+.white .imager {
+    width: 64px;
+    height: 96px;
+    margin-right: 4px;
+    margin-top: -106px;
+    position: relative;
+    float: right;
+}
+.white .forgot_password {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/key.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin: 0 20px;
+    padding-left: 26px;
+    height: 56px;
+    line-height: 58px;
+    margin-top: -66px;
+    font-size: 14px;
+    color: #AAAAAA;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.white .forgot_password:hover {
+    text-decoration: underline;
+}
+.white .checkbox {
+    margin-top: 18px;
+    margin-bottom: 33px;
+}
+.white .checkbox input {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.white .checkbox input:checked {
+    line-height: 22px;
+    text-align: center;
+    font-family: "FontAwesome";
+}
+.white .checkbox input:checked:before {
+    content: "\f00c"
+}
+.white .checkbox input+label {
+    width: calc(100% - 60px);
+    height: 22px;
+    line-height: 22px;
+    margin: 0 15px;
+    float: left;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    color: #666666;
+}
+.white .checkbox.remember {
+    float: left;
+    margin-left: calc(50% - 75px);
+}
+.white .checkbox.remember input+label {
+    width: auto;
+}
+.white button {
+    background-color: #F1F1F1;
+    border: none;
+    height: 60px;
+    padding: 0;
+    margin: 5px 0;
+    border-radius: 4px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.white button:hover {
+    opacity: 0.8;
+}
+.white button.log_in {
+    background-color: #E26E0B;
+    background-image: linear-gradient(to bottom, #EE8F02, #E26E0B);
+    width: 460px;
+    font-size: 20px;
+    float: left;
+}
+.white button.log_in:focus {
+    background-color: #E26E0B;
+    background-image: linear-gradient(to top, #EE8F02, #E26E0B);
+}
+.white button.facebook {
+    background-color: #3559A0;
+    background-image: linear-gradient(to bottom, #4F78B9, #3559A0);
+    width: 300px;
+    font-size: 16px;
+    float: right;
+}
+.white button.facebook i {
+    margin-right: 10px;
+}
+.white button.facebook:focus {
+    background-color: #4F78B9;
+    background-image: linear-gradient(to top, #4F78B9, #3559A0);
+}
+.white button.cancel {
+    height: 46px;
+    color: #AAAAAA;
+    text-shadow: none;
+    padding: 0 20px;
+    float: left;
+}
+.white button.green {
+    height: 46px;
+    padding: 0 24px;
+    float: right;
+}
+.white .sign_up {
+    font-size: 14px;
+    color: #888888;
+    margin: 35px 0;
+}
+.white .sign_up b {
+    color: #444444;
+    font-weight: 500;
+}
+.white .sign_up a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#login {
+    opacity: 0;
+    display: none;
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#login.active {
+    opacity: 1;
+    display: block;
+    -webkit-animation: fadeIn 1.5s;
+    animation: fadeIn 1.5s;
+}
+#register {
+    position: relative;
+    height: 710px;
+    opacity: 0;
+    display: none;
+}
+#register.active {
+    opacity: 1;
+    display: block;
+    -webkit-animation: fadeIn 1.5s;
+    animation: fadeIn 1.5s;
+}
+#register fieldset {
+    position: relative;
+}
+#register fieldset:not(:first-of-type) {
+    display: none;
+}
+.white .captcha {
+    width: 100%;
+    margin: 30px 0;
+}
+.white .captcha .txt {
+    float: left;
+    height: 76px;
+    line-height: 76px;
+    color: #444444;
+    font-size: 20px;
+}
+.white .captcha .g-recaptcha {}.white .reward {
+    float: left;
+    width: 100%;
+    height: 66px;
+    margin: 6px 0;
+}
+.white .reward:first-child {
+    margin-top: 10px;
+}
+.white .reward:last-child {
+    margin-bottom: 34px;
+}
+.white .reward div {
+    background-repeat: no-repeat;
+    background-position: 20px center, right center;
+    width: calc(100% - 96px);
+    padding-left: 48px;
+    height: 66px;
+    line-height: 66px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+    float: left;
+}
+@-moz-keyframes reward {
+    0% {
+        top: -10px;
+    }
+    50% {
+        top: -40px;
+    }
+    100% {
+        top: -10px;
+    }
+}
+@-webkit-keyframes reward {
+    0% {
+        top: -10px;
+    }
+    50% {
+        top: -40px;
+    }
+    100% {
+        top: -10px;
+    }
+}
+@keyframes reward {
+    0% {
+        top: -10px;
+    }
+    50% {
+        top: -40px;
+    }
+    100% {
+        top: -10px;
+    }
+}
+.white .reward div:before {
+    content: "";
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/arrow_user.png);
+    width: 30px;
+    height: 44px;
+    position: absolute;
+    right: 14px;
+    opacity: 0;
+    transition: all 0.2s;
+    -webkit-animation: reward 1.5s infinite ease-in-out;
+    -moz-animation: reward 1.5s infinite ease-in-out;
+    animation: reward 1.5s infinite ease-in-out;
+}
+.white .reward div:hover:before {
+    opacity: 1;
+    right: 34px;
+}
+.white .reward div.coins {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/coin.png), url(/app/tpl/skins/Habbo/images/index-img/coin_thumb.png);
+    background-color: #EEB82A;
+}
+.white .reward div.rare {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/diamond.png), url(/app/tpl/skins/Habbo/images/index-img/rare_thumb.png);
+    background-color: #3683B5;
+}
+.white .reward div.vip {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/hc.png), url(/app/tpl/skins/Habbo/images/index-img/vip_thumb.png);
+    background-color: #488286;
+}
+.white .reward input {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    margin-top: 22px;
+    float: right;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.white .reward input:checked {
+    line-height: 22px;
+    text-align: center;
+    font-family: "FontAwesome";
+}
+.white .reward input:checked:before {
+    content: "\f00c"
+}
+.white .hotel_view {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/hotel_view.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 100%;
+    height: 196px;
+    margin-top: -100px;
+    z-index: -1;
+}
+.white .rabbo_visual {
+    text-align: center;
+    margin-bottom: 64px;
+}
+.white .rabbo_visual .subtitle {
+    text-align: center;
+}
+.white .rabbo_visual .left {
+    float: left;
+}
+.white .rabbo_visual .right {
+    float: right;
+}
+.white .rabbo_visual .box {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 6px;
+    width: 60px;
+    height: 248px;
+}
+.white .rabbo_visual .box.active {
+    box-shadow: 0 0 0 2px #48B509;
+}
+.white .rabbo_visual .box.rabbomeisje {
+    box-shadow: 0 0 0 2px #FF69B4;
+}
+.white .rabbo_visual .box.rabbojongen {
+    box-shadow: 0 0 0 2px #1E90FF;
+}
+.white .rabbo_visual .box .head {
+    width: 60px;
+    height: 56px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+    filter: grayscale(1);
+}
+.white .rabbo_visual .box .head:hover {
+    background-color: #F1F1F1;
+}
+.white .rabbo_visual .box .head.active {
+    background-color: #F1F1F1;
+}
+.white .rabbo_visual .box.active .head {
+    filter: grayscale(0);
+}
+.white .rabbo_visual .box .head img {
+    margin-top: -4px;
+    opacity: 0.3;
+}
+.white .rabbo_visual .box .head.active img {
+    opacity: 1;
+}
+.white .rabbo_visual .box .head:last-child {
+    margin-bottom: 0;
+}
+.white .rabbo_visual input {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    margin-top: 26px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.white .rabbo_visual input:checked {
+    line-height: 22px;
+    text-align: center;
+    font-family: "FontAwesome";
+}
+.white .rabbo_visual input:checked:before {
+    content: "\f00c"
+}
+.white .rabbo_visual .rabbo_x2 {
+    position: absolute;
+    top: 268px;
+    left: calc(50% - 62px);
+}
+.white .rabbo_visual .rabbo_x2 .rabbo {
+    position: relative;
+}
+.white .rabbo_visual .rabbo_x2 .plate {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/plate.png);
+    width: 126px;
+    height: 90px;
+    margin-top: -55px;
+}
+.white .rabbo_visual .rabbo_x2 .rotate {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/arrow_rotate.png);
+    width: 44px;
+    height: 31px;
+    margin: 10px auto;
+}
+.white footer {
+    background-color: #F1F1F1;
+}
+.white footer ul {
+    padding: 20px;
+}
+.white footer ul li {
+    padding: 0 14px;
+    height: 12px;
+    line-height: 12px;
+    margin: 14px 0;
+    box-shadow: 1px 0 rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #666666;
+    float: left;
+    transition: all 0.2s;
+}
+.white footer ul li:hover {
+    color: #444444;
+    text-decoration: underline;
+}
+.white footer ul li:last-child {
+    box-shadow: none;
+}
+.copyright {
+    padding: 0 14px;
+    height: 12px;
+    line-height: 12px;
+    font-size: 14px;
+    color: #666666;
+}
+.orange {
+    width: 50%;
+    overflow: hidden;
+    float: right;
+}
+.orange .content {
+    max-width: 710px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+@-moz-keyframes spin {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+.orange .umbrella {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/umbrella.png);
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: -476px;
+    left: calc(50% - 300px);
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+}
+.orange h2 {
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 96px;
+}
+.orange p {
+    font-size: 14px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 24px 0;
+}
+.orange .room {
+    width: 584px;
+    height: 475px;
+    position: relative;
+    margin: 60px auto;
+    margin-bottom: 50px;
+}
+.orange .room_1 {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/room_1.png);
+    width: 584px;
+    height: 475px;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s;
+    filter: drop-shadow(0 6px rgba(0, 0, 0, 0.2));
+}
+.orange .room_2 {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/room_2.png);
+    width: 584px;
+    height: 475px;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s;
+    filter: drop-shadow(0 6px rgba(0, 0, 0, 0.2));
+}
+.orange .room_3 {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/room_3.png);
+    width: 584px;
+    height: 475px;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s;
+}
+@-moz-keyframes arrow_top {
+    0% {
+        top: -10px;
+    }
+    50% {
+        top: -40px;
+    }
+    100% {
+        top: -10px;
+    }
+}
+@-webkit-keyframes arrow_top {
+    0% {
+        top: -10px;
+    }
+    50% {
+        top: -40px;
+    }
+    100% {
+        top: -10px;
+    }
+}
+@keyframes arrow_top {
+    0% {
+        top: -10px;
+    }
+    50% {
+        top: -40px;
+    }
+    100% {
+        top: -10px;
+    }
+}
+.orange .arrow_top {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/arrow_top.png);
+    width: 46px;
+    height: 49px;
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 26px);
+    z-index: 5;
+    -webkit-animation: arrow_top 1.5s infinite ease-in-out;
+    -moz-animation: arrow_top 1.5s infinite ease-in-out;
+    animation: arrow_top 1.5s infinite ease-in-out;
+}
+.orange .room #rabbo {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/avatares.png?v=1);
+    background-position: 0 0;
+    width: 51px;
+    height: 89px;
+    position: absolute;
+    left: 234px;
+    top: 146px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.orange .room #rabbo.dance {
+    animation: rabbo 2s steps(6);
+    background-position: 100% 0;
+}
+@keyframes rabbo {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -306px 0;
+    }
+}
+.orange .room .box_msg {
+    background-color: #FFFFFF;
+    width: 328px;
+    padding: 20px 26px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 225px;
+    top: 250px;
+    opacity: 0;
+    transition: all 1s;
+}
+.orange .room .box_msg.active {
+    top: 260px;
+}
+.orange .room .box_msg.small {
+    width: 300px!important;
+}
+.orange .room .box_msg:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 0 10px;
+    border-color: transparent transparent transparent #FFFFFF;
+    filter: drop-shadow(-1px 0 rgba(0, 0, 0, 0.2)) drop-shadow(0 -1px rgba(0, 0, 0, 0.2));
+    position: absolute;
+    top: -10px;
+    left: 30px;
+}
+.orange .room .box_msg h3 {
+    font-size: 20px;
+    color: #444444;
+    text-align: left;
+    float: left;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.orange .room .box_msg p {
+    line-height: 20px;
+    font-size: 14px;
+    color: #666666;
+    text-shadow: none;
+    margin-bottom: 18px;
+    text-align: left;
+}
+.orange .room .box_msg button {
+    background-color: #F1F1F1;
+    border: none;
+    height: 36px;
+    padding: 0 28px;
+    border-radius: 4px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    text-transform: uppercase;
+    text-align: center;
+    float: left;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.orange .room .box_msg button:hover {
+    opacity: 0.8;
+}
+.orange .room .box_msg.final button.green {
+    width: 100%;
+    height: 72px;
+    font-size: 26px;
+}
+.orange .room .box_msg .more {
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: all 0.5s 0.5s;
+}
+.orange .room .box_msg.active .more {
+    opacity: 1;
+    bottom: -36px;
+}
+.orange .room .furni {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/room_furni.png);
+    width: 584px;
+    height: 475px;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.orange .room .friends {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/room_friends.png);
+    width: 584px;
+    height: 475px;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.orange .active {
+    opacity: 1!important;
+}
+#preloader {
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+#status {
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+}
+#status .loader {
+    background-image: url(/app/tpl/skins/Habbo/images/index-img/rabbo_loader.gif);
+    width: 102px;
+    height: 67px;
+    margin: 0 auto;
+}
+#status p {
+    font-size: 30px;
+    color: #444444;
+    margin: 30px 0;
+}
+#status i {
+    font-size: 24px;
+    color: #EE8F02;
+}
+.black_overlay {
+    background-color: rgba(34, 34, 34, 0.86);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+.black_overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.black_overlay .box {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+    width: calc(100% - 82px);
+    max-width: 668px;
+    border-radius: 4px;
+    padding: 20px 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%) scale(0.5);
+    opacity: 0;
+    transition: all 0.2s 0.2s;
+}
+.black_overlay.active .box {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+.black_overlay .box .left {
+    float: left;
+    line-height: 52px;
+    color: #888888;
+    font-size: 14px;
+}
+.black_overlay .box .left i {
+    color: #5FCB03;
+    margin-right: 6px;
+}
+.black_overlay .box .right {
+    float: right;
+}
+.black_overlay .box .close {
+    height: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    float: right;
+    margin-right: -26px;
+    margin-top: -60px;
+    cursor: pointer;
+}
+.black_overlay .box .close:hover {
+    text-decoration: underline;
+}
+.black_overlay .box h2 {
+    font-size: 20px;
+    color: #444444;
+}
+.black_overlay .box p {
+    margin: 14px 0;
+    line-height: 20px;
+    font-size: 14px;
+    color: #888888;
+}
+.black_overlay .box input {
+    background-color: transparent;
+    border: none;
+    padding: 0 20px;
+    padding-right: 74px;
+    width: calc(100% - 94px);
+    height: 52px;
+    margin: 18px 0;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    transition: all 0.2s;
+}
+.black_overlay .box input:focus {
+    box-shadow: 0 0 0 2px #EE8E02;
+    color: #EE8E02;
+}
+.black_overlay .box button {
+    border: none;
+    height: 48px;
+    padding: 0 28px;
+    border-radius: 4px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    text-transform: uppercase;
+    text-align: center;
+    float: right;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.black_overlay .box button:hover {
+    opacity: 0.8;
+}
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.pace-inactive {
+    display: none;
+}
+.pace .pace-progress {
+    background: #59c505;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 4px;
+}
+.white .birth {
+    margin: 26px 0;
+    margin-bottom: 52px;
+}
+div.cs-select.dag {
+    width: 20%;
+}
+div.cs-select.maand {
+    width: calc(50% - 40px);
+    margin: 0 20px;
+}
+div.cs-select.jaar {
+    width: 30%;
+}
+div.cs-select {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    background-color: #FFFFFF;
+    color: #8F8F8F;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 80;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: box-shadow 0.2s, border-radius 0.2s;
+    float: left;
+}
+div.cs-select:focus {
+    box-shadow: 0 0 0 2px #EE8E02;
+    color: #444444;
+}
+div.cs-select.cs-active {
+    border-radius: 3px 3px 0 0;
+}
+.cs-select select {
+    display: none;
+}
+.cs-select span {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 50px;
+    line-height: 50px;
+}
+.cs-select>span {
+    padding: 0 20px;
+}
+.cs-select>span::after,
+.cs-select .cs-selected span::after {
+    speak: none;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "FontAwesome";
+}
+.cs-select>span::after {
+    content: '\f0d7';
+    right: 20px;
+}
+.cs-select .cs-selected {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.cs-select.cs-active>span::after {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+}
+.cs-select .cs-options {
+    position: absolute;
+    width: calc(100% + 4px);
+    max-height: 128px;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 0 0 4px 4px;
+    background-color: #FFFFFF;
+    color: #444444;
+    margin-left: -2px;
+    padding-bottom: 3px;
+    transition: box-shadow 0.2s, opacity 0.2s, visibility 0.2s;
+}
+div.cs-active .cs-options {
+    box-shadow: inset 2px 0 #EE8E02, inset -2px 0 #EE8E02, inset 0 1px #E5E5E5, inset 0 2px #FFFFFF, inset 0 0 0 2px #EE8E02;
+}
+.cs-select.cs-active .cs-options {
+    visibility: visible;
+    opacity: 1;
+}
+.cs-select ul {
+    overflow-y: scroll;
+    max-height: 128px;
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 4px);
+    margin: 2px;
+    margin-top: 1px;
+    border-radius: 0 0 3px 3px;
+}
+.cs-select ul li {
+    height: 46px;
+}
+.cs-select ul li:nth-child(even) {
+    background-color: #F7F7F7;
+    height: 36px!important;
+}
+.cs-select ul li:nth-child(even) span {
+    line-height: 36px!important;
+}
+.cs-select ul li:hover {
+    background-color: #EF930E;
+    color: #FFFFFF;
+}
+.cs-select ul li span {
+    padding: 0 20px;
+    height: 46px;
+    line-height: 46px;
+}
+.registerDescription {
+    color: #BDBDBD;
+    font-size: 12px;
+    font-family: Open-Sans, sans-serif;
+    font-weight: 500;
+    text-align: left;
+}
+.alert-success {
+    color: #fff;
+    background-color: #4CAF50;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+    border-radius: 2px;
+}
+.alert-danger {
+    color: #fff;
+    background-color: #CC1616;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+    border-radius: 2px;
+}
+.alert {
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@media (max-width: 980px) {
+    .white button.log_in,
+    .white button.facebook {
+        float: none;
+    }
+}
+@media (max-width: 850px) {
+    .menu_mobile {
+        display: block;
+    }
+    .menu_mobile_content {
+        display: block;
+    }
+    #menu .logo {
+        width: 100%;
+        height: 100px;
+    }
+    #menu header {
+        display: none;
+    }
+    #menu nav {
+        display: none;
+    }
+    .white {
+        width: 100%;
+    }
+    .white h2 {
+        line-height: 36px;
+    }
+    .white p {
+        line-height: 20px;
+    }
+    .orange {
+        display: none;
+    }
+    .white button.log_in {
+        float: left;
+    }
+    .white button.facebook {
+        float: right;
+    }
+    div.cs-select {
+        font-size: 12px;
+    }
+    .white .rabbo_visual .rabbo_x2 {
+        top: 340px;
+    }
+    .white .captcha .txt {
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 16px;
+    }
+}
+@media (max-width: 500px) {
+    .white button.log_in,
+    .white button.facebook {
+        float: none;
+    }
+    .white button.facebook {
+        width: 100%;
+    }
+    .black_overlay .box button {
+        width: 100%;
+        margin-top: 12px;
+    }
+}

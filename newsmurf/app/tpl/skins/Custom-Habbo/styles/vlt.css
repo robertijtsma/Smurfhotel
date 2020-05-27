@@ -1,0 +1,305 @@
+body {
+	background-color: #bce0ee;
+	background-image: url( '../images/bg.png' );
+	padding: 20px;
+	font-size: 10px;
+	font-family: Verdana;
+}
+
+a {
+	color: #000;
+}
+
+a.reglink {
+	font-weight: bold;
+	text-decoration: underline;
+	color: #000;
+}
+
+input {
+	border: 1px solid #aaa;
+	background: #fff;
+	padding: 5px;
+	font-family: verdana;
+	font-size: 10px;
+}
+
+input[type=submit] {
+	padding-left: 10px;
+	padding-right: 10px;
+	float: right;
+	margin:5px;
+}
+
+div.loginBox {
+	background-color: #ffffff;
+	width: 720px;
+	margin: 0 auto;
+	border: 1px solid #aaa;
+}
+
+div.loginBox > div.top {
+	padding: 20px;
+	overflow: hidden;
+	text-align: right;
+}
+
+div.loginBox > div.top > a > img {
+	border:0;
+	float: left;
+}
+
+div.loginBox > div.mid {
+	height: 431px;
+	background-image: url( '../images/park_battle.png' );
+	overflow: hidden;
+}
+
+
+div.loginBox > div.mid > div.registerBox {
+	width: 280px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	background-color: #fff;
+	border: 1px solid #000;
+	padding: 10px;
+}
+div.loginBox > div.mid > div.registerBox#right {
+	float: right;
+	margin-right: 40px;
+}
+
+div.loginBox > div.mid > div.registerBox > form > input[type=text] {
+	width: 95%;
+}
+
+div.loginBox > div.mid > div.registerBox > form > input[type=password] {
+	width: 95%;
+}
+
+div.loginBox > div.mid > div.loginForm {
+	width: 317px;
+	float: left;
+	margin-left: 30px;
+	margin-top: 60px;
+	background-color: #fff;
+	border: 3px solid #000;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+
+div.loginBox > div.mid > div.loginForm > form > input[type=text] {
+	width: 95%;
+}
+
+div.loginBox > div.mid > div.loginForm > form > input[type=password] {
+	width: 95%;
+}
+
+div.loginBox > div.mid > div.registerstep2 > input[type=text] {
+	width: 80%;
+}
+
+div.loginBox > div.mid > div.registerstep2 > input[type=submit] {
+	width: 15%;
+}
+
+div.loginBox > div.bot > p {
+	text-align: center;
+}
+
+div.loginBox > div.bot > p.copyright > a, div.loginBox > div.bot > p.copyright {
+	color: #aaa;
+}
+
+div.loginBox > div.mid > div.loginForm > div.box_header {
+	background: #edede5;
+	padding: 5px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: -5px;
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+div.loginBox > div.mid > div.logininfo > div.box_header {
+	background: #edede5;
+	padding: 5px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: -5px;
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+div.loginBox > div.mid > div.registerBox > div.box_header {
+	background: #edede5;
+	padding: 5px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: -5px;
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+div.loginBox > div.mid > div.registerstep2 > div.box_header {
+	background: #edede5;
+	padding: 5px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: -5px;
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+.auth-providers ul {
+	list-style: none;
+}
+
+.auth-providers li .provider {
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-indent: -10000px;
+    margin-bottom: 3px;
+    background: transparent url('../images/misc/rpx_buttons.png') no-repeat 0 0;
+}
+
+.auth-providers { width: 188px }
+.auth-providers-list { float: none; width: auto }
+.auth-providers-list li { float: none; padding: 10px }
+.auth-providers-list li .provider {
+    background: transparent url(../images/misc/rpx_labels.png) no-repeat 0 0;
+    border: 1px solid #999;}
+
+.auth-providers li a:active, .auth-providers li a:focus {
+    outline: none;
+}
+
+.phase-1 #register-page { margin-right: 0 }
+.auth-providers form input { display: none; }
+
+.auth-providers li a.provider:hover { background-position: 0 -51px }
+.auth-providers li.twitter .provider { background-position: -151px 0px; }
+.auth-providers li.twitter a.provider:hover { background-position: -151px -51px; }
+.auth-providers li.myspace .provider { background-position: -302px 0px; }
+.auth-providers li.myspace a.provider:hover { background-position: -302px -51px; }
+.auth-providers li.yahoo .provider { background-position: -453px 0px; }
+.auth-providers li.yahoo a.provider:hover { background-position: -453px -51px; }
+.auth-providers li.google .provider { background-position: -604px 0px; }
+.auth-providers li.google a.provider:hover { background-position: -604px -51px; }
+.auth-providers li.windowslive .provider { background-position: -755px 0px; }
+.auth-providers li.windowslive a.provider:hover { background-position: -755px -51px; }
+.auth-providers li.hyves .provider { background-position: -906px 0px; }
+.auth-providers li.hyves a.provider:hover { background-position: -906px -51px; }
+.auth-providers li.habbo .provider { background-position: -1057px 0px; }
+.auth-providers li.habbo a.provider:hover { background-position: -1057px -51px; }
+.auth-providers li.otaku .provider { background-position: -1207px 0px; }
+.auth-providers li.otaku a.provider:hover { background-position: -1207px -51px; }
+
+select {
+    border: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #edede5;
+    width: 75px;
+}
+
+input.text-field,input.password-field,select {
+    font-size: 11px;
+    padding: 4px;
+    border-style: solid;
+    border-color: #C6C6C6 #C6C6C6 #E3E3E3;
+    border-width: 1px;
+}
+
+input, textarea, select {
+    font-size: 11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.loginBox > div.mid > div.registerstep2 {
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 40px;
+	background-color: #fff;
+	border: 1px solid #000;
+	padding: 10px;
+	overflow: hidden;
+}
+
+#avatar-choices { float: left; margin-left: 16px; width: 450px; }
+#selected-avatar {
+    background: transparent url(../images/misc/reg_stand.png) no-repeat bottom left;    height: 157px;
+    width: 106px;
+    float: left; 
+    margin-top: 42px;
+    position: relative; 
+}
+
+#selected-avatar img {
+	position: absolute;
+	bottom: 36px;
+	left: 22px;
+}
+
+#selected-avatar h3 { position: absolute; top: -42px; }
+.field-avatar .selected {
+	border: 2px solid lightgreen;
+}
+.male-avatar, .female-avatar {
+    display: block;
+    float: left;
+    background: transparent url(../images/misc/reg_btn_0.png) no-repeat 0 0;
+    height: 61px;
+    width: 35px;
+    margin: 0 3px 10px 0;
+}
+
+.male-avatar:hover, .female-avatar:hover { background-image: url(../images/misc/reg_btn_1.png)}#avatar-field-container h3 {
+    clear: left;}
+
+div.errormsg {
+	padding: 7px;
+	background-color: #fff4f2;
+	border: 1px solid #a63c29;
+	color: #E2001A;
+	margin-top: 5px;
+}
+
+div.errormsg > h3 {
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+}
+
+div.goodmsg {
+	padding: 7px;
+	background-color: #d8f3d8;
+	border: 1px solid #4da04d;
+	color: #205220;
+	margin-top: 5px;
+}
+
+div.goodmsg > h3 {
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+}
+
+div.display_none {
+	display: none;
+}
+
+label.error {
+	padding: 7px;
+	background-color: #fff4f2;
+	border: 1px solid #a63c29;
+	color: #E2001A;
+	display: block;
+	font-weight: bold;
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - Dashboard</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <!--- HEADER -->
+  
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+      <div class="ad-notif-info grid_12"><p>Welcome to Adminity! The home of {hotelname}' Housekeeping! You can dismiss this message by clicking it!</p></div>
+      <div class="box grid_3">
+        <div class="box-head"><h2>Your Character's Info!</h2></div>
+        <div class="box-content">
+		<center>
+		  <img alt="{username}" src="http://www.habbo.nl/habbo-imaging/avatarimage?figure={figure}&direction=2&head_direction=3&action=wav&gesture=sml"/><hr />
+		  <p>{username}</p><hr />
+		 <p> Motto: {motto}</p><hr />
+		  <p>Rank: {rank}</p>
+          </p>
+		</center>
+        </div>
+      </div>
+      <div class="box grid_3">
+        <div class="box-head"><h2>Stats</h2></div>
+        <div class="box-content ad-stats">
+          <ul>
+            <li><h3><?php $query = mysql_query("SELECT COUNT(*) AS aantalleden FROM users") or die(mysql_error()); $data = mysql_fetch_assoc($query); echo $data['aantalleden']; ?></h3> Users Registered</li>
+            <li class="stats-up"><h3>{online}</h3> Users Online</li>
+            <li class="stats-up"><h3><?php $query = mysql_query("SELECT COUNT(*) AS aantalkamers FROM rooms") or die(mysql_error()); $data = mysql_fetch_assoc($query); echo $data['aantalkamers']; ?></h3> Rooms</li>
+            <li class="stats-down"><h3><?php $query = mysql_query("SELECT COUNT(*) AS aantalmeubels FROM furniture") or die(mysql_error()); $data = mysql_fetch_assoc($query); echo $data['aantalmeubels']; ?></h3> Furniture</li>
+            <li class="stats-up"><h3><?php $query = mysql_query("SELECT COUNT(*) AS aantalmeubels FROM catalog_items") or die(mysql_error()); $data = mysql_fetch_assoc($query); echo $data['aantalmeubels']; ?></h3> Furni in Catalog</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box grid_6">
+        <div class="box-head"><span class="box-icon-24 fugue-24 system-monitor"></span><h2>Welcome to {hotelName} ASE</h2></div>
+        <div class="box-content">
+		<p align="right">
+			Welcome to the {hotelname} administration panel. Please not that if you're not a staff member, please sign out of this panel as your IP has been logged. The ASE (All Seeing Eye) allows you to edit your catalogue, make, delete or edit news, change a users information and much more!
+			For the sake of {hotelname}, please do not abuse these tools as your actions will be traced back to you.
+			<br /><br />
+			Each session is logged. Meaning if you're to log in to the Housekeeping, each move you make is logged under your IP Address <b>(<?php echo $_SERVER['REMOTE_ADDR']; ?>)</b>. Everything as far as
+			clicking links, editing something, even browsing a certain page - within the Housekeeping. So please use it respectfully so you don't get your rank removed.
+			<br /><br />
+			Thanks,
+			<br />
+			{hotelname} Administration<br>
+</div></p>
+<br>
+</div></div></div>
+<center>
+</br>
+<div id="footer" align="middle">
+<p>Powered by PulseASE<br>
+&copy; Copyright 2013-2014 {HotelName} Hotel</p>
+</center>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SwizzyAdminity</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Bewerk een Catalogus Pagina</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+          <br />          
+         <?php
+          
+        if(isset($_POST['update']))
+		{
+			mysql_query("UPDATE catalog_pages SET id = '" . filter($_POST['id']) . "', parent_id = '" . filter($_POST['parent_id']) . "', caption = '" . filter($_POST['caption']) . 		"', min_rank = '" . filter($_POST['min_rank']) . "', page_layout = '" . filter($_POST['page_layout']) . "', page_headline = '" . filter($_POST['page_headline']) . "' WHERE id = '" . filter($_POST['id_current']) . "'") or die(mysql_error());
+			 	echo $_POST['id_current'] . " De pagina is bijgewerkt! :-)"; 
+		}
+		
+
+if(isset($_POST['lookup']))
+{	
+	
+	if(mysql_num_rows(mysql_query("SELECT * FROM catalog_pages WHERE id = '". filter($_POST['l_id']) ."'")) == 0) { echo "Deze Pagina bestaat niet of werd niet gevonden."; }
+	else { 
+				$two = mysql_fetch_assoc(mysql_query("SELECT * FROM catalog_pages WHERE id = '" . filter($_POST['l_id']) . "'"));
+	?>
+		
+	
+	<form method='post'>
+	<input type="hidden" name="id_current" value="<?php echo $_POST['l_id']; ?>" />
+	
+		<table style="width: 100%;">
+				
+			<tr>
+				<td>ID</td></td>
+				<td><input type="text" name="id" value="<?php echo $_POST['l_id']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Parent ID</td>
+				<td><input type="text" name="parent_id" value="<?php echo $two['parent_id']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Naam</td>
+				<td><input type="text" name="caption" value="<?php echo $two['caption']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Min Rank</td>
+				<td><input type="text" name="min_rank" value="<?php echo $two['min_rank']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Pagina Layout</td>
+				<td><input type="text" name="page_layout" value="<?php echo $two['page_layout']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Pagina Headline</td>
+				<td><input type="text" name="page_headline" value="<?php echo $two['page_headline']; ?>" style="width: 95%" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="  Bewerk de Pagina  " name="update"/>
+	</form>
+	<br />
+	<?php
+	}
+	}
+	?>
+
+	<center><form method='post'>
+	ID: <br /> <input type="text" name="l_id" style="width: 40%"  /> <br /> <br />
+	<input type="submit" class="button green" value="  Zoek naar deze Catalogus Pagina  " name="lookup" />
+	</form></center>
+	
+	</center>
+<?php include_once('inc/footer.html'); ?>

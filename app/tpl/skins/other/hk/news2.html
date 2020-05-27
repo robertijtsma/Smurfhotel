@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - News</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Post News</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+<center>
+          <br />         
+<?php
+
+if(!isset($_SESSION["longstory"]))
+{
+	header("Location: ".$_CONFIG['hotel']['url']."/ase/news");
+	exit;
+}
+
+if(isset($_POST["proceed"]))
+{
+	$author = mysql_result(mysql_query("SELECT username FROM users WHERE id = '".$_SESSION['user']['id']."' LIMIT 1"), 0);
+mysql_query("INSERT INTO cms_news (title,shortstory,longstory,published,image,author, campaign, campaignimg) VALUES ('" . filter($_SESSION["title"]) . "', '" . filter($_SESSION["shortstory"]) . "', '" . ($_SESSION["longstory"]) . "', '" . time() . "', '" . filter($_POST["topstory"]) . "', '" . filter($author) . "', 0, 'default')") or die(mysql_error());
+	unset($_SESSION["title"], $_SESSION["shortstory"], $_SESSION["longstory"]);
+	header("Location: ".$_CONFIG['hotel']['url']."/ase/");
+	exit;
+}
+	echo '<center><b>It\'s time to choose the image for your story. Choose one from the drop down list and click "Check Image"';
+	echo '<form method="post">';
+	echo '<br />';
+	echo '<select name="topstory" id="topstory" style="font-size: 14px;"';
+	
+	if ($handle = opendir('ts/'))
+	{	
+		while (false !== ($file = readdir($handle)))
+		{
+			if ($file == '.' || $file == '..')
+			{
+				continue;
+			}	
+	
+			echo '<option value="' . $file . '"';
+	
+			if (isset($_POST['topstory']) && $_POST['topstory'] == $file)
+			{
+				echo ' selected';
+			}
+			
+			echo '>' . $file . '</option>';
+		}
+	}
+
+	echo '</select>';
+	
+	if(isset($_POST["check"]))
+	{
+		echo '<br /> <br /> <input type="submit" value="  Check image  " name="check" /> <br /><br />';
+		echo '<font size="3">Topstory image<br /></font><img src="ts/' . $_POST["topstory"] . '" align="right />';
+		echo '</center> <align="right"> <br /> <br /> <input type="submit" value="  Proceed (use image)  " name="proceed" /> <br />';
+		echo '</form>';
+	}
+	else
+	{
+		echo '<br /> <br /> <input type="submit" value="Check image" class="button green" name="check" /> <br />';
+		echo "</form>";
+	}
+
+?>	</div>
+</center>
+</center>
+<?php include_once('inc/footer.html'); ?>

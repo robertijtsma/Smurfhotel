@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Adminity - Edit News</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-ui-1.8.17.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/styler.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.tipTip.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/colorpicker.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/sticky.full.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/global.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!--- HEADER -->
+
+  <?php include_once('inc/header.html'); ?>
+
+  <!--- CONTENT AREA -->
+
+  <div class="content container_12">
+    <div class="box grid_12">
+      <div class="box-head"><h2>Edit News</h2></div>
+        <div class="box-content textsh">
+      <div id="content_container">
+	  <center>
+          <br /> 
+         <?php
+          
+        if(isset($_POST['update'])) 
+		{
+			mysql_query("UPDATE groups SET id='".mysql_real_escape_string($_POST ['id'])."' WHERE id='".mysql_real_escape_string($_POST['id'])."'") or die(mysql_error()); 
+			mysql_query("UPDATE groups SET name='".mysql_real_escape_string($_POST ['name'])."' WHERE id='".mysql_real_escape_string($_POST['id'])."'") or die(mysql_error()); 
+			mysql_query("UPDATE groups SET badge='".mysql_real_escape_string($_POST ['badge'])."' WHERE id='".mysql_real_escape_string($_POST['id'])."'") or die(mysql_error());
+			mysql_query("UPDATE groups SET ownerid='".mysql_real_escape_string($_POST ['ownerid'])."' WHERE id='".mysql_real_escape_string($_POST['id'])."'") or die(mysql_error());
+			mysql_query("UPDATE groups SET roomid='".mysql_real_escape_string($_POST ['roomid'])."' WHERE id='".mysql_real_escape_string($_POST['id'])."'") or die(mysql_error());
+			mysql_query("UPDATE groups SET privacy='".mysql_real_escape_string($_POST ['privacy'])."' WHERE id='".mysql_real_escape_string($_POST['id'])."'") or die(mysql_error()); 
+			 	echo ($_POST['name_current']) . "Group Updated.";
+		}
+
+if(isset($_POST['lookup']))
+{	
+	
+	if(mysql_num_rows(mysql_query("SELECT * FROM groups WHERE id = '". mysql_real_escape_string($_POST['id']) ."'")) == 0) { echo "Group does not exist."; }
+	else { 
+				$two = mysql_fetch_assoc(mysql_query("SELECT * FROM groups WHERE id = '" . mysql_real_escape_string($_POST['id']) . "'"));
+	?>
+	
+	Editing Group: <?php echo $id; ?></a>
+	<form method='post'>
+	<input type="hidden" name="id" value="<?php echo $_POST['id']; ?>" />
+	
+		<table style="width: 100%;">
+				
+			<tr>
+				<td>Group ID</td></td>
+				<td><input type="text" name="id" value="<?php echo $_POST['id']; ?>" style="width: 95%" readonly="readonly" /></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name" value="<?php echo $two['name']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td><input type="text" name="desc" value="<?php echo $two['desc']; ?>" style="width: 95%" readonly="readonly" /></td>
+			</tr>
+			<tr>
+				<td>Badge ID</td>
+				<td><input type="text" name="badge" value="<?php echo $two['badge']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Owner ID</td>
+				<td><input type="text" name="ownerid" value="<?php echo $two['ownerid']; ?>" style="width: 95%" /></td>
+			</tr>
+			<tr>
+				<td>Room ID</td>
+				<td><input type="text" name="roomid" value="<?php echo $two['roomid']; ?>" style="width: 95%" /></td>
+			</tr>
+				<td>Privacy</td>
+				<td><input type="text" name="privacy" value="<?php echo $two['privacy']; ?>" style="width: 95%" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="  Update Group  " name="update"/>
+	</form>
+	<br />
+	<?php
+	}
+	}
+	?>
+
+	<center><form method='post'>
+	Group ID:<br> <br /> <input type="text" name="id" style="width: 40%"  /> <br /> <br />
+	<input type="submit" class="button green" value="  Find Group  " name="lookup" />
+	</form></center>
+	
+	</center>
+<div class="footer container_12">
+  <p class="grid_12">Powered by Adminity Administration Interface</p>
+</div>
+
+</body>
+
+</html>

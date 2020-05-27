@@ -1,0 +1,25 @@
+INSERT INTO `furniture` (`id`, `public_name`, `item_name`, `type`, `width`, `length`, `stack_height`, `can_stack`, `can_sit`, `is_walkable`, `sprite_id`, `allow_recycle`, `allow_trade`, `allow_marketplace_sell`, `allow_gift`, `allow_inventory_stack`, `interaction_type`, `interaction_modes_count`, `vending_ids`, `is_arrow`) VALUES
+(80000051, 'fillar', 'fillar', 's', 1, 1, 1, '0', '0', '0', 80000051, '1', '1', '1', '1', '1', 'default', 0, '0', '0'),
+(80000052, 'face_icecream_bookkkkk', 'face_icecream_bookkkkk', 's', 1, 1, 1, '0', '0', '0', 80000052, '1', '1', '1', '1', '1', 'vendingmachine', 0, '4', '0'),
+(80000053, 'facebook_wall', 'facebook_wall', 'i', 0, 0, 1, '0', '0', '0', 80000053, '1', '1', '0', '1', '1', 'default', 1, '0', '0'),
+(80000054, 'facebookcarpett', 'facebookcarpett', 's', 3, 5, 0, '1', '0', '1', 80000054, '1', '1', '0', '1', '1', 'default', 1, '0', '0'),
+(80000055, 'faceboosofa', 'faceboosofa', 's', 2, 1, 1, '0', '1', '0', 80000055, '1', '1', '1', '1', '1', 'default', 1, '0', '0'), 
+(80000056, 'fillow', 'fillow', 's', 1, 1, 1, '1', '0', '0', 80000056, '1', '1', '1', '1', '1', 'default', 1, '0', '0'),
+(80000057, 'facebookven', 'facebookven', 's', 1, 1, 1, '0', '0', '0', 80000057, '1', '1', '1', '1', '1', 'vendingmachine', 0, '51', '0');
+
+INSERT INTO `catalog_items`(`id`, `page_id`, `item_ids`, `catalog_name`, `cost_credits`, `cost_pixels`, `cost_snow`, `amount`) VALUES
+('80000051', '105', '80000051', 'Facebook Pillar', '200', '0', '0', '1'),
+('80000052', '105', '80000052', 'Facebook ICM', '200', '0', '0', '1'),
+('80000053', '105', '80000053', 'Facebook wall', '200', '0', '0', '1'),
+('80000054', '105', '80000054', 'Facebook Carpet', '200', '0', '0', '1'),
+('80000055', '105', '80000055', 'Facebook Couch', '200', '0', '0', '1'),
+('80000056', '105', '80000056', 'Facebook Pillow', '200', '0', '0', '1'),
+('80000057', '105', '80000057', 'Facebook Vending', '200', '0', '0', '1');
+
+["s","80000051","fillar","95825","0","1","1","","Facebook Pillar","Mark Bow Downs To This!","","-1","-1"],
+["s","80000052","face_icecream_bookkkkk","95825","0","1","1","","Facebook ICM","Eat This While Watching The Social Network!","","-1","-1"],  
+["i","80000053","facebook_wall","95825","0","1","1","","Facebook Wall","Hang this while you make a status!","","-1","-1"],  
+["s","80000054","facebookcarpett","95825","0","1","1","","Facebook Carpet","This Is Mark's Carpet!","","926514","9471","","1"],  
+["s","80000055","faceboosofa","95825","0","1","1","","Facebook Couch","Relax And Go On Facebook!","","-1","-1"],
+["s","80000056","fillow","95825","0","1","1","0,0,0","Facebook Pillow","Pillow To Go On Facebook!","","-1","-1"],
+["s","80000057","facebookven","95825","0","1","1","","Facebook Vending Machine","Get a snack before hours on Facebook!","","-1","-1"],  

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd"><cross-domain-policy>
+<site-control permitted-cross-domain-policies="master-only"/>
+<allow-access-from domain="images.habbohotel.com"/>
+<allow-access-from domain="images.habbo.com"/>
+<allow-access-from domain="*.habbomobile.com"/>
+<allow-access-from domain="*.habbo.com"/>
+<allow-access-from domain="*.habbohotel.com"/>
+<allow-access-from domain="rumba.sulake.com"/>
+<allow-access-from domain="habbo.hs.llnwd.net"/>
+<allow-access-from domain="images-sulake.netdna-ssl.com"/>
+<allow-access-from domain="images-sulake.cotssl.net"/>
+<allow-access-from domain="*.appspot.com"/>
+<allow-access-from domain="prntscr.com"/>
+<allow-access-from domain="tinypic.com/"/>
+
+</cross-domain-policy>

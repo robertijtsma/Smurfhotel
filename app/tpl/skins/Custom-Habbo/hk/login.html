@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{hotelName} - Login</title>
+  <link rel="shortcut icon" href="{url}/app/tpl/skins/{skin}/hk/favicon.gif">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/master.css">
+  <link rel="stylesheet" href="{url}/app/tpl/skins/{skin}/hk/css/login.css">
+  <!---jQuery Files-->
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery-1.7.1.min.js"></script>
+  <script src="{url}/app/tpl/skins/{skin}/hk/js/jquery.spinner.js"></script>
+  <script type="text/javascript" src="{url}/app/tpl/skins/{skin}/hk/js/forms/jquery.validate.min.js"></script>
+  <!---Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <!---FadeIn Effect, Validation and Spinner-->
+  <script>
+    $(document).ready(function () {
+       $('div.wrapper').hide();
+        $('div.wrapper').fadeIn(1200);
+        $('#lg-form').validate();
+        $('.submit').click(function() {
+        var $this = $(this);
+        $this.spinner();
+        setTimeout(function() {
+                $this.spinner('remove');
+        }, 1000);
+       });
+    });
+  </script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="logo">
+	 	<h1>LOGIN PAGE</h1>
+	 </div>
+   <div class="lg-body">
+     <div class="inner">
+       <div id="lg-head">
+         <p><span class="font-bold">SwizzyASE</span>: Log in met je Staff naam en wachtwoord!</p>
+         <div class="separator"></div>
+       </div>
+       <div class="login">
+         <form id="lg-form" method="post" action="index.php?url=login">
+           <fieldset>
+              <ul>
+                 <li id="usr-field">
+                  <input class="input required" type="text" name="username" size="26" minlength ="1" placeholder="SwizzNaam..." />
+                 </li>
+                 <li id="psw-field">
+                  <input class="input required" type="password" name="password" size="26" minlength="1" placeholder="Wachtwoord..." />
+                 </li>
+                 <li class="checkbox">
+                  <input class="checkbox" type="checkbox" id="remember-me" value="remember" /> 
+                  <label for="remember-me" class="checkbox-text">Onthoudt mij!</label>
+				  <?php echo $template->form->error; ?>
+                 </li>
+                 <li>
+                  <input class="submit" name="login" type="submit" value=""/>
+                 </li>
+              </ul>
+           </fieldset>
+          </form>
+        </div>
+     </div>
+    </div>
+	</div>
+</body>
+
+</html>
